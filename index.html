@@ -8928,6 +8928,40 @@ if(rcchg3.indexOf("VND") >= 0 ) {
    } 
 
 }
+
+
+
+if (option === "修改金额(ETH)"){
+
+
+  rcorderamount.style.display="block";
+
+
+
+  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+rcchg3+" 】 仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+   
+
+  if(rcchg3.length==0){
+  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+  }
+
+  if(rcchg3.indexOf("VND") >= 0 ) { 
+    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+   } 
+
+
+   if(rcchg3.indexOf("PHP") >= 0 ) { 
+
+    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+(parseFloat((rcchg3)))+" PHP 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+   } 
+
+   if(rcchg3.indexOf("INR") >= 0 ) { 
+
+document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+(parseFloat((rcchg3)))+" INR 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+} 
+}
+
 if (option === "会员转错TRX" || option === "会员转错ETH"  ){
 
 
@@ -12302,7 +12336,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251224v962</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251224v963</font>
 
 </div>
 <div style="background:#000">
@@ -15439,6 +15473,7 @@ function formatText() {
 <select id="rcchgm" style="height:40px; font-size:15pt; width:300px; text-align: center; color:rgb(245, 105, 11); background-color: #333333; font-weight: bolder;" onclick="rcchg(this)" >
   <option value="修改金额" selected>修改金额</option>
   <option value="重复支付">重复支付</option>
+<option value="修改金额(ETH)" >💜修改金额(ETH)</option>
   <option value="会员转错TRX">会员转错TRX</option>
   <option value="会员转错ETH">会员转错ETH</option>
   <option value="会员转错链">会员转错链</option>
