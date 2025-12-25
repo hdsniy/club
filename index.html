@@ -954,6 +954,15 @@ background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, F
    color:#5eff00;
   font-weight:bolder;
 }
+.gsw{
+  display: inline-block;
+  width: 650px;
+  height: 100px;
+  border: 3px solid rgba(8, 245, 115, 0.034);
+  background:rgba(14, 23, 53, 0.9);
+   color:#5eff00;
+  font-weight:bolder;
+}
 
 .h {
   display: inline-block;
@@ -12336,7 +12345,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251224v964</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251225v965</font>
 
 </div>
 <div style="background:#000">
@@ -15501,6 +15510,14 @@ function formatText() {
 转错链话术</br>
 <textarea id="inerror2out" type="text" value="" style="width:300px; height:100px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;     overflow: hidden;" onclick="inerror2out(this)";></textarea>
 <textarea id="inerror2out2" type="text" value="" style="width:300px; height:100px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;     overflow: hidden;" onclick="inerror2out2(this)";></textarea>
+<br>
+<div class="gsw" style="color: #8ffa02;; vertical-align:text-top; ">
+<font style="color:yellow; font-size:20px; ">RCPAY 转错币种、区块链</font><br>
+=========================<br>
+订单 以太链(ERC20) 会员转 币安链(BEP20)  - 3 U 手續費  <br>
+订单 币安链(BEP20) 会员转 以太链(ERC20)  - 5 U 手續費  <br>
+
+</div>
 </div>
 
 
@@ -15526,9 +15543,9 @@ function formatText() {
 </div>
 </br>
 
-<textarea id="rcin" type="text" value="" style="width:600px; height:180px; color:rgb(100, 218, 125);font-weight:bold;    background:black; font-size:13pt; text-align:center;" onkeyup="rcchg(this)";></textarea>
+<textarea id="rcin" placeholder="请输入订单资讯"   ptype="text" value="" style="width:600px; height:180px; color:rgb(100, 218, 125);font-weight:bold;    background:black; font-size:13pt; text-align:center;" onkeyup="rcchg(this)";></textarea>
 </br></br>
-<textarea id="rcchg4" type="text" value="" style="width:600px; height:180px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;" onclick="rcchgbt()">></textarea>
+<textarea id="rcchg4" type="text" value="" style="width:600px; height:180px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;" onclick="rcchgbt()"></textarea>
 
 </br></br>
  <button id="rcchgbt" class="myButton" style="padding:5px 5px;" onclick="rcchgbt()">复制内容</button>
