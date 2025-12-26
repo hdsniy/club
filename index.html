@@ -350,6 +350,63 @@ input[type='radio']:after {
     }
 
 
+.green-select {
+    height: 40px;
+    width: 220px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+
+    /* 重点颜色 */
+    background-color: #00f2b3;   /* 亮绿色（接近图片） */
+    color: #ff2b2b;              /* 红色文字 */
+
+    border: 2px solid #00cfa0;
+    border-radius: 6px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+/* 下拉框样式 */
+.BSC-select {
+    height: 40px;
+    width: 400px;
+    text-align: center;
+    font-size: 20px; /* 适当增加字体大小 */
+    font-weight: bold; /* 粗体字 */
+    background-color: #011b14; /* 绿色背景，接近原图 */
+    color: #f0a503; /* 红色文字 */
+    border: 2px solid #00cfa0; /* 边框颜色 */
+    border-radius: 6px; /* 圆角 */
+    cursor: pointer;
+    outline: none;
+}
+
+/* 下拉选项 */
+.BSC-select option {
+    background-color: #00f2b3; /* 绿色背景 */
+    color: #0c0101; /* 红色字体 */
+    font-weight: bolder; /* 粗体字 */
+}
+
+/* 悬停效果 */
+.BSC-select:hover {
+    background-color: #8a2be2; /* 紫色背景 */
+    color: yellow; /* 黄色文字 */
+        font-weight: bolder; /* 粗体字 */
+
+}
+
+/* 获取焦点时样式 */
+.BSC-select:focus {
+    border-color: #8a2be2; /* 紫色边框 */
+    box-shadow: 0 0 6px rgba(138, 43, 226, 0.6); /* 紫色光圈 */
+        font-weight: bolder; /* 粗体字 */
+
+}
+
+
 
 
 .signature {
@@ -3390,7 +3447,17 @@ function usdtv2(obj) {
         usdtv2order + "\n此笔金额为: " + usdtv2amount1 + " U" + "  手续费: " +
         trcfee + " U\n" + "『实际转出: " + tol + " U』\n到以下地址\n" + usdtv2address + "\n再请帮我确认下\n\n" + noticeText;
     }
-    else if (usdtv2name == "BBIN-qq(大额卡卡)" || usdtv2name == "BBIN-qq" || usdtv2name == "四方-昊升支付(大额卡卡)+0.25" || usdtv2name == "四方-昊升支付(支付宝)+0.15" || usdtv2name == "BBIN-008(支付宝)+0.2" || usdtv2name == "四方-Orionpay(大额卡卡)+0.23" || usdtv2name == "四方-Orionpay(小额卡卡)+0.25"  || usdtv2name == "四方-Orionpay(大额卡卡)+0.2" || usdtv2name == "BBIN-294"  || usdtv2name == "BBIN-950"|| usdtv2name == "BBIN-zz" || usdtv2name == "BBIN-bo8") {
+
+
+    // 第二人确认 
+    else if (usdtv2name == "BBIN-qq(大额卡卡)" || usdtv2name == "BBIN-qq" || usdtv2name == "四方-昊升支付(大额卡卡)+0.25" || usdtv2name == "四方-昊升支付(支付宝)+0.15" || usdtv2name == "BBIN-008(支付宝)+0.2" || usdtv2name == "四方-Orionpay(大额卡卡)+0.23" || usdtv2name == "四方-Orionpay(小额卡卡)+0.25"  || usdtv2name == "四方-Orionpay(大额卡卡)+0.2" || usdtv2name == "BBIN-294"  || usdtv2name == "BBIN-950"|| usdtv2name == "BBIN-zz" || usdtv2name == "BBIN-bo8"  
+|| usdtv2name == "自营商-JBO竟博(数字RMB)+0.15" 
+|| usdtv2name == "自营商-JBO竟博(大额卡卡)+0.25" 
+|| usdtv2name == "自营商-JBO竟博(支付宝抗头)+0.13" 
+|| usdtv2name == "自营商-JBO竟博(小额卡卡)+0.25" 
+
+
+      ) {
       document.getElementById('usdtv2out').value =
         "USDT-TRC20\n" +
         "商户: `" + usdtv2name + "`\n" +
@@ -8885,27 +8952,27 @@ if (option === "修改金额"){
 
 
 
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+rcchg3+" 】 仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+rcchg3+" 】 仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    
 
   if(rcchg3.length==0){
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
   }
 
   if(rcchg3.indexOf("VND") >= 0 ) { 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    } 
 
 
    if(rcchg3.indexOf("PHP") >= 0 ) { 
 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+(parseFloat((rcchg3)))+" PHP 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+(parseFloat((rcchg3)))+" PHP 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    } 
 
    if(rcchg3.indexOf("INR") >= 0 ) { 
 
-document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+(parseFloat((rcchg3)))+" INR 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" U\n           会员支付金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+(parseFloat((rcchg3)))+" INR 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 } 
 
 
@@ -8919,21 +8986,21 @@ if (option === "重复支付"){
 
 
 
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 重复支付 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+rcchg3+"  】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 重复支付 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
  
   //判断兰为为空 请帮忙会员上分
   if(rcchg3.length==0){
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 重复支付 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 重复支付 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
 }
 
 
 if(rcchg3.indexOf("VND") >= 0 ) { 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    } 
 
    if(rcchg3.indexOf("PHP") >= 0 ) { 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseFloat(rcchg3)+" PHP 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单成功金额: "+rcchgom +" U\n           会员重复金额: "+rcchgrm+ " U\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseFloat(rcchg3)+" PHP 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 重复支付 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    } 
 
 }
@@ -8947,27 +9014,27 @@ if (option === "修改金额(ETH)"){
 
 
 
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+rcchg3+" 】 仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+rcchg3+" 】 仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    
 
   if(rcchg3.length==0){
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n           再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
   }
 
   if(rcchg3.indexOf("VND") >= 0 ) { 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 修改金额 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    } 
 
 
    if(rcchg3.indexOf("PHP") >= 0 ) { 
 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+(parseFloat((rcchg3)))+" PHP 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+(parseFloat((rcchg3)))+" PHP 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
    } 
 
    if(rcchg3.indexOf("INR") >= 0 ) { 
 
-document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+(parseFloat((rcchg3)))+" INR 】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           订单应付金额: "+rcchgom +" ETH\n           会员支付金额: "+rcchgrm+ " ETH\n订单 修改金额 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+(parseFloat((rcchg3)))+" INR 】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员\n        转账金额需自行加上交易所的转帐手续费 哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 } 
 }
 
@@ -8981,10 +9048,10 @@ if (option === "会员转错TRX" || option === "会员转错ETH"  ){
  trxusdtaa=document.getElementById('trxusdta').value;
 
 
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错TRX转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员手动上分约 【 "+rcchg3+"  】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错TRX转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
   //判断兰为为空 请帮忙会员上分
   if(rcchg3.length==0){
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错TRX转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错TRX转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
 }
 
@@ -8998,23 +9065,23 @@ rcorderamount.style.display="none";
 trxusdtaa=document.getElementById('trxusdta').value;
 
 
-document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员手动上分约 【 "+rcchg3+"  】仅供参考\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 //判断兰为为空 请帮忙会员上分
 if(rcchg3.length==0){
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员 **手动上**分 \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
 }
 
 }
 
 if(rcchg3.indexOf("VND") >= 0 ) { 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错TRX 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseInt(rcchg3)+" VND 】\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错TRX 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
   
   } 
 
   if(rcchg3.indexOf("PHP") >= 0 ) { 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错TRX 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseFloat(rcchg3)+" PHP 】\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错TRX 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseFloat(rcchg3)+" PHP 】**\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
   
   } 
@@ -9032,61 +9099,58 @@ if (option === "会员转错链"){
  
  var OKCBSC = document.getElementById('OKCBSC').value;
 
-if ( OKCBSC == "OKC" || OKCBSC == "okc" )
+if ( OKCBSC == "ERCBSC" )
 {
 
+
+  document.getElementById('rcchginternetfee').value="3";
   document.getElementById('rcchginternetrc').value= rcchginternetname+" 上分 ERC "+rcchginternettols+" ( 转错区块 转入欧易链(OKC) "+rcchginternettol+" U 手续费 "+rcchginternetfee+" U 实际上分 "+rcchginternettols+" USDT) - "+rcchg2;
   document.getElementById('inerror2out').value = "亲，我们是区块链是 乙太链\n会员转成不同区块链，导致无法救回\n\n该笔要请会员自行承担\n请会员不要转错区块链，不好意思。";
-document.getElementById('inerror2out2').value ="亲，我们是区块链是 乙太链\n会员转成币安链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 "+rcchginternettols+" USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
+document.getElementById('inerror2out2').value ="亲，我们是区块链是 乙太链\n会员转成币安链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 `"+rcchginternettols+"` USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
 
 }
-else if ( OKCBSC == "BSC" || OKCBSC == "bsc")
+else if ( OKCBSC == "BSCERC" )
 {
-  document.getElementById('rcchginternetrc').value= rcchginternetname+" 上分 ERC "+rcchginternettols+" ( 转错区块链 转入币安链(BSC) "+rcchginternettol+" U 手续费 "+rcchginternetfee+" U 实际上分 "+rcchginternettols+" USDT) - "+rcchg2;
-document.getElementById('inerror2out').value = "亲，我们是区块链是 乙太链\n会员转成不同区块链，导致无法救回\n\n该笔要请会员自行承担\n请会员不要转错区块链，不好意思。";
-document.getElementById('inerror2out2').value ="亲，我们是区块链是 乙太链\n会员转成币安链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 "+rcchginternettols+" USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
+
+    document.getElementById('rcchginternetfee').value="5";
+  document.getElementById('rcchginternetrc').value= rcchginternetname+" 上分 BSC "+rcchginternettols+" ( 转错区块链 转入乙太链(ERC) "+rcchginternettol+" U 手续费 "+rcchginternetfee+" U 实际上分 "+rcchginternettols+" USDT) - "+rcchg2;
+document.getElementById('inerror2out').value = "亲，我们是区块链是 币安链\n会员转成不同区块链，导致无法救回\n\n该笔要请会员自行承担\n请会员不要转错区块链，不好意思。";
+document.getElementById('inerror2out2').value ="亲，我们是区块链是 币安链\n会员转成乙太链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 `"+rcchginternettols+"` USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
 
 }
-else if ( OKCBSC == "OKTC" || OKCBSC == "oktc")
+else if ( OKCBSC == "BSCother" )
 {
-  document.getElementById('rcchginternetrc').value= rcchginternetname+" 上分 ERC "+rcchginternettols+" ( 转错区块链 转入OKTC) "+rcchginternettol+" U 手续费 "+rcchginternetfee+" U 实际上分 "+rcchginternettols+" USDT) - "+rcchg2;
-document.getElementById('inerror2out').value = "亲，我们是区块链是 乙太链\n会员转成不同区块链，导致无法救回\n\n该笔要请会员自行承担\n请会员不要转错区块链，不好意思。";
-document.getElementById('inerror2out2').value ="亲，我们是区块链是 乙太链\n会员转成币安链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 "+rcchginternettols+" USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
 
-}
-
-else if ( OKCBSC == "usdc" || OKCBSC == "USDC")
-{
-  document.getElementById('rcchginternetrc').value= rcchginternetname+" 上分 ERC "+rcchginternettols+" ( 转错币别 转入USDC) "+rcchginternettol+" U 手续费 "+rcchginternetfee+" U 实际上分 "+rcchginternettols+" USDT) - "+rcchg2;
-document.getElementById('inerror2out').value = "亲，我们是收USDT-ERC20\n会员转成不同币别，我们不支援\n\n该笔要请会员自行承担\n请会员不要转错币别，不好意思。";
-document.getElementById('inerror2out2').value ="亲，我们是收USDT-ERC20\n会员转成USDC\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 "+rcchginternettols+" USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错币别。";
+  document.getElementById('rcchginternetrc').value= rcchginternetname+" 上分 🛑 "+rcchginternettols+" ( 转错区块链 转入 "+rcchginternettol+" U 手续费 "+rcchginternetfee+" U 实际上分 "+rcchginternettols+" USDT) - "+rcchg2;
+document.getElementById('inerror2out').value = "亲，我们是区块链是 【 🛑 】\n会员转成不同区块链，导致无法救回\n\n该笔要请会员自行承担\n请会员不要转错区块链，不好意思。";
+document.getElementById('inerror2out2').value ="亲，我们是区块链是 【 🛑 】\n会员转成【 🛑 】\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 `"+rcchginternettols+"` USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
 
 }
 else
 {
   document.getElementById('rcchginternetrc').value ="填一下区快链大哥";
   document.getElementById('inerror2out').value = "亲，我们是区块链是 乙太链\n会员转成不同区块链，导致无法救回\n\n该笔要请会员自行承担\n请会员不要转错区块链，不好意思。";
-document.getElementById('inerror2out2').value ="亲，我们是区块链是 乙太链\n会员转成币安链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 "+rcchginternettols+" USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
+document.getElementById('inerror2out2').value ="亲，我们是区块链是 乙太链\n会员转成币安链\n\n该笔救回要收取 "+rcchginternetfee+" U 手续费\n实际上分 `"+rcchginternettols+"` USDT\n如果您可以接受这边补空单上分给您\n还请提醒下会员不要转错区块链。";
 
 
 }
 
-document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+rcchg3+"  】\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 //判断兰为为空 请帮忙会员上分
 if(rcchg3.length==0){
-  document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  再麻烦您帮会员手动上分 \n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
 }
 
 
 if(rcchg3.indexOf("VND") >= 0 ) { 
 
-    document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseInt(rcchg3)+" VND 】\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】仅供参考**\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
   } 
   if(rcchg3.indexOf("PHP") >= 0 ) { 
 
-document.getElementById('rcchg4').value =merorder+"\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员手动上分约 【 "+parseFloat(rcchg3)+" PHP 】\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错区块链 "+rcchginternettols+ " U 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseFloat(rcchg3)+" PHP 】仅供参考**\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错区块链  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
 
 } 
 }
@@ -12345,7 +12409,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251225v965</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251226v967</font>
 
 </div>
 <div style="background:#000">
@@ -15494,14 +15558,19 @@ function formatText() {
 
 <input id="rcchginternetname" type="text" value=""  placeholder="商户名称" style=" text-align:center;  width: 180px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent;  "  onkeyup="rcchg(this)" ></input>
 <input id="rcchginternettol" type="text" value=""  placeholder="实际收到金额"  style=" text-align:center;  width: 200px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent;   "  onkeyup="rcchg(this)" ></input>
-<input id="rcchginternetfee" type="text" value="3"  placeholder="手续费"   style="text-align:center;  width: 100px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent; "   onkeyup="rcchg(this)" ></input>
-<input id="OKCBSC" type="text" value="BSC"  placeholder="BSC/USDC"   style="text-align:center;  width: 300px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent; "   onkeyup="rcchg(this)" ></input>
-
+<input id="rcchginternetfee" type="text" value=""  placeholder="手续费"   style="text-align:center;  width: 100px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent; "   onkeyup="rcchg(this)"  ></input>
+<select id="OKCBSC"  class="BSC-select"   onclick="rcchg(this)" >
+    <option value="ERCBSC" selected>订单 ERC20 转 BEP20 / 手续费 3 U</option>
+    <option value="BSCERC" >订单 BEP20 转 ERC20 / 手续费 5 U</option>
+   <option value="BSCother" >其他 (自行填手续费)</option>
+</select>
 <button id="rcchginternetrcbt" class="myButton" onclick="rcchginternetrcbt()"><font color="blue" >🌍RC帳記</font></button>
 
 <!--
 <button id="rcchginternetgoinbt" class="myButton" onclick="rcchginternetgoinbt()" ><font color="blue" >🌍出入U 明细</font></button>
 <button id="rcchginternetmerbt" class="myButton" onclick="rcchginternetmerbt()" ><font color="blue" >🌍商户往来U(备注)</font></button>
+<input id="OKCBSC" type="text" value="BSC"  placeholder="BSC/USDC"   style="text-align:center;  width: 300px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent; "   onkeyup="rcchg(this)" ></input>
+
 隐藏-->
 
 
@@ -15511,13 +15580,6 @@ function formatText() {
 <textarea id="inerror2out" type="text" value="" style="width:300px; height:100px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;     overflow: hidden;" onclick="inerror2out(this)";></textarea>
 <textarea id="inerror2out2" type="text" value="" style="width:300px; height:100px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;     overflow: hidden;" onclick="inerror2out2(this)";></textarea>
 <br>
-<div class="gsw" style="color: #8ffa02;; vertical-align:text-top; ">
-<font style="color:yellow; font-size:20px; ">RCPAY 转错币种、区块链</font><br>
-=========================<br>
-订单 以太链(ERC20) 会员转 币安链(BEP20)  - 3 U 手續費  <br>
-订单 币安链(BEP20) 会员转 以太链(ERC20)  - 5 U 手續費  <br>
-
-</div>
 </div>
 
 
