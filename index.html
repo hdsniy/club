@@ -6841,6 +6841,29 @@ function buttonblchgrt(){
     content19.select();
     document.execCommand('copy');
 } //复制内容
+
+
+function buttonblchgrtBEP(){
+  var notification = document.getElementById('notification');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+  var content1993 = document.getElementById('blchgrtoutBEP');
+    
+    content1993.select();
+    document.execCommand('copy');
+} //复制内容
+
+
+
+
+
 function blchgrtrc(){
 
   var notification = document.getElementById('notification');
@@ -6892,6 +6915,27 @@ function notyetetercbt(){
     content22.select();
     document.execCommand('copy');
 } //复制内容
+
+
+function notyetetercbtBEP(){
+
+  var notification = document.getElementById('notification');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+  var content2293 = document.getElementById('notyetetercBEP');
+    
+    content2293.select();
+    document.execCommand('copy');
+} //复制内容
+
+
 function notyetettrcbt(){
 
   var notification = document.getElementById('notification');
@@ -6908,6 +6952,27 @@ function notyetettrcbt(){
     content23.select();
     document.execCommand('copy');
 } //复制内容
+
+
+
+function notyetettrcbtBEP(){
+
+  var notification = document.getElementById('notification');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+  var content2393 = document.getElementById('notyetettrcBEP');
+    
+    content2393.select();
+    document.execCommand('copy');
+} //复制内容
+
+
 
 function notyetteercbt(){
 
@@ -8872,6 +8937,44 @@ document.getElementById('notyeteterc').value=outputDate+" 	USDT-ERC20 	0x7548178
 document.getElementById('notyetettrc').value=outputDate+" 	USDT-TRC20 	TV8edDYchQcmgscgiBvoFAfzjShcm1SZsm 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【ERC转TRC】ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
 
 }
+
+
+// 余额互转 BEP20 转 TRC
+function blchgrtBEP(){
+
+var blchgrtname = (document.getElementById('blchgrtnameBEP').value).replace(/\s*/g,"");
+//var blchgrterc =  (Math.trunc(((document.getElementById('blchgrterc').value).replace(/[,]+/g, "")*1000000)));
+//var blchgrtfee =  (Math.trunc(((document.getElementById('blchgrtfee').value).replace(/[,]+/g, "")*1000000)));
+
+var blchgrterc =  ((parseFloat((document.getElementById('blchgrtercBEP').value).replace(/[,]+/g, "")*1000000).toPrecision(15)));
+var blchgrterc = parseFloat(blchgrterc);
+
+  var blchgrtfee =  ((parseFloat((document.getElementById('blchgrtfeeBEP').value).replace(/[,]+/g, "")*1000000).toPrecision(15)));
+  var blchgrtfee = parseFloat(blchgrtfee);
+
+var blchgrttime = document.getElementById('blchgrttimeBEP').value;
+
+
+const dateObj = new Date(blchgrttime);
+// 從日期對象中獲取月份和日期
+const month = dateObj.getMonth() + 1; // JavaScript中的月份是從0開始，所以需要加1
+const day = dateObj.getDate();
+
+// 將月份和日期組合成所需的格式
+const outputDate = month + "/" + day;
+
+
+var blchgrttol = (blchgrterc-blchgrtfee)/1000000;
+document.getElementById('blchgrttrcBEP').value=blchgrttol;
+document.getElementById('blchgrtoutBEP').value=blchgrtname +"\n 【BEP20转TRC】\n BEP20 扣除 " +blchgrterc/1000000+" U \n TRC 上分 "+blchgrttol+" U \n 手续费 " +blchgrtfee/1000000+" U \n 再帮我确认下";
+document.getElementById('blchgrtrcoutBEP').value=blchgrtname +" 【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" U TRC 上分 "+blchgrttol+" U 手续费 " +blchgrtfee/1000000 +"  U - 无订单号";
+document.getElementById('blchgrtgoinoutBEP').value= blchgrtname+" 	"+" 【BEP20转TRC】"+" 	"+"ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U"+" 	"+"-"+" 	 	"+"-"+" 	"+blchgrttime;
+document.getElementById('notyetetercBEP').value=outputDate+" 	USDT-BEP20 	0x07bb00d54Bc6dDA607b74566413699c09EADe0bB 	-"+blchgrterc/1000000+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U\n"+outputDate+" 	USDT-BEP20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	20 	"+blchgrttime+" 	手续费 20U 	";
+document.getElementById('notyetettrcBEP').value=outputDate+" 	USDT-TRC20 	TV8edDYchQcmgscgiBvoFAfzjShcm1SZsm 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
+
+}
+
+
 //RC修改金额
 function rcchg(){
 
@@ -9038,7 +9141,7 @@ document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"
 } 
 }
 
-if (option === "会员转错TRX" || option === "会员转错ETH"  ){
+if (option === "会员转错TRX" ){
 
 
 
@@ -9055,24 +9158,8 @@ if (option === "会员转错TRX" || option === "会员转错ETH"  ){
 
 }
 
-if (option === "会员转错ETH"){
 
 
-
-rcorderamount.style.display="none";
-
-
-trxusdtaa=document.getElementById('trxusdta').value;
-
-
-document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
-//判断兰为为空 请帮忙会员上分
-if(rcchg3.length==0){
-  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员 **手动上**分 \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
-
-}
-
-}
 
 if(rcchg3.indexOf("VND") >= 0 ) { 
     document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错TRX 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
@@ -9087,6 +9174,43 @@ if(rcchg3.indexOf("VND") >= 0 ) {
   } 
 
 }
+
+
+if (option === "会员转错ETH" ){
+
+
+
+  rcorderamount.style.display="none";
+
+
+ trxusdtaa=document.getElementById('trxusdta').value;
+
+
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  //判断兰为为空 请帮忙会员上分
+  if(rcchg3.length==0){
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错ETH转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+}
+
+
+
+
+if(rcchg3.indexOf("VND") >= 0 ) { 
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错ETH 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+  
+  } 
+
+  if(rcchg3.indexOf("PHP") >= 0 ) { 
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错ETH 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseFloat(rcchg3)+" PHP 】**\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+  
+  } 
+
+}
+
+
 
 
 if (option === "会员转错链"){
@@ -12409,7 +12533,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251226v967</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251226v968</font>
 
 </div>
 <div style="background:#000">
@@ -15039,7 +15163,41 @@ ERC <input id="blchgtrerc" readonly="readonly" type="text" value="" onkeyup="blc
 <button id="notyetteercbt" class="myButton" onclick="notyetteercbt()"><font color="blue" >🌍 商户往来U TRC</font></button></br><textarea id="notyetteerc" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgtr(this)";></textarea></br>
 </div>
 </div>
+
+
+
+
+<div class="blchget" align="center" style="color: yellow; font-weight:bold;">
 </br>
+</br>
+</br>
+  <font color="yellowgreen"> <h1>互转余额 BEP20转TRC</h1></br></font>
+  商户 <input id="blchgrtnameBEP" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center;"></input></br>
+  BEP20 <input id="blchgrtercBEP" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center;"></input></br></br>
+  TRC <input id="blchgrttrcBEP" readonly="readonly" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center; background-color: #333333; color: #ffaa22; width: 100px; "></input>
+
+  <font color="yellow">互转 手续费 </font><input id="blchgrtfeeBEP" type="text" value="20" size=5 style="background-color:yellow; text-align:center; font-weight:bold; color:#A6A600; " onkeyup="blchgrtBEP(this)";></input></br>
+</br>
+  完成时间 <input id="blchgrttimeBEP" type="text" value="" size=5 style="background-color:rgb(243, 243, 183); text-align:center; font-weight:bold; color:#A6A600; width: 150px; " onkeyup="blchgrtBEP(this)";></input>
+</br>  
+</br>  
+<div class="blchget1" style="color:teal; font-weight: bold;"></br></br>
+输出  <button id="buttonblchgrtBEP" class="myButton" onclick="buttonblchgrtBEP()"> 复制内容</button></br></br></br>
+<textarea id="blchgrtoutBEP" type="text" value="" style="width:200px;height:125px;color:blue; text-align: center;" onkeyup="blchgrtBEP(this)";></textarea></br>
+</div>
+<div class="blchget2" style="color:teal; font-weight: bold; vertical-align: top; " ></br>
+<button id="blchgrtrcBEP" class="myButton" onclick="blchgrtrcBEP()"><font color="blue" >🌍 RC 帐记</font></button></br><textarea id="blchgrtrcoutBEP" type="text" value="" style="width:200px;height:20px;color:yellow;background-color:#000079;font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
+
+<div style="display: none;">
+<button id="blchgrtgoinBEP" class="myButton" onclick="blchgrtgoinBEP()"><font color="blue" >🌍 出入U 明细</font></button></br><textarea id="blchgrtgoinoutBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:#FFFFCE;font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
+</div>
+
+
+<button id="notyetetercbtBEP" class="myButton" onclick="notyetetercbtBEP()"><font color="blue" >🌍 商户往来U ERC </font></button></br><textarea id="notyetetercBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
+<button id="notyetettrcbtBEP" class="myButton" onclick="notyetettrcbtBEP()"><font color="blue" >🌍 商户往来U TRC</font></button></br><textarea id="notyetettrcBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
+</div>
+</div>
+
 
 <div class="trx" align="center" style="font-weight:bold; ">
 <font style="color:yellow;"> <h1>TRX 转换</h1></font> 
