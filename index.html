@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6939,6 +6940,24 @@ function notyetetercbtBEP(){
     document.execCommand('copy');
 } //复制内容
 
+function blchgrtrcBEP(){
+
+  var notification = document.getElementById('notification');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+  var content22931 = document.getElementById('blchgrtrcoutBEP');
+    
+    content22931.select();
+    document.execCommand('copy');
+} //复制内容
+
 
 function notyetettrcbt(){
 
@@ -12537,7 +12556,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20251230v977</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260102v978</font>
 
 </div>
 <div style="background:#000">
