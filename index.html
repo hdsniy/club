@@ -3456,14 +3456,15 @@ function usdtv2(obj) {
 || usdtv2name == "自营商-JBO竟博(大额卡卡)+0.25" 
 || usdtv2name == "自营商-JBO竟博(支付宝抗头)+0.13" 
 || usdtv2name == "自营商-JBO竟博(小额卡卡)+0.25" 
-|| usdtv2name == "BBIN-hh(支付宝抗头老户)+0.12" 
-|| usdtv2name == "BBIN-hh(支付宝抗头新户)+0.12" 
 || usdtv2name == "BBIN-bo8" 
 || usdtv2name == "BBIN-jw,自营商-HHGAME" 
 || usdtv2name == "BBIN-scc(支付宝抗头)+0.15" 
 
 
-      ) {
+      )
+      
+      
+      {
       document.getElementById('usdtv2out').value =
         "USDT-TRC20\n" +
         "商户: `" + usdtv2name + "`\n" +
@@ -3471,6 +3472,30 @@ function usdtv2(obj) {
         usdtv2order + "\n此笔金额为: " + usdtv2amount1 + " U" + "  手续费: " +
         trcfee + " U\n" + "『实际转出: `" + tol + "` U』\n到以下地址\n`" + usdtv2address + "`\n**再请帮我⚠️『两个人』⚠️确认下**\n\n" + noticeText;
     }
+
+
+    //三人确认
+        else if (
+|| usdtv2name == "BBIN-hh(支付宝抗头老户)+0.12" 
+|| usdtv2name == "BBIN-hh(支付宝抗头新户)+0.12" 
+
+
+
+      )
+      
+      
+      {
+
+      var taghh="@James8hao_169988 @nianxinyijiu @SAI_OooOOo11 @chadan8967 @xiaodianpu4321 @niaojuya @mingalarbar113\n@TYC6699  (负责人）\n@qian88599  (负责人）\n";
+      document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order + "\n此笔金额为: " + usdtv2amount1 + " U" + "  手续费: " +
+        trcfee + " U\n" + "『实际转出: `" + tol + "` U』\n到以下地址\n`" + usdtv2address + "`\n**再请帮我🆘『 3 个人』🆘确认下**\n\n"+taghh+"\n" + noticeText;
+    }
+
+
      
    else if (usdtv2name == "BBIN-xj(支付宝抗头)+0.15" ) {
       document.getElementById('usdtv2out').value =
@@ -12587,7 +12612,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260113v988</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260115v989</font>
 
 </div>
 <div style="background:#000">
