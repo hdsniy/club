@@ -3496,6 +3496,50 @@ function usdtv2(obj) {
     }
 
 
+    
+// BBIN-55 - 指定地址
+else if (
+    usdtv2name === "BBIN-55(支付宝抗头)+0.12" &&
+    (
+        usdtv2address === "THhBpZPj57gymqV1CKKEdQ7tFZr6avFn3a" ||
+        usdtv2address === "TGH8rb694Nx6KpSE5isXcb2XgHDc3UWLMP"
+    )
+) {
+
+    var taghh="**商户固定地址** \n✅ `THhBpZPj57gymqV1CKKEdQ7tFZr6avFn3a` \n✅ `TGH8rb694Nx6KpSE5isXcb2XgHDc3UWLMP` \n如有不同 TAG 置顶处的人员确认\n";
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "**再请帮我确认下**\n\n" +
+        taghh + "\n" + noticeText;
+
+}
+
+// BBIN-55 - 其他地址
+else if (usdtv2name === "BBIN-55(支付宝抗头)+0.12") {
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "⚠️**注意** 非固定地址⚠️\n请确认以下人员出来喊下并且多人确认\n @ok000  @afei202588  @facaixingwang @ejiao  @wumei899 \n\n" +
+        noticeText;
+}
+
+
+
      
    else if (usdtv2name == "BBIN-xj(支付宝抗头)+0.15" ) {
       document.getElementById('usdtv2out').value =
@@ -12729,7 +12773,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260117v992</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260118v993</font>
 
 </div>
 <div style="background:#000">
