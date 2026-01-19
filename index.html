@@ -3540,6 +3540,8 @@ else if (usdtv2name === "BBIN-55(支付宝抗头)+0.12") {
 
 
 
+
+
      
    else if (usdtv2name == "BBIN-xj(支付宝抗头)+0.15" ) {
       document.getElementById('usdtv2out').value =
@@ -4553,7 +4555,7 @@ function u12018(){
 
 var u12019name= document.getElementById('u12019name').value;
 
-if (u12019name ==="聚付宝-预付上分" || u12019name ==="华中-预付上分" || u12019name ==="旭腾-预付上分"|| u12019name ==="玖远-预付上分" || u12019name ==="保利-预付上分"  || u12019name ==="安通-预付上分"    ){
+if (u12019name ==="聚付宝-预付上分" || u12019name ==="聚财-预付上分" || u12019name ==="旭腾-预付上分"|| u12019name ==="玖远-预付上分" || u12019name ==="保利-预付上分"  || u12019name ==="安通-预付上分"    ){
 
 var u12019u= parseFloat((document.getElementById('u12019u').value).replace(/[,]+/g, ""));
 var u12019rate= parseFloat((document.getElementById('u12019rate').value).replace(/[,]+/g, ""));
@@ -4956,7 +4958,7 @@ rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
 function GFBBBV(){
- document.getElementById('u12019name').value="聚付宝-预付上分";
+ document.getElementById('u12019name').value="聚财-预付上分";
  document.getElementById('u12019free').value=0;
 
  var ru10589= document.getElementById('ru10589');
@@ -10545,7 +10547,7 @@ function ababoml(){
 function restfee(){
 
   document.getElementById('restfeered').value=
-  "-备付金利润      \n-转卡代付利润    \n-支付宝代付利润    \n-快云手续费       \n-F86手续费      \n-明日手续费      \n-局气手续费      \n-极速手续费      \n-汇鑫手续费       \n-lkpay手续费        ";
+  "-备付金利润      \n-转卡代付利润    \n-支付宝代付利润    \n-快云手续费       \n-聚财手续费             ";
 
 
   document.getElementById('cloudpayment').value=0;
@@ -12773,7 +12775,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260118v993</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260119v994</font>
 
 </div>
 <div style="background:#000">
@@ -12898,8 +12900,8 @@ white-space:nowrap;">买价</a> /
 -转卡代付利润 
 -支付宝代付利润
 -快云手续费 
--F86手续费  
--明日手续费  
+-聚财手续费  
+
 
 
 
@@ -12910,7 +12912,7 @@ white-space:nowrap;">买价</a> /
 
 <div style="font-size: 10px; position: relative; left:60px; top:20px;">
 
-果实手续费( <input id="nonamepaiedfee" type="text" value="0.5"   placeholder="%"  onkeyup="noname(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left; width: 50px;" size="1" ></input>)
+聚财手续费( <input id="nonamepaiedfee" type="text" value="0.4"   placeholder="%"  onkeyup="noname(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left; width: 50px;" size="1" ></input>)
   </div>
 
   <div style="position: absolute; margin-left: 690px; margin-top: 15px; ">
@@ -14410,9 +14412,9 @@ background-size: cover;  " onkeyup="west23(this);west(this)"></textarea></br></b
   　　
 </br>
 <h1 style="background-color: black;">备付金</h1>  
-<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="fastcloud();u12019();"><font color="white" style="font-size: 20px;" >快云</font><font color="yellow" style="font-size: 20px; " >0.7%+2</font></button>
-<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="tomorrow();u12019();"><font color="white" style="font-size: 20px;" >明日</font><font color="yellow" style="font-size: 20px; " >0.7%%+2</font></button>
-<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="gs();u12019();"><font color="white" style="font-size: 20px;" >F86</font><font color="yellow" style="font-size: 20px; " >0.2%+2</font></button></br>
+<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="fastcloud();u12019();"><font color="white" style="font-size: 20px;" >快云</font><font color="yellow" style="font-size: 20px; " >0.5%+2</font></button>
+</br>
+<button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="GFBBBV();u12018();"><font color="black" style="font-size: 20px;" >聚财 - 预付上分</font><font color="red" style="font-size: 20px; " >0.4%+2</font></button>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="yc();u12018();"><font color="black" style="font-size: 20px;" >旭滕代付 - 预付上分</font><font color="red" style="font-size: 20px; " >0.5%+2 (返佣千一 实际0.6%+2)</font></button>
 
 </br></br>
@@ -14426,7 +14428,8 @@ background-size: cover;  " onkeyup="west23(this);west(this)"></textarea></br></b
 <button id="ufarawayn" class="myButton" style="padding:5px 5px;" onclick="DMP();u12019();"><font color="blue" style="font-size: 20px;" >DMP支付宝<font color="red" style="font-size: 20px; " >汇率上浮+0.03</font></font></button></button>
 
   <!--暂时不用区
-   
+   <button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="tomorrow();u12019();"><font color="white" style="font-size: 20px;" >明日</font><font color="yellow" style="font-size: 20px; " >0.7%%+2</font></button>
+<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="gs();u12019();"><font color="white" style="font-size: 20px;" >F86</font><font color="yellow" style="font-size: 20px; " >0.2%+2</font></button>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="yc();u12018();"><font color="black" style="font-size: 20px;" >亿乾代付 - 预付上分</font><font color="red" style="font-size: 20px; " >0.4%+2</font></button>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="bl();u12018();"><font color="black" style="font-size: 20px;" >保利 - 预付上分</font><font color="red" style="font-size: 20px; " >0.5%+2</font></button>
   <button id="u10726n" class="ufarawayn" style="padding:5px 5px; " onclick="inpay2();u12019();"><font color="white" style="font-size: 20px;" >银付通2 (混跑)</font></button>
@@ -16882,9 +16885,9 @@ href4="	https://ucpays.net/agent/withdraws?started_at=2025-12-23+04%3A14%3A00&en
 href5="	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	"
 href6="	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	"
 
-//明日
-href7="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=336_39ee33835389d9a720770658&separate_order_status=-1&relative_system_order_number="
-href8="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=336_39ee33835389d9a720770658&separate_order_status=-1&relative_system_order_number="
+//聚财
+href7="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=618_TM1767348476&separate_order_status=-1&relative_system_order_number="
+href8="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=618_TM1767348476&separate_order_status=-1&relative_system_order_number="
 
 
 //备付金
