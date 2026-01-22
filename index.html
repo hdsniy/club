@@ -3458,8 +3458,8 @@ function usdtv2(obj) {
 || usdtv2name == "自营商-JBO竟博(小额卡卡)+0.25" 
 || usdtv2name == "BBIN-bo8" 
 || usdtv2name == "BBIN-jw,自营商-HHGAME" 
-|| usdtv2name == "BBIN-scc(支付宝抗头)+0.15" 
 || usdtv2name == "BBIN-bc" 
+|| usdtv2name == "BBIN-008(支付宝抗头)+0.12" 
 
 
       )
@@ -3537,6 +3537,49 @@ else if (usdtv2name === "BBIN-55(支付宝抗头)+0.12") {
         "⚠️**注意** 非固定地址⚠️\n请以下人员出来喊下并且多人确认\n @ok000  @afei202588  @facaixingwang @ejiao  @wumei899 \n\n" +
         noticeText;
 }
+
+
+// BBIN-scc - 指定地址
+else if (
+    usdtv2name === "BBIN-scc(支付宝抗头)+0.15" &&
+    (
+        usdtv2address === "TFqxWhDfkRVHdJ3A9fc1hx6yZNbR8gxbjY" 
+    )
+) {
+
+    var taghh="**商户固定地址** \n✅ `TFqxWhDfkRVHdJ3A9fc1hx6yZNbR8gxbjY`\n⚠️**请三个人员协助确认**⚠️\n@xxn140222, @xxbsh1588，@laibaxiongdei，@buxiangshangban145，@jixujiaban888，@lulululu5555，@bengteng88，@xpj235，@meixue145，@xxbsh1123，@yccd5940， @biemaochongwo，@zhunbeixiaban666，@hoaqua6688 \n";
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "**再请帮我确认下**\n\n" +
+        taghh + "\n" + noticeText;
+
+}
+
+// BBIN-scc - 其他地址
+else if (usdtv2name === "BBIN-scc(支付宝抗头)+0.15") {
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "⚠️**注意** 非固定地址⚠️**请以下人员三位 加上 一位管理员确认**\n@xxn140222, @xxbsh1588 @laibaxiongdei @buxiangshangban14 @jixujiaban888 @lulululu5555 @bengteng88 @xpj235 @meixue145 @xxbsh1123 @yccd5940  @biemaochongwo @zhunbeixiaban666 @hoaqua6688 **以上三位出来确认**\n @TYC6699 @qian88599 **管理员一位**\n\n" +
+        noticeText;
+}
+
+
 
 
 // BBIN-437 - 指定地址
@@ -12815,7 +12858,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260121v996</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260122v997</font>
 
 </div>
 <div style="background:#000">
@@ -16939,7 +16982,8 @@ href11="https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%
     
 
 //后台出U
-href12="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=TTWM2hgSEA7mpkHdUuRWq6DVyuBifuAGQc&upstream_merchant_group_key%5B%5D=569_TBTUOVQLR0MP9R6N&separate_order_status=-1&relative_system_order_number=";
+       href12="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=531_TTWM2hgSEA7mpkHdUuRWq6DVyuBifuAGQc&separate_order_status=-1&relative_system_order_number="  
+//href12="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=TTWM2hgSEA7mpkHdUuRWq6DVyuBifuAGQc&upstream_merchant_group_key%5B%5D=569_TBTUOVQLR0MP9R6N&separate_order_status=-1&relative_system_order_number=";
 //明额明细
 href13="https://ucpays.net/agent/merchants/wallet-history/integration?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"&ended_at=&merchant_display_name=&merchant_number="
 
