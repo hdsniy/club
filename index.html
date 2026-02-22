@@ -3202,7 +3202,9 @@ document.getElementById('urbbbbb').value="";
         }
 
         async function fetchBalance() {
-            const url = 'https://apilist.tronscanapi.com/api/accountv2?address=TGvJP4imLCY4bNe1QXo2AzYVhJNgjWtbEK ';  //RC出款地址 TGvJP4imLCY4bNe1QXo2AzYVhJNgjWtbEK         
+
+             var rcaddress =  document.getElementById("rcoutaddress").value;     
+            const url = 'https://apilist.tronscanapi.com/api/accountv2?address='+rcaddress;    
             let balance = 0;
             try {
                 const res = await fetch(url);
@@ -12866,9 +12868,10 @@ font-weight:700;
 white-space:nowrap;">OKEX 买价</a> 
 
   
+<input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="THk1KSyphU7wSxLwdVdxKNtGw5TS28fTsF"  size="10"></input></br>
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260216v1009</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260222v1011</font>
 
 </div>
 <div style="background:#000">
@@ -13018,7 +13021,7 @@ white-space:nowrap;">买价</a> /
 
 <div style="font-size: 10px; position: relative; left:-100px">
 
-快云手续费( <input id="cloudpaymentrate" type="text" value="0.5"   placeholder="%"  onkeyup="cloudpayment(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
+快云手续费( <input id="cloudpaymentrate" type="text" value="0.6"   placeholder="%"  onkeyup="cloudpayment(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
 </div>
 <!--快云手续费-->
 <div style="font-size: 10px; position: relative; left:-100px">
@@ -17591,7 +17594,7 @@ else if (person == password)
 
     document.getElementById("timercyang").value = "开启成功";
 
-    var rcaddress ="TGvJP4imLCY4bNe1QXo2AzYVhJNgjWtbEK " ; // RC出款地址 TGvJP4imLCY4bNe1QXo2AzYVhJNgjWtbEK         
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
 
   
 
@@ -18020,7 +18023,7 @@ else if (person == password)
     document.getElementById("timerc").value = "开启成功";
     
 
-    var rcaddress ="TGvJP4imLCY4bNe1QXo2AzYVhJNgjWtbEK " ; // RC出款地址 TGvJP4imLCY4bNe1QXo2AzYVhJNgjWtbEK         
+    var rcaddress = document.getElementById("rcoutaddress").value;            
 
     var urls = [
         "https://rcqoo99.com/#/admin/merchant/order-stats?page=1",
