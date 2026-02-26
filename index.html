@@ -3203,7 +3203,6 @@ document.getElementById('urbbbbb').value="";
 
         async function fetchBalance() {
 
-             var rcaddress =  document.getElementById("rcoutaddress").value;     
             const url = 'https://apilist.tronscanapi.com/api/accountv2?address='+rcaddress;    
             let balance = 0;
             try {
@@ -9052,6 +9051,10 @@ function add(){
 // 余额互转 TRC 转 ERC
 function blchgtr(){
 
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
+
+
+
   var blchgtrname = (document.getElementById('blchgtrname').value).replace(/\s*/g,"");
 
 
@@ -9082,7 +9085,7 @@ const outputDate = month + "/" + day;
   document.getElementById('blchgtrout').value=blchgtrname +"\n 【TRC转ERC】\n TRC 扣除 " +blchgtrtrc/1000000+" U \n ERC 上分 "+blchgtrtol+" U \n 手续费 " +blchgtrfee/1000000+" U \n 再帮我确认下";
   document.getElementById('blchgtrrcout').value=blchgtrname +" 【TRC转ERC】TRC 扣除 " +blchgtrtrc/1000000+" U ERC 上分 "+blchgtrtol+" U 手续费 " +blchgtrfee/1000000 +" U - 无订单号";
   document.getElementById('blchgtrgoinout').value= blchgtrname+" 	"+" 【TRC转ERC】"+" 	"+"TRC 扣除 " +blchgtrtrc/1000000+" UERC 上分 "+blchgtrtol+" U手续费 "  +blchgtrfee/1000000+" U"+" 	"+"-"+" 	 	"+"-"+" 	"+blchgtrtime;
-  document.getElementById('notyetteerc').value=outputDate+" 	USDT-TRC20 	TV8edDYchQcmgscgiBvoFAfzjShcm1SZsm 	-"+blchgtrtrc/1000000+" 	"+blchgtrtime+" 	"+blchgtrname+"【TRC转ERC】TRC 扣除 " +blchgtrtrc/1000000+" UERC 上分 "+blchgtrtol+" U手续费 "  +blchgtrfee/1000000+" U\n"+outputDate+" 	USDT-TRC20 	TV8edDYchQcmgscgiBvoFAfzjShcm1SZsm 	20 	"+blchgtrtime+" 	手续费 20U 	";
+  document.getElementById('notyetteerc').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	-"+blchgtrtrc/1000000+" 	"+blchgtrtime+" 	"+blchgtrname+"【TRC转ERC】TRC 扣除 " +blchgtrtrc/1000000+" UERC 上分 "+blchgtrtol+" U手续费 "  +blchgtrfee/1000000+" U\n"+outputDate+" 	USDT-TRC20 	"+rcaddress+" 	20 	"+blchgtrtime+" 	手续费 20U 	";
   document.getElementById('notyettetrc').value=outputDate+" 	USDT-ERC20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	"+blchgtrtol+" 	"+blchgtrtime+" 	"+blchgtrname+"【TRC转ERC】TRC 扣除 " +blchgtrtrc/1000000+" UERC 上分 "+blchgtrtol+" U手续费 "  +blchgtrfee/1000000+" U";
 }
 // 余额互转 ERC 转 TRC
@@ -9100,6 +9103,8 @@ var blchgrterc = parseFloat(blchgrterc);
 
 var blchgrttime = document.getElementById('blchgrttime').value;
 
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
+
 
 const dateObj = new Date(blchgrttime);
 // 從日期對象中獲取月份和日期
@@ -9116,13 +9121,17 @@ document.getElementById('blchgrtout').value=blchgrtname +"\n 【ERC转TRC】\n E
 document.getElementById('blchgrtrcout').value=blchgrtname +" 【ERC转TRC】ERC 扣除 " +blchgrterc/1000000+" U TRC 上分 "+blchgrttol+" U 手续费 " +blchgrtfee/1000000 +"  U - 无订单号";
 document.getElementById('blchgrtgoinout').value= blchgrtname+" 	"+" 【ERC转TRC】"+" 	"+"ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U"+" 	"+"-"+" 	 	"+"-"+" 	"+blchgrttime;
 document.getElementById('notyeteterc').value=outputDate+" 	USDT-ERC20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	-"+blchgrterc/1000000+" 	"+blchgrttime+" 	"+blchgrtname+"【ERC转TRC】ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U\n"+outputDate+" 	USDT-ERC20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	20 	"+blchgrttime+" 	手续费 20U 	";
-document.getElementById('notyetettrc').value=outputDate+" 	USDT-TRC20 	TV8edDYchQcmgscgiBvoFAfzjShcm1SZsm 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【ERC转TRC】ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
+document.getElementById('notyetettrc').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【ERC转TRC】ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
 
 }
 
 
 // 余额互转 BEP20 转 TRC
 function blchgrtBEP(){
+
+
+      var rcaddress =  document.getElementById("rcoutaddress").value;     
+
 
 var blchgrtname = (document.getElementById('blchgrtnameBEP').value).replace(/\s*/g,"");
 //var blchgrterc =  (Math.trunc(((document.getElementById('blchgrterc').value).replace(/[,]+/g, "")*1000000)));
@@ -9144,16 +9153,50 @@ const day = dateObj.getDate();
 
 // 將月份和日期組合成所需的格式
 const outputDate = month + "/" + day;
-
-
 var blchgrttol = (blchgrterc-blchgrtfee)/1000000;
+
 document.getElementById('blchgrttrcBEP').value=blchgrttol;
+
+if(document.getElementById('TRCtoBEP').checked){
+
+    document.getElementById('bep20lable1').innerHTML = "TRC20";
+    document.getElementById('bep20lable2').innerHTML = "BEP20";
+
+
+document.getElementById('blchgrtoutBEP').value=blchgrtname +"\n 【TRC20转BEP20】\n TRC20 扣除 " +blchgrterc/1000000+" U \n BEP20 上分 "+blchgrttol+" U \n 手续费 " +blchgrtfee/1000000+" U \n 再帮我确认下";
+document.getElementById('blchgrtrcoutBEP').value=blchgrtname +" 【TRC20转BEP20】TRC20 扣除 " +blchgrterc/1000000+" U BEP20 上分 "+blchgrttol+" U 手续费 " +blchgrtfee/1000000 +"  U - 无订单号";
+document.getElementById('blchgrtgoinoutBEP').value= blchgrtname+" 	"+" 【TRC20转BEP20】"+" 	"+"TRC20 扣除 " +blchgrterc/1000000+" UBEP20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U"+" 	"+"-"+" 	 	"+"-"+" 	"+blchgrttime;
+document.getElementById('notyetettrcBEP').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	-"+blchgrterc/1000000+" 	"+blchgrttime+" 	"+blchgrtname+"【TRC20转BEP20】TRC20 扣除 " +blchgrterc/1000000+" UBEP20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U\n"+outputDate+" 	USDT-TRC20 	"+rcaddress+" 	20 	"+blchgrttime+" 	手续费 20U 	";
+document.getElementById('notyetetercBEP').value=outputDate+" 	USDT-BEP20 	0x07bb00d54Bc6dDA607b74566413699c09EADe0bB 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【TRC转BEP20】TRC20 扣除 " +blchgrterc/1000000+" UBEP20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
+
+
+
+
+}else{
+    document.getElementById('bep20lable1').innerHTML = "BEP20";
+    document.getElementById('bep20lable2').innerHTML = "TRC20";
+
+document.getElementById('blchgrtoutBEP').value=blchgrtname +"\n 【BEP20转TRC20】\n BEP20 扣除 " +blchgrterc/1000000+" U \n TRC20 上分 "+blchgrttol+" U \n 手续费 " +blchgrtfee/1000000+" U \n 再帮我确认下";
+document.getElementById('blchgrtrcoutBEP').value=blchgrtname +" 【BEP20转TRC20】BEP20 扣除 " +blchgrterc/1000000+" U TRC20 上分 "+blchgrttol+" U 手续费 " +blchgrtfee/1000000 +"  U - 无订单号";
+document.getElementById('blchgrtgoinoutBEP').value= blchgrtname+" 	"+" 【BEP20转TRC20】"+" 	"+"BEP20 扣除 " +blchgrterc/1000000+" UTRC20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U"+" 	"+"-"+" 	 	"+"-"+" 	"+blchgrttime;
+document.getElementById('notyetetercBEP').value=outputDate+" 	USDT-BEP20 	0x07bb00d54Bc6dDA607b74566413699c09EADe0bB 	-"+blchgrterc/1000000+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC20】BEP20 扣除 " +blchgrterc/1000000+" UTRC20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U\n"+outputDate+" 	USDT-BEP20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	20 	"+blchgrttime+" 	手续费 20U 	";
+document.getElementById('notyetettrcBEP').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC20】BEP20 扣除 " +blchgrterc/1000000+" UTRC20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
+
+}
+
+/*
+
+document.getElementById('notyetetercBEP').value=outputDate+" 	USDT-BEP20 	0x07bb00d54Bc6dDA607b74566413699c09EADe0bB 	-"+blchgrterc/1000000+" 	"+blchgrttime+" 	"+blchgrtname+"【TRC20转BEP20】TRC20 扣除 " +blchgrterc/1000000+" UBEP20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U\n"+outputDate+" 	USDT-BEP20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	20 	"+blchgrttime+" 	手续费 20U 	";
+document.getElementById('notyetettrcBEP').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【TRC转BEP20】TRC20 扣除 " +blchgrterc/1000000+" UBEP20 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
+
+
+
 document.getElementById('blchgrtoutBEP').value=blchgrtname +"\n 【BEP20转TRC】\n BEP20 扣除 " +blchgrterc/1000000+" U \n TRC 上分 "+blchgrttol+" U \n 手续费 " +blchgrtfee/1000000+" U \n 再帮我确认下";
 document.getElementById('blchgrtrcoutBEP').value=blchgrtname +" 【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" U TRC 上分 "+blchgrttol+" U 手续费 " +blchgrtfee/1000000 +"  U - 无订单号";
 document.getElementById('blchgrtgoinoutBEP').value= blchgrtname+" 	"+" 【BEP20转TRC】"+" 	"+"ERC 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U"+" 	"+"-"+" 	 	"+"-"+" 	"+blchgrttime;
 document.getElementById('notyetetercBEP').value=outputDate+" 	USDT-BEP20 	0x07bb00d54Bc6dDA607b74566413699c09EADe0bB 	-"+blchgrterc/1000000+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U\n"+outputDate+" 	USDT-BEP20 	0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12 	20 	"+blchgrttime+" 	手续费 20U 	";
-document.getElementById('notyetettrcBEP').value=outputDate+" 	USDT-TRC20 	TV8edDYchQcmgscgiBvoFAfzjShcm1SZsm 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
-
+document.getElementById('notyetettrcBEP').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	"+blchgrttol+" 	"+blchgrttime+" 	"+blchgrtname+"【BEP20转TRC】BEP20 扣除 " +blchgrterc/1000000+" UTRC 上分 "+blchgrttol+" U手续费 "  +blchgrtfee/1000000+" U";
+*/
 }
 
 
@@ -12871,7 +12914,7 @@ white-space:nowrap;">OKEX 买价</a>
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="THk1KSyphU7wSxLwdVdxKNtGw5TS28fTsF"  size="10"></input></br>
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260222v1011</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260226v1012</font>
 
 </div>
 <div style="background:#000">
@@ -15508,9 +15551,12 @@ ERC <input id="blchgtrerc" readonly="readonly" type="text" value="" onkeyup="blc
 </br>
 </br>
   <font color="yellowgreen"> <h1>互转余额 BEP20转TRC</h1></br></font>
+  <div  style=" background-color: #000000; color: blueviolet; " ><input id="TRCtoBEP" style="width: 15px;height: 15px; " type="checkbox"    onclick="blchgrtBEP(this)" ></input><label for="TRCtoBEP" style="font-size:30px;" >TRC转BEP20</label></div>
+</br>
+
   商户 <input id="blchgrtnameBEP" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center;"></input></br>
-  BEP20 <input id="blchgrtercBEP" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center;"></input></br></br>
-  TRC <input id="blchgrttrcBEP" readonly="readonly" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center; background-color: #333333; color: #ffaa22; width: 100px; "></input>
+   <font id="bep20lable1" color="yellowgreen">BEP20</font>  <input id="blchgrtercBEP" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center;"></input></br></br>
+   <font id="bep20lable2" color="yellow">TRC20</font> <input id="blchgrttrcBEP" readonly="readonly" type="text" value="" onkeyup="blchgrtBEP(this)"; style="text-align:center; background-color: #333333; color: #ffaa22; width: 100px; "></input>
 
   <font color="yellow">互转 手续费 </font><input id="blchgrtfeeBEP" type="text" value="20" size=5 style="background-color:yellow; text-align:center; font-weight:bold; color:#A6A600; " onkeyup="blchgrtBEP(this)";></input></br>
 </br>
@@ -15529,8 +15575,8 @@ ERC <input id="blchgtrerc" readonly="readonly" type="text" value="" onkeyup="blc
 </div>
 
 
-<button id="notyetetercbtBEP" class="myButton" onclick="notyetetercbtBEP()"><font color="blue" >🌍 商户往来U ERC </font></button></br><textarea id="notyetetercBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
-<button id="notyetettrcbtBEP" class="myButton" onclick="notyetettrcbtBEP()"><font color="blue" >🌍 商户往来U TRC</font></button></br><textarea id="notyetettrcBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
+<button id="notyetetercbtBEP" class="myButton" onclick="notyetetercbtBEP()"><font color="blue" >🌍 商户往来U BEP20 </font></button></br><textarea id="notyetetercBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
+<button id="notyetettrcbtBEP" class="myButton" onclick="notyetettrcbtBEP()"><font color="blue" >🌍 商户往来U TRC20</font></button></br><textarea id="notyetettrcBEP" type="text" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;" onkeyup="blchgrt(this)";></textarea></br>
 </div>
 </div>
 
@@ -17594,7 +17640,6 @@ else if (person == password)
 
     document.getElementById("timercyang").value = "开启成功";
 
-    var rcaddress =  document.getElementById("rcoutaddress").value;     
 
   
 
@@ -17842,8 +17887,8 @@ else if (person == password)
 
     document.getElementById("timerc").value = "开启成功";
     
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
 
-    var rcaddress ="TYi6Scdu8Y7pgD3tcjictpBPpzAog3jdij"; // RC 出款
 
     var urls = [
 
@@ -17933,8 +17978,8 @@ else if (person == password)
 
     document.getElementById("timerc").value = "开启成功";
     
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
 
-    var rcaddress ="TYi6Scdu8Y7pgD3tcjictpBPpzAog3jdij"; // RC 出款
 
     var urls = [
 "https://ucpays.net/agent/deposits?started_at=" + strDate + "+08%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=-1&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=392_1ae58de0-8330-486e-a906-3fb8c17fb08a&upstream_merchant_group_keys%5B%5D=391_1ae58de0-8330-486e-a906-3fb8c17fb08a&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_by_confirmed_at=1",
@@ -18020,10 +18065,13 @@ else if (person == password)
 
   {
 
+
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
+
     document.getElementById("timerc").value = "开启成功";
     
 
-    var rcaddress = document.getElementById("rcoutaddress").value;            
+           
 
     var urls = [
         "https://rcqoo99.com/#/admin/merchant/order-stats?page=1",
