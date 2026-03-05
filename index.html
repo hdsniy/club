@@ -11068,7 +11068,7 @@ function Search(){
 
         
 //新BC宝
-        function Serchnewbca(){
+        function Serchnewbca500(){
 
           var notification = document.getElementById('notificationA');
       notification.style.top = '50px'; // 滑出位置
@@ -11082,7 +11082,7 @@ function Search(){
 
 
             $.get("https://script.google.com/macros/s/AKfycbwC3Ko4WzOEC3uo1_1nAgRcIehdPO_iwHZJUqzMrErKsWR7RyqnyfcOc08LIq7AvziO/exec", {
-                 "number": "BC支付宝"
+                 "number": "BC500宝"
                     },
                     function (response) {
 
@@ -11124,8 +11124,67 @@ function Search(){
           });
 
         
+
       }
 
+
+      //新BC宝
+        function Serchnewbca300(){
+
+          var notification = document.getElementById('notificationA');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+
+            $.get("https://script.google.com/macros/s/AKfycbwC3Ko4WzOEC3uo1_1nAgRcIehdPO_iwHZJUqzMrErKsWR7RyqnyfcOc08LIq7AvziO/exec", {
+                 "number": "BC300宝"
+                    },
+                    function (response) {
+
+
+      var notification = document.getElementById('notificationB');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+
+
+
+            // 显示返回的结果
+            if (response === "未找到匹配的数据") {
+              $('#result').html("未找到对应的数据");
+            } else {
+              // 将返回的数据分隔并显示
+              var data = response.split(",");
+
+          
+              var resultText = "编号: " + data[0] + "<br>名称: " + data[1] + "<br>分数: " + data[2] + "<br>额外信息: " + data[3];
+
+
+
+              document.getElementById("usdtname111q").value=(String(((data[3]).split("余额换U")).slice(0,1))).slice(1).replace(/\s+/g, "");   // 上游名称
+              document.getElementById("uraaaaaq").value= data[1] ;  // RMB
+              document.getElementById("urbbbbbq").value= data[2] ;   // 汇率
+              document.getElementById("urdddddq").value= data[3] ;  // 红字 
+
+            }
+                
+        }).fail(function() {
+          document.getElementById("usdtname111q").value="请求失败，请稍后再试";
+          });
+
+        }
     
 //新BC宝
         function Serchnewvca(){
@@ -11350,7 +11409,7 @@ function Search(){
         });
         }
 
-        function Searchbcotc(){
+        function Searchbcotc500(){
 
 
           
@@ -11366,7 +11425,61 @@ function Search(){
 
 
           $.get("https://script.google.com/macros/s/AKfycbynYY_Htm4Y0gPV9OsMvIY172mJqREEUKNPOXv6TI_ZdJGNJTftavZWQomiiZDzXLaz/exec", {
-                 "number": "BC支付宝"
+                 "number": "BC500宝"
+                    },
+                    function (response) {
+
+                      
+      var notification = document.getElementById('notificationB');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+            // 显示返回的结果
+            if (response === "未找到匹配的数据") {
+              $('#result').html("未找到对应的数据");
+            } else {
+              // 将返回的数据分隔并显示
+              var data = response.split(",");
+
+          
+              var resultText = "编号: " + data[0] + "<br>名称: " + data[1] + "<br>分数: " + data[2] + "<br>额外信息: " + data[3];
+              document.getElementById("usdtname111q").value=data[0];   // 上游名称
+              document.getElementById("uraaaaaq").value= data[1] ;  // RMB
+              document.getElementById("urbbbbbq").value= data[2] ;   // 汇率
+              document.getElementById("urdddddq").value= data[3] ;  // 红字 
+
+            }
+                
+                    
+        
+        });
+        }
+
+
+
+          function Searchbcotc300(){
+
+
+          
+     var notification = document.getElementById('notificationA');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+
+
+          $.get("https://script.google.com/macros/s/AKfycbynYY_Htm4Y0gPV9OsMvIY172mJqREEUKNPOXv6TI_ZdJGNJTftavZWQomiiZDzXLaz/exec", {
+                 "number": "BC300宝"
                     },
                     function (response) {
 
@@ -12918,7 +13031,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260305v1019</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260305v1020</font>
 
 
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRHHJk9tVfYu1AEypr7QJGu1okWp4bPxyy"  size="10"></input></br>
@@ -15282,9 +15395,14 @@ ERC20
         <input  class="ufarawayn" type="button" value="💳BC大额卡卡" style="color: white;font-weight: bolder;  " onclick="Searchbcotccard();urmbbbbbq(this);"></input>
       </div>
 
-      <div id="Searchvcotc1" style="position:absolute; margin-top: 20px; margin-left: 620px;" >
-        <input  class="ufarawayn" type="button" value="🟦BCOTC支付宝" style="color: white;font-weight: bolder;  " onclick="Searchbcotc();urmbbbbbq(this);"></input>
+      <div id="Searchvcotc1" style="position:absolute; margin-top: 20px; margin-left: 600px;" >
+        <input  class="ufarawayn" type="button" value="🟦BC500宝" style="color: white;font-weight: bolder;  " onclick="Searchbcotc500();urmbbbbbq(this);"></input>
       </div>
+
+            <div id="Searchvcotc1" style="position:absolute; margin-top: 20px; margin-left: 700px;" >
+        <input  class="ufarawayn" type="button" value="🟠BC300宝" style="color: white;font-weight: bolder;  " onclick="Searchbcotc300();urmbbbbbq(this);"></input>
+      </div>
+
 
             <div id="Serchnewbccardsmall" style="position:absolute; margin-top: 70px; margin-left: 490px;" >
         <input  class="myButtonbc" type="button" value="💳 新BC卡"   style="color:yellow; font-weight: bolder;
@@ -15298,10 +15416,15 @@ ERC20
          text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000,
                       -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;" onclick="Serchnewbccard();urmbbbbbq(this);"></input>
       </div>
-      <div id="Serchnewbca" style="position:absolute; margin-top: 70px; margin-left: 630px;" >
-        <input  class="myButtonbc" type="button" value="🟦 新支付宝"   style="color:yellow; font-weight: bolder;
+      <div id="Serchnewbca" style="position:absolute; margin-top: 70px; margin-left: 580px;" >
+        <input  class="myButtonbc" type="button" value="🟦 新500宝"   style="color:yellow; font-weight: bolder;
          text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000,
-                      -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;" onclick="Serchnewbca();urmbbbbbq(this);"></input>
+                      -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;" onclick="Serchnewbca500();urmbbbbbq(this);"></input>
+      </div>
+          <div id="Serchnewbca" style="position:absolute; margin-top: 70px; margin-left: 670px;" >
+        <input  class="myButtonbc" type="button" value="🟠 新300宝"   style="color:yellow; font-weight: bolder;
+         text-shadow: -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000,
+                      -0.5px 0.5px 0 #000, 0.5px 0.5px 0 #000;" onclick="Serchnewbca300();urmbbbbbq(this);"></input>
       </div>
           <div id="Serchnewvca" style="position:absolute; margin-top: 110px; margin-left: 630px;" >
         <input  class="myButtonbc" type="button" value="💳 新VC宝"   style="color:yellow; font-weight: bolder;
