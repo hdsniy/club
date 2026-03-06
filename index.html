@@ -1078,6 +1078,18 @@ input#btrx:checked ~ div#c22 div#btrx
   display: block;
 }
 
+
+.xxxeth {
+  display: none;
+}
+
+input#aeth:checked ~ div#c11eth div#aeth,
+input#beth:checked ~ div#c22eth div#beth
+  {
+  display: block;
+}
+
+
 .rcxx {
   display: none;
 }
@@ -7376,9 +7388,9 @@ var notification = document.getElementById('notification');
     }, 2000); // 三秒後淡出
 
 
-var content333 = document.getElementById('trxurceth');
+var content3333 = document.getElementById('uethrc');
   
-  content333.select();
+  content3333.select();
   document.execCommand('copy');
 } //复制内容
 
@@ -9818,6 +9830,51 @@ function utrx(){
  document.getElementById('utrxexcel').value=strDate+" 	"+utrxname+" 	"+utrx+" 	"+toltrx+" 	"+utrxrate+" 	"+utrxorder;
 
 }
+
+
+
+//商户买ETH
+function ueth(){
+
+    var oruethrate = document.getElementById('uethrate').value;
+
+  var uethrate =  truncateDecimals (1/ (document.getElementById('uethrate').value),10);
+  var uethusdt = document.getElementById('ueth').value;
+  var uethname = document.getElementById('uethname').value;
+  var uethorder = document.getElementById('uethorder').value;
+    var rcaddress = document.getElementById('rcoutaddress').value;
+
+
+   document.getElementById('uethtol').value = truncateDecimals( uethrate*uethusdt,10);
+ var  uethtol = truncateDecimals( uethrate*uethusdt,10);
+
+  var date = new Date();
+  var strDate = (date.getMonth()+1)+"/"+date.getDate();
+
+var blchgrttime = document.getElementById('blchgrttimeBEPETH').value;
+
+const dateObj = new Date(blchgrttime);
+
+const month = dateObj.getMonth() + 1; // JavaScript中的月份是從0開始，所以需要加1
+const day = dateObj.getDate();
+
+
+const outputDate = month + "/" + day;
+
+
+
+  document.getElementById('trxuouteth').value=uethname+" \n买ETH，目前汇率 1 USDT = "+uethrate+" ETH\n 此次购买 『"+uethusdt+" 』 USDT\n"+uethusdt+" USDT* "+uethrate+"  = "+uethtol+" ETH \n稍后扣除商户余额 "+uethusdt+" U\n亲，再帮我请确认下";
+  document.getElementById('uethrc').value=uethname+" 扣除 TRC "+uethusdt+" (买ETH，汇率 1 USDT = "+uethrate+" ETH, 买 "+uethtol+" ETH = "+uethusdt+" U * "+uethrate+"  = "+uethtol+" ETH) - "+uethorder;
+document.getElementById('notyetetercETH').value=outputDate+" 	ETH 	0xE4dDc6266cACaFBf34572197bB70266E3aeec65B 	"+uethtol+" 	"+blchgrttime+" 	"+uethname+"【商户买ETH】TRC20 扣除 " +uethusdt+" U ETH 上分 "+uethtol+" U汇率 "+ uethrate+" 	"+oruethrate ;
+document.getElementById('notyetettrcETH').value=outputDate+" 	USDT-TRC20 	"+rcaddress+" 	-"+uethusdt+" 	"+blchgrttime+" 	"+uethname+"【商户买ETH】TRC20 扣除 " +uethusdt+" U ETH 上分 "+uethtol+" ETH- 汇率 "+ oruethrate;
+
+
+
+
+
+}
+
+
 
 function trxueth(){
   var trxurate=(truncateDecimals(((parseFloat(document.getElementById('trxurateeth').value)-500)/100),0)*100).toFixed(0);   // ETH 汇率 -500 算整数
@@ -13031,7 +13088,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260306v1021</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260306v1022</font>
 
 
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRHHJk9tVfYu1AEypr7QJGu1okWp4bPxyy"  size="10"></input></br>
@@ -15808,10 +15865,57 @@ style="width:600px;height:180px;color:rgb(155, 238, 2); font-weight: bold; font-
 </br>
 </br>
 
-<font style="color:yellow;"> <h1>会员转错 ETH </h1></font> 
+
+ <input type="radio" id="aeth" name="ddddeth"  checked="checked"  style="width: 20px; height:20px; "></input>
+  <label for="aeth" style="font-size:30px; background-color: black; ">🌞 商户买ETH</label>
+  <input type="radio" id="beth" name="ddddeth"  style="width: 20px; height:20px;"></input>
+  <label for="beth" style="font-size:30px; background-color: black; ">🌞 会员转错 ETH</label>
 
 
-收 ETH 汇率 <font style="color:red;">  <strong>实价汇率-500 凑整数</strong> </font> </br>
+
+  <div id="c11eth">
+  <div id="aeth" class="xxxeth"> 
+    <div style="color: yellow; ">
+      </br>
+  商户买  ETH 汇率 = ETHSCAN 左上角 截图实时汇率给罗西确认</br></br>
+
+当前 汇率 1 ETH =  <input id="uethrate" style="background-color:yellow; width:100px; text-align: center; width: 100px;" value="" onkeyup="ueth(this)";></input> USDT </br></br>
+
+
+
+
+<input id="uethname"  placeholder="商户名称" style="background-color:rgb(10, 252, 159); width:150px; text-align: center; color:blue;font-weight: bolder;" value="" onkeyup="ueth(this)";></input> 
+
+</br>
+<input id="ueth" placeholder="USDT" style="background-color:rgb(10, 252, 159); width:190px; text-align: center; color:blue;font-weight: bolder;" value="" onkeyup="ueth(this)";></input> USDT = <input id="uethtol" style="background-color:rgb(248, 165, 10); width:100px; text-align: center; color:rgb(252, 6, 6);font-weight: bolder;" value="" onkeyup="ueth(this)";  readonly="readonly"></input> ETH </br>
+<input id="uethorder"  placeholder="转出单号" style="background-color:rgb(10, 252, 159);width:250px; text-align: center; color:blue;font-weight: bolder; "   value="" onkeyup="ueth(this)";></input>
+ </br>
+完成时间 <input id="blchgrttimeBEPETH" type="text" value="" size=5 style="background-color:rgb(243, 243, 183); text-align:center; font-weight:bold; color:#A6A600; width: 150px; " onkeyup="ueth(this)";></input>
+</br>
+
+
+<textarea id="uethrc" type="type" value="" style="width:0px;height:0px;color:yellow;background-color:#000079;font-weight:bold;  position:absolute; right:50000px ;" readonly="readonly" onkeyup="ueth(this)";></textarea>
+<textarea id="uethgoin" type="hidden" value="" style="width:0px;height:0px;color:yellow;background-color:#000079;font-weight:bold;  position:absolute;right:50000px ;" readonly="readonly" onkeyup="ueth(this)";></textarea>
+<textarea id="uethcomming" type="hidden" value="" style="width:0px;height:0px;color:yellow;background-color:#000079;font-weight:bold;  position:absolute; right:50000px ;" readonly="readonly" onkeyup="ueth(this)";></textarea>
+<textarea id="uethexcel" type="hidden" value="" style="width:0px;height:0px;color:yellow;background-color:#000079;font-weight:bold;  position:absolute; right:50000px ;" readonly="readonly" onkeyup="ueth(this)";></textarea>
+
+</br>
+<button id="blchgtrrceth" class="myButton" onclick="trxurcbteth()"><font color="blue" >🌍RC帳記</font></button>
+<button id="notyetetercbtETH" class="myButton" onclick="notyetetercbtETH()"><font color="blue" >🌍 商户往来U TRC </font></button><textarea id="notyetetercETH" type="hidden" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;  position:absolute; right:0px ;" ></textarea>
+<button id="notyetettrcbtETH" class="myButton" onclick="notyetettrcbtETH()"><font color="blue" >🌍 商户往来U ETH</font></button></br><textarea id="notyetettrcETH" type="hidden" value="" style="width:200px;height:20px;color:red;background-color:hsl(24, 85%, 81%);font-weight:bold;  position:absolute; right:0px ;"></textarea></br>
+
+
+</div>
+  </div>
+</div>
+
+
+<div id="c22eth">
+  <div id="beth" class="xxxeth" > 
+    <div style="color: yellow; ">
+    </br> 
+
+    收 ETH 汇率 <font style="color:red;">  <strong>实价汇率-500 凑整数</strong> </font> </br>
 例如 3017.63  -500  = 给  2500</br>
 例如 3200.63  -500  = 给  2700</br>
 
@@ -15826,6 +15930,17 @@ style="width:600px;height:180px;color:rgb(155, 238, 2); font-weight: bold; font-
 ETH 金额 <input id="trxutrxeth" style="background-color:yellow; width:100px; text-align: center; font-weight: bold;" value="" onkeyup="trxueth(this)";></input>
 补入单号<input id="trxinordereth" style="background-color:yellow; width:150px; text-align: center;  color:blue; font-weight: bold;" value="" onkeyup="trxueth(this)";></input> </br>
 <button id="blchgtrrceth" class="myButton" onclick="trxurcbteth()"><font color="blue" >🌍RC帳記</font></button></br></br>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+
+
 
 
 <button id="trxuoutbteth" class="myButton" onclick="trxuoutbteth()">复制内容</button>
