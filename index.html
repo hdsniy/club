@@ -7413,6 +7413,24 @@ function trxurcbt(){
     document.execCommand('copy');
 } //复制内容
 
+function trxurcbteth6(){
+
+var notification = document.getElementById('notification');
+    notification.style.top = '50px'; // 滑出位置
+    notification.style.opacity = '1'; // 顯示提示框
+    
+    setTimeout(function() {
+      notification.style.top = '-100px'; // 滑出位置
+      notification.style.opacity = '0'; // 隱藏提示框
+    }, 2000); // 三秒後淡出
+
+
+var content3333trxurceth = document.getElementById('trxurceth');
+  
+  content3333trxurceth.select();
+  document.execCommand('copy');
+} //复制内容
+
 
 function trxurcbteth(){
 
@@ -13126,7 +13144,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260308v1024</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260308v1025</font>
 
 
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRHHJk9tVfYu1AEypr7QJGu1okWp4bPxyy"  size="10"></input></br>
@@ -15967,7 +15985,7 @@ style="width:600px;height:180px;color:rgb(155, 238, 2); font-weight: bold; font-
 订单号<input id="trxuordereth" style="background-color:yellow; width:150px; text-align: center;  color:blue; font-weight: bold;" value="" onkeyup="trxueth(this)";></input> </br>
 ETH 金额 <input id="trxutrxeth" style="background-color:yellow; width:100px; text-align: center; font-weight: bold;" value="" onkeyup="trxueth(this)";></input>
 补入单号<input id="trxinordereth" style="background-color:yellow; width:150px; text-align: center;  color:blue; font-weight: bold;" value="" onkeyup="trxueth(this)";></input> </br>
-<button id="blchgtrrceth" class="myButton" onclick="trxurcbteth()"><font color="blue" >🌍RC帳記</font></button></br></br>
+<button id="blchgtrrcethQ" class="myButton" onclick="trxurcbteth6()"><font color="blue" >🌍RC帳記</font></button></br></br>
 
 
 
@@ -15975,8 +15993,6 @@ ETH 金额 <input id="trxutrxeth" style="background-color:yellow; width:100px; t
 </div>
 </div>
 </div>
-
-
 
 
 
