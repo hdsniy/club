@@ -3421,14 +3421,16 @@ function usdtv2(obj) {
 
     const tol = ((usdtv2amount1) * 100 - parseFloat(trcfee.toPrecision(12) * 100)) / 100;
     const tolrmb = original;
-    //const tolqq = original + " RMB/ " + rate + " = " + usdt + " USDT";
-    const tolqq ="**" +parseFloat(usdt) + " USDT * "+ rate  +" = " + original + " RMB **"  ;
+    const tolqq = original + " RMB/ " + rate + " = " + usdt + " USDT";
 
     // 使用 match 并先判断结果是否为 null
     const match = usdtv2address.match(/[A-Za-z0-9]{34}/);
 
 
     if (usdtv2name == "自营商-WEPOKER(支付宝)+0.1" ) {
+
+          const tolqq ="公式： `" +parseFloat(usdt) + "  * "+ rate  +" = " + original + " ` (点击蓝字可复制)"  ;
+
 
       const tolERC = ((usdtv2amount1) * 100 - parseFloat(ercfee.toPrecision(12) * 100)) / 100;
 
@@ -3965,7 +3967,7 @@ else if ( uname ==  "自營商-10b18(大额卡卡)"	||  uname == "自營商-10b1
           else if (uname === "自营商-WEPOKER(支付宝)+0.1" ) {
 
 
-  var uorder ="**" + tol+" USDT * "+taiginrate+" = "+ taiginrmb+" RMB **";
+  var uorder ="公式： `" + tol+" * "+taiginrate+" = "+ taiginrmb+" ` (点击蓝字可复制)";
 
 
   document.getElementById('uout').value="USDT-TRC20\n"+"商户: `"+uname+"`\n"+uorder+"\n此笔金额为: "+uin1+" U"+"  手续费: "+trcfee+" U\n"+"『实际转出: "+tol +" U』\n"+"\n到以下地址\n"+uinaddress+"\n再请帮我确认下\n\n❌注意❌\n请确认『U 金额』及『地址』是否有问题，贵司人员打『1』或其他确认信息确认\n我司出款后>有任何问题我司一概不承担，请详读确认讯息，谢谢";
@@ -13168,7 +13170,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260319v1029</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260321v1030</font>
 
 
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TMQHRUrk3jWCkFSMJFmrEFFjyS2y4RwaPp"  size="10"></input>
