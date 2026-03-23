@@ -10881,8 +10881,9 @@ function ababoml(){
 
 function restfee(){
 
-  document.getElementById('restfeered').value=
-  "-备付金利润      \n-转卡代付利润    \n-支付宝代付利润    \n-快云手续费       \n-聚财手续费             ";
+
+    const el = document.getElementById('restfeered');
+    el.value = el.defaultValue;
 
 
   document.getElementById('cloudpayment').value=0;
@@ -13352,6 +13353,7 @@ white-space:nowrap;">买价</a> /
 -转卡代付利润 
 -支付宝代付利润
 -快云手续费 
+-旭滕手续费 
 -聚财手续费  
 
 
