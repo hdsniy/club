@@ -17370,51 +17370,58 @@ else if (person == password)
 
 
 
-  
+     var urls = [
 
 //没下发的
-href1="	https://ucpays.net/agent/withdraws?started_at="+strDate+"+00%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=103&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=6&relative_system_order_number=	"
+"	https://ucpays.net/agent/withdraws?started_at="+strDate+"+00%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=103&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=6&relative_system_order_number=	",
 //商户可用余额
-href2="	https://ucpays.net/agent/merchants?merchant_display_name=&merchant_number=&agent_id=&status=&trash_status=1&sorted_by=created_at_desc&withdraw_from_ui=	"
+"	https://ucpays.net/agent/merchants?merchant_display_name=&merchant_number=&agent_id=&status=&trash_status=1&sorted_by=created_at_desc&withdraw_from_ui=	",
 //入金利润
-href3="	https://ucpays.net/agent/deposits?started_at=2026-02-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	"
+"	https://ucpays.net/agent/deposits?started_at=2026-02-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	",
 //出金利
-href4="	https://ucpays.net/agent/withdraws?started_at=2026-02-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number=	"
+"	https://ucpays.net/agent/withdraws?started_at=2026-02-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number=	",
 
 //快云
-href5="	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	"
-href6="	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	"
+"	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	",
+"	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	",
+
+//旭滕
+"	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=605_57b394c34df9f17620859553&separate_order_status=-1&relative_system_order_number=	",
+"	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=605_57b394c34df9f17620859553&separate_order_status=-1&relative_system_order_number=	",
+
 
 //聚财
-href7="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=618_TM1767348476&separate_order_status=-1&relative_system_order_number="
-href8="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=618_TM1767348476&separate_order_status=-1&relative_system_order_number="
+"https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=618_TM1767348476&separate_order_status=-1&relative_system_order_number=",
+"https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=618_TM1767348476&separate_order_status=-1&relative_system_order_number=",
+
 
 
 //备付金
-href9="	https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=%E5%A4%87%E4%BB%98%E9%87%91&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	"
+"	https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=%E5%A4%87%E4%BB%98%E9%87%91&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	",
 //转卡代付
-href10="	https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=%E8%BD%AC%E5%8D%A1&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	"
+"	https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=%E8%BD%AC%E5%8D%A1&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	",
 //支付宝代付
-href11="https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=TYPE_DEPOSIT_USDT&merchant_number=&merchant_display_name=%E6%94%AF%E4%BB%98%E5%AE%9D&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
+"https://ucpays.net/agent/deposits?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=TYPE_DEPOSIT_USDT&merchant_number=&merchant_display_name=%E6%94%AF%E4%BB%98%E5%AE%9D&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
     
 
 //后台出U
-       href12="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=531_TTWM2hgSEA7mpkHdUuRWq6DVyuBifuAGQc&separate_order_status=-1&relative_system_order_number="  
+ "https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=531_TTWM2hgSEA7mpkHdUuRWq6DVyuBifuAGQc&separate_order_status=-1&relative_system_order_number="  ,
 //href12="https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=TTWM2hgSEA7mpkHdUuRWq6DVyuBifuAGQc&upstream_merchant_group_key%5B%5D=569_TBTUOVQLR0MP9R6N&separate_order_status=-1&relative_system_order_number=";
 //明额明细
-href13="https://ucpays.net/agent/merchants/wallet-history/integration?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"&ended_at=&merchant_display_name=&merchant_number="
-
-
-    var url=[href1,href2,href3,href4,href5,href6,href7,href8,href9,href10,href11,href12,href13]
+"https://ucpays.net/agent/merchants/wallet-history/integration?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"&ended_at=&merchant_display_name=&merchant_number=",
 
 
 
 
-for(var i=0;i<url.length;i++){
-  window.open(url[i], '_blank').location;
-}
 
-        }
+      ];
+
+
+
+     for (var i = 0; i < urls.length; i++) {
+        window.open(urls[i], '_blank');
+      }
+
           
 
 
@@ -17424,7 +17431,7 @@ for(var i=0;i<url.length;i++){
 
       }
 
-
+ }
 //UCFEE
 
 
