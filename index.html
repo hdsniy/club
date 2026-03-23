@@ -9916,6 +9916,8 @@ function utrx(){
 
 
 //商户买ETH
+
+
 function ueth(){
 
     var oruethrate = document.getElementById('uethrate').value;
@@ -9957,7 +9959,58 @@ document.getElementById('notyetettrcETH').value=outputDate+" 	USDT-TRC20 	"+rcad
 }
 
 
+/*
+function ueth(){
+    var oruethrate = document.getElementById('uethrate').value;
+    var uethusdt = parseFloat(document.getElementById('ueth').value);
+    var uethname = document.getElementById('uethname').value;
+    var uethorder = document.getElementById('uethorder').value;
+    var rcaddress = document.getElementById('rcoutaddress').value;
 
+    // ✅ 用 BigInt 高精度计算 1/price * usdt
+    function calcETH(usdtAmount, ethPrice, decimals) {
+        const scale = 10n ** BigInt(decimals + 8);
+        const priceInt = BigInt(Math.round(parseFloat(ethPrice) * 1e8));
+        const usdtInt  = BigInt(Math.round(usdtAmount * 1e8));
+        const resultInt = (usdtInt * scale) / priceInt;
+        const resultStr = resultInt.toString().padStart(decimals + 9, '0');
+        const intPart = resultStr.slice(0, -(decimals + 8)) || '0';
+        const decPart = resultStr.slice(-(decimals + 8)).substring(0, decimals);
+        return intPart + '.' + decPart;
+    }
+
+    // ✅ 用 BigInt 高精度计算 1/price（汇率显示用）
+    function calcRate(ethPrice, decimals) {
+        const scale = 10n ** BigInt(decimals + 8);
+        const priceInt = BigInt(Math.round(parseFloat(ethPrice) * 1e8));
+        const resultInt = (1n * scale * 100000000n) / priceInt;
+        const resultStr = resultInt.toString().padStart(decimals + 9, '0');
+        const intPart = resultStr.slice(0, -(decimals + 8)) || '0';
+        const decPart = resultStr.slice(-(decimals + 8)).substring(0, decimals);
+        return intPart + '.' + decPart;
+    }
+
+    var uethrate = calcRate(oruethrate, 10);     // 汇率字符串，如 "0.0006666666"
+    var uethtol  =parseFloat( calcETH(uethusdt, oruethrate, 10)); // 换算结果，如 "1.0000000000"
+
+    document.getElementById('uethtol').value = parseFloat(uethtol);
+
+    var date = new Date();
+    var strDate = (date.getMonth()+1)+"/"+date.getDate();
+
+    var blchgrttime = document.getElementById('blchgrttimeBEPETH').value;
+    const dateObj = new Date(blchgrttime);
+    const month = dateObj.getMonth() + 1;
+    const day = dateObj.getDate();
+    const outputDate = month + "/" + day;
+
+    document.getElementById('trxuouteth').value = uethname+" \n买ETH，目前汇率 1 USDT = "+uethrate+" ETH\n 此次购买 『"+uethusdt+" 』 USDT\n"+uethusdt+" USDT* "+uethrate+"  = "+uethtol+" ETH \n稍后扣除商户余额 "+uethusdt+" U\n亲，再帮我请确认下";
+    document.getElementById('uethrc').value = uethname+" 扣除 TRC "+uethusdt+"U (买ETH，汇率 1 USDT = "+uethrate+" ETH, 买 "+uethusdt+" U * "+uethrate+"  = "+uethtol+" ETH) - "+uethorder;
+    document.getElementById('notyetetercETH').value = outputDate+" 	ETH 	0xE4dDc6266cACaFBf34572197bB70266E3aeec65B 	"+uethtol+" 	"+blchgrttime+" 	"+uethname+"【商户买ETH】TRC20 扣除 " +uethusdt+" U ETH 上分 "+uethtol+" U汇率 "+ uethrate+" 	"+oruethrate;
+    document.getElementById('notyetettrcETH').value = outputDate+" 	USDT-TRC20 	"+rcaddress+" 	-"+uethusdt+" 	"+blchgrttime+" 	"+uethname+"【商户买ETH】TRC20 扣除 " +uethusdt+" U ETH 上分 "+uethtol+" ETH- 汇率 "+ oruethrate;
+}
+
+*/
 function trxueth(){
   var trxurate=(truncateDecimals(((parseFloat(document.getElementById('trxurateeth').value)-500)/100),0)*100).toFixed(0);   // ETH 汇率 -500 算整数
 
@@ -13170,7 +13223,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260321v1030</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260323v1031</font>
 
 
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TMQHRUrk3jWCkFSMJFmrEFFjyS2y4RwaPp"  size="10"></input>
@@ -18458,7 +18511,7 @@ else if (person == password)
         "https://admin.beeqoo99.com/admin",
         "https://chat.beeqoo99.com/app/accounts/1/conversations/53",
         "https://rcqoo99.com/#/admin/merchant/ips?name_or_username=&ipv4=&page=1",
-       "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TMdHwojMyp6W1c87pgdvJK79WyQxhKBVJv%20&type=&is_platform_tx=&amount=&row=15&page=1",
+       "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TCTNUf79SQfYQYr6hRFTYXwUqBvGdVCn52%20&type=&is_platform_tx=&amount=&row=15&page=1",
         "https://rcqoo99.com/#/admin/deposit/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=MKD2026032110153212649138&name_or_username=202407111118261456&system_wallet_address=&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=&type=",
 
       ];
