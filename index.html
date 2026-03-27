@@ -3471,6 +3471,23 @@ function usdtv2(obj) {
     }
 
 
+// 第二人确认  两人确认
+    else if ( usdtv2name == "BBIN-888(小额卡卡)" || usdtv2name == "BBIN-888(大额卡卡)"
+
+      )
+      
+      
+      {
+      document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order + "\n此笔金额为: " + usdtv2amount1 + " U" + "  手续费: " +
+        trcfee + " U\n" + "『实际转出: `" + tol + "` U』\n到以下地址\n`" + usdtv2address + "`\n**⚠️再请指定人员确认⚠️\n**⭐️**提交下发** @betlego89 @lego520888 \n**⭐️审核人员** @ttingl @weiwei1202 @dai0524 @peace_n_joy \n帮我确认下\n\n\n" + noticeText;
+    }
+
+
+
     // 第二人确认  两人确认
     else if (usdtv2name == "BBIN-qq(大额卡卡)" || usdtv2name == "BBIN-qq" || usdtv2name == "四方-昊升支付(大额卡卡)+0.25" || usdtv2name == "四方-昊升支付(支付宝)+0.15" || usdtv2name == "BBIN-008(支付宝)+0.2" || usdtv2name == "四方-Orionpay(大额卡卡)+0.23" || usdtv2name == "四方-Orionpay(小额卡卡)+0.25"  || usdtv2name == "四方-Orionpay(大额卡卡)+0.2" || usdtv2name == "BBIN-294"  || usdtv2name == "BBIN-950"|| usdtv2name == "BBIN-zz" || usdtv2name == "BBIN-bo8"  
 || usdtv2name == "自营商-JBO竟博(数字RMB)+0.15" 
@@ -13224,7 +13241,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260323v1031</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260327v1032</font>
 
 
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TEXBqWX2PLV2nQEvWfS8kt1DtvnFRxhRPC"  size="10"></input>
