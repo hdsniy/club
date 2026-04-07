@@ -13233,7 +13233,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260407v1036</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260407v1037</font>
 
 <!-- 出款地址 -->
 
@@ -13364,7 +13364,9 @@ white-space:nowrap;">买价</a> /
 -支付宝代付利润
 -快云手续费 
 -旭滕手续费 
--聚财手续费  
+-聚财手续费 
+-明日手续费 
+
 
 
 
@@ -13401,9 +13403,8 @@ white-space:nowrap;">买价</a> /
 </br></br>
 </div>
 
-<div style="font-size: 10px; position: relative; left:30px; top:-10px;">
-
-lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkeyup="frpayment(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
+<div style="font-size: 10px; position: relative; left:0px; top:-10px;">
+  旭腾(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkeyup="frpayment(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
 </div>
   <!--质远手续费-->
   <div style="position: absolute; margin-left: 690px; margin-top: -10px; ">
@@ -13418,7 +13419,7 @@ lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkey
 
 <div style="font-size: 10px; position: relative; left:-100px; margin-top: -29px;">
 
-  极速手续费( <input id="cloudpaymentrateTW" type="text" value="0.4"   placeholder="%"  onkeyup="tomorrowfee(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
+  明日手续费( <input id="cloudpaymentrateTW" type="text" value="0.7"   placeholder="%"  onkeyup="tomorrowfee(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
   </div>
   <!--明日手续费-->
   <div style="position: relative; left: -100px; margin-top: 0px; ">
@@ -13435,11 +13436,13 @@ lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkey
 
 
 
+<!-- 
+
 <div style="font-size: 10px; position: relative; left:300px; top:20px;">
 
   汇鑫手续费(<input id="gfrpaymentratea" type="text" value="0.5"   placeholder="%"  onkeyup="gfrpaymenta(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
   </div>
-    <!--安通手手续费-->
+
     <div style="position: absolute; margin-left: 950px; margin-top: 30px; ">
   
     <input id="gfrpaymenta" type="text" value=""   placeholder="汇鑫手续费"  onkeyup="gfrpaymenta(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="10" ></input></br>
@@ -13453,7 +13456,7 @@ lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkey
 
     FML手续费(<input id="gfrpaymentrateafu" type="text" value="0.5"   placeholder="%"  onkeyup="fupay(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
     </div>
-      <!--金狮手续费-->
+
       <div style="position: absolute; margin-left: 1100px; margin-top: 10px; ">
     
       <input id="gfrpaymentafu" type="text" value=""   placeholder="FML手续费"  onkeyup="fupay(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="10" ></input></br>
@@ -13469,7 +13472,7 @@ lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkey
 
 局气(<input id="frpaymentratea" type="text" value="0.5"   placeholder="%"  onkeyup="frpaymenta(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
   </div>
-    <!--银付通2手续费-->
+
     <div style="position: absolute; margin-left: 740px; margin-top: -10px; ">
   
     <input id="frpaymenta" type="text" value=""   placeholder="局气"  onkeyup="frpaymenta(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="10" ></input></br>
@@ -13484,9 +13487,9 @@ lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkey
   
   <div style="font-size: 10px; position: relative; left:-120px; margin-top: -29px;">
   
-    明日手续费( <input id="frpaymentrateb" type="text" value="0.7"   placeholder="%"  onkeyup="frpaymentb(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
+    明日手续费( <input id="frpaymentrateb" type="text" value="0.8"   placeholder="%"  onkeyup="frpaymentb(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
     </div>
-    <!--银付通手续费-->
+ 
     <div style="position: relative; left: -100px; margin-top: 0px; ">
   
      <input id="frpaymentb" type="text" value=""   placeholder="牧师支付"  onkeyup="frpaymentb(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="10" ></input></br>
@@ -13542,12 +13545,14 @@ lkpay(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkey
               <input id="lofrpaymentingvms" type="text" value="0"   placeholder="GT手续费"  onkeyup="frpaymentbvms(this);" style="font-size: 5pt; color: #a09f9f;  border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="10" ></input></br>
               <input id="lofrpaymenttolvms" type="text" value=""   readyonlt="readonly" placeholder="手续费"  onkeyup="frpaymentbvms(this);" style="font-size: 5pt; color: #a09f9f;  border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="10" ></input></br>
           </br></br>
-        
-
-
-
-
+          
           </div>
+        
+-->
+
+
+
+
 
  
 
@@ -14855,7 +14860,9 @@ background-size: cover;  " onkeyup="west23(this);west(this)"></textarea></br></b
   　　
 </br>
 <h1 style="background-color: black;">备付金</h1>  
-<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="fastcloud();u12019();"><font color="white" style="font-size: 20px;" >快云</font><font color="yellow" style="font-size: 20px; " >0.5%+2</font></button>
+<button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="fastcloud();u12019();"><font color="white" style="font-size: 20px;" >快云</font><font color="yellow" style="font-size: 20px; " >0.6%+2</font></button>
+   <button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="tomorrow();u12019();"><font color="white" style="font-size: 20px;" >明日</font><font color="yellow" style="font-size: 20px; " >0.8%+2</font></button>
+
 </br>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="GFBBBV();u12018();"><font color="black" style="font-size: 20px;" >聚财 - 预付上分</font><font color="red" style="font-size: 20px; " >0.4%+2</font></button>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="yc();u12018();"><font color="black" style="font-size: 20px;" >旭滕代付 - 预付上分</font><font color="red" style="font-size: 20px; " >0.5%+2 (返佣千一 实际0.6%+2)</font></button>
@@ -14871,7 +14878,6 @@ background-size: cover;  " onkeyup="west23(this);west(this)"></textarea></br></b
 <button id="ufarawayn" class="myButton" style="padding:5px 5px;" onclick="DMP();u12019();"><font color="blue" style="font-size: 20px;" >DMP支付宝<font color="red" style="font-size: 20px; " >汇率上浮+0.03</font></font></button></button>
 
   <!--暂时不用区
-   <button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="tomorrow();u12019();"><font color="white" style="font-size: 20px;" >明日</font><font color="yellow" style="font-size: 20px; " >0.7%%+2</font></button>
 <button id="uMLBn" class="ufarawayn" style="padding:5px 5px; height: 40px;" onclick="gs();u12019();"><font color="white" style="font-size: 20px;" >F86</font><font color="yellow" style="font-size: 20px; " >0.2%+2</font></button>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="yc();u12018();"><font color="black" style="font-size: 20px;" >亿乾代付 - 预付上分</font><font color="red" style="font-size: 20px; " >0.4%+2</font></button>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="bl();u12018();"><font color="black" style="font-size: 20px;" >保利 - 预付上分</font><font color="red" style="font-size: 20px; " >0.5%+2</font></button>
