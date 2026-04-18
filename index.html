@@ -3579,12 +3579,98 @@ else if (usdtv2name === "BBIN-55(支付宝抗头)+0.12") {
 }
 
 
+
+// LEBO-澳门金沙娱乐场 指定地址
+else if (
+    usdtv2name === "LEBO-澳门金沙娱乐场" &&
+    (
+        usdtv2address === "TY5gLRL7o9zM1aBcG1gf7XuduMPWFT1Kp3" 
+    )
+) {
+
+    var taghh="**商户固定地址** \n✅ `TY5gLRL7o9zM1aBcG1gf7XuduMPWFT1Kp3` 如有不同 请驳回\n";
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "**再请帮我确认下**\n\n" +
+        taghh + "\n" + noticeText;
+
+}
+
+// LEBO-澳门金沙娱乐场- 其他地址
+else if (usdtv2name === "LEBO-澳门金沙娱乐场") {
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "⚠️**注意** 非固定地址⚠️\n请驳回 \n\n" +
+        noticeText;
+}
+
+
+
+// EZPAY - 指定地址
+else if (
+    usdtv2name === "四方-EZPAY(支付宝抗头)+0.12" &&
+    (
+        usdtv2address === "TAT4f8run7vRd7sx1yLpRj1YXxp3PyJMev"  
+
+    )
+) {
+
+    var taghh="**商户固定地址** \n✅ `TAT4f8run7vRd7sx1yLpRj1YXxp3PyJMev`\n";
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "**再请帮我确认下**\n\n" +
+        taghh + "\n" + noticeText;
+
+}
+
+// EZPAY - 其他地址
+else if (usdtv2name === "四方-EZPAY(支付宝抗头)+0.12") {
+
+    document.getElementById('usdtv2out').value =
+        "USDT-TRC20\n" +
+        "商户: `" + usdtv2name + "`\n" +
+        tolqq + "\n" +
+        usdtv2order +
+        "\n此笔金额为: " + usdtv2amount1 + " U 手续费: " +
+        trcfee + " U\n" +
+        "『实际转出: `" + tol + "` U』\n" +
+        "到以下地址\n`" + usdtv2address + "`\n" +
+        "⚠️**注意** 非固定地址⚠️ **请至代理群确认更换地址**" ;
+}
+
+
+
 // BBIN-scc - 指定地址
 else if (
-    usdtv2name === "BBIN-scc(支付宝抗头)+0.15" &&
+    usdtv2name === "BBIN-scc(支付宝抗头/微信)+0.15" &&
     (
         usdtv2address === "TFqxWhDfkRVHdJ3A9fc1hx6yZNbR8gxbjY"  ||
-        usdtv2address === "TT6G7Csx3FQbqWZ95bHWSoiNuiBvzMaRGo"  
+        usdtv2address === "TT6G7Csx3FQbqWZ95bHWSoiNuiBvzMaRGo"  ||
+        usdtv2address === "TQM9qugVudjmJbGuFeTXEeRNhzYVHaYcoh" 
     )
 ) {
 
@@ -3605,7 +3691,7 @@ else if (
 }
 
 // BBIN-scc - 其他地址
-else if (usdtv2name === "BBIN-scc(支付宝抗头)+0.15") {
+else if (usdtv2name === "BBIN-scc(支付宝抗头/微信)+0.15") {
 
     document.getElementById('usdtv2out').value =
         "USDT-TRC20\n" +
@@ -3625,7 +3711,7 @@ else if (usdtv2name === "BBIN-scc(支付宝抗头)+0.15") {
 
 // BBIN-437 - 指定地址
 else if (
-    usdtv2name === "BBIN-437(支付宝抗头)+0.14" &&
+    usdtv2name === "BBIN-437(支付宝抗头)+0.12" &&
     (
         usdtv2address === "TEpZEcjmzHR5CQ8p3BcrH8cCiMWS6cb7mE" 
     )
@@ -3648,7 +3734,7 @@ else if (
 }
 
 // BBIN-437 - 其他地址
-else if (usdtv2name === "BBIN-437(支付宝抗头)+0.14") {
+else if (usdtv2name === "BBIN-437(支付宝抗头)+0.12") {
 
     document.getElementById('usdtv2out').value =
         "USDT-TRC20\n" +
@@ -13236,7 +13322,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260412v1040</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260418v1043</font>
 
 <!-- 出款地址 -->
 
@@ -18495,15 +18581,18 @@ else if (person == password)
     document.getElementById("timerc").value = "开启成功";
     
 
-           
+           /*
+          GASFREE
+        "https://tronscan.io/#/balanceView/" + rcgasfreeaddress,
+        "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=" + rcgasfreeaddress + "&type=&has_group=&channel_code=&status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2&user_id=&page=1&external_enable=&balance=&auto_withdraw=&third_party_withdraw_enable=&is_blocked=",
+      
+           */
 
     var urls = [
         "https://rcqoo99.com/#/admin/merchant/order-stats?page=1",
         "https://tronscan.io/#/address/" + rcaddress,
         "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=" + rcaddress + "&type=&has_group=&channel_code=&status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2&user_id=&page=1&external_enable=&balance=&auto_withdraw=&third_party_withdraw_enable=&is_blocked=",
-          "https://tronscan.io/#/balanceView/" + rcgasfreeaddress,
-        "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=" + rcgasfreeaddress + "&type=&has_group=&channel_code=&status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2&user_id=&page=1&external_enable=&balance=&auto_withdraw=&third_party_withdraw_enable=&is_blocked=",
-      
+  
       
         "https://rcqoo99.com/#/admin/wallet/transfer-record?started_at=" + strDate + "T00%3A00%3A00%2B08%3A00",
         "https://rcqoo99.com/#/admin/wallet/all-wallets?status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2",
