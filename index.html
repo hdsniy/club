@@ -4875,76 +4875,17 @@ function u12019(){
 
 
   document.getElementById('u12019uc').value= "+"+u12019name +" 充值 "+ u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB 实际上分 "+ u12019tol +" RMB" ;
-  document.getElementById('u12019rcgoin').value=u12019name+"充值上分 	"+u12019name+"充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20";
+  document.getElementById('u12019rcgoin').value=u12019name+"充值上分 	"+"上游备付金充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20";
   document.getElementById('u12019rc').value = "从 外部地址(VPqAY) 转出 TRC "+u12019u+" (给 "+u12019name+" 充值上分)不影响帐 - ";
 
   document.getElementById('uctext').value= "+"+u12019name +" 充值 "+ u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB 实际上分 "+ u12019tol +" RMB" ;
-  document.getElementById('utext').value=u12019name+"充值上分 	"+u12019name+"充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20";
+  document.getElementById('utext').value=u12019name+"充值上分 	"+"上游备付金充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20";
   document.getElementById('rcouttext').value = "从 外部地址(VPqAY) 转出 TRC "+u12019u+" (给 "+u12019name+" 充值上分)不影响帐 - ";
 
   var farawayercaddress = document.getElementById('farawayercaddress').value;
 
 
-  if (u12019name ==="质远代收" || u12019name ==="质远代收小额" ){
 
-
-
-  document.getElementById('u12019uc').value= "-"+u12019name +" 余额换U "+ u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB 扣除 "+u12019rmb+" RMB";
-  document.getElementById('u12019rcgoin').value=u12019name+" 	"+"余额换U 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+"- 	"+u12019u+" 	TRC20";
-  document.getElementById('u12019rc').value = "外部地址(VPqAY) 转入 TRC "+u12019u+" ( "+u12019name+"余额换U "+u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB  )不影响帐 - 无订单号 ";
-  document.getElementById('farawayutotal').value = u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB ";
-
-
-  document.getElementById('uctext').value= "-"+u12019name +" 余额换U "+ u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB 扣除 "+u12019rmb+" RMB";
-  document.getElementById('utext').value=u12019name+" 	"+"余额换U 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+"- 	"+u12019u+" 	TRC20";
-  document.getElementById('rcouttext').value = "外部地址(VPqAY) 转入 TRC "+u12019u+" ( "+u12019name+"余额换U "+u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB  )不影响帐 - 无订单号 ";
-
-  
-  //ERC
-  document.getElementById('farawayercrc').value = "外部地址("+farawayercaddress+") 转入 ERC "+u12019u+" ( "+u12019name+"余额换U "+u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB  )不影响帐 - 无订单号 ";
-  document.getElementById('farawayercgoin').value = u12019name+"余额换U 	"+u12019name+"余额换U 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+"- 	"+u12019u+" 	ERC20";
-
-
-
-
-}
-
-
-  if (u12019name ==="智支付10589"  ){
-
-  var ru10589 =  parseFloat((document.getElementById('ru10589').value).replace(/[,]+/g, ""));
-  var rate10589 =   parseFloat((document.getElementById('rate10589').value).replace(/[,]+/g, ""));
-  tols=(ru10589/rate10589).toFixed(0);
-  document.getElementById('rmb10589').value=tols;
-  document.getElementById('u12019u').value=tols;
-  document.getElementById('u12019rate').value=rate10589;
-
-  document.getElementById('u12019uc').value= u12019name +" 上分余额换U "+ ru10589+" RMB / "+rate10589+" = "+ tols +" USDT" ;
-  document.getElementById('u12019rcgoin').value=u12019name+"上分余额换U 	"+u12019name+"上分余额换U 	"+ru10589+" RMB/ "+rate10589+" = "+ tols+" USDT"+" 	"+tols+" 	- 	TRC20";
-  document.getElementById('u12019rc').value = "从 外部地址(VPqAY) 转出 TRC "+u12019u+" (给 "+u12019name+" 上分余额换U)不影响帐 - ";
-
-
-
-  }
-
-  /*
-
-  else if ( u12019name ==="无名"){
-
-var ru10589 =  parseFloat((document.getElementById('ru10589').value).replace(/[,]+/g, ""));
-var rate10589 =   parseFloat((document.getElementById('rate10589').value).replace(/[,]+/g, ""));
-tols=(ru10589/rate10589).toFixed(0);
-document.getElementById('rmb10589').value=tols;
-document.getElementById('u12019u').value=tols;
-document.getElementById('u12019rate').value=rate10589;
-
-document.getElementById('u12019uc').value= u12019name +" 充值上分 "+ ru10589+" RMB / "+rate10589+" = "+ tols +" USDT" ;
-document.getElementById('u12019rcgoin').value=u12019name+"充值上分 	"+u12019name+"充值上分 	"+ru10589+" RMB/ "+rate10589+" = "+ tols+" USDT"+" 	"+tols+" 	- 	TRC20";
-document.getElementById('u12019rc').value = "从 外部地址(VPqAY) 转出 TRC "+u12019u+" (给 "+u12019name+" 充值上分)不影响帐 - ";
-
-document.getElementById('farawayutotal').value = ru10589+" RMB / "+rate10589+" = "+ tols +" USDT" ;
-
-}*/
 
 
 
@@ -13367,7 +13308,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260604v1063</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260604v1064</font>
 
 <!-- 出款地址 -->
 
