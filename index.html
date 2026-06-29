@@ -9436,6 +9436,7 @@ var inerror=document.getElementById('inerror');
 var inerror2=document.getElementById('inerror2');
 var checkinternet=document.getElementById('checkinternet');
 var rcorderamount=document.getElementById('rcorderamount');
+var usdccontractdiv=document.getElementById('usdccontractdiv');
 
 
 if (checkinternet.checked == true){
@@ -9459,6 +9460,7 @@ if (option === "修改金额"){
 
 
   rcorderamount.style.display="block";
+  usdccontractdiv.style.display="none";
 
 
 
@@ -9495,6 +9497,7 @@ if (option === "重复支付"){
 
 
   rcorderamount.style.display="block";
+  usdccontractdiv.style.display="none";
 
 
 
@@ -9523,6 +9526,7 @@ if (option === "修改金额(ETH)"){
 
 
   rcorderamount.style.display="block";
+  usdccontractdiv.style.display="none";
 
 
 
@@ -9555,6 +9559,7 @@ if (option === "会员转错TRX" ){
 
 
   rcorderamount.style.display="none";
+  usdccontractdiv.style.display="none";
 
 
  trxusdtaa=document.getElementById('trxusdta').value;
@@ -9585,11 +9590,14 @@ if(rcchg3.indexOf("VND") >= 0 ) {
 }
 
 
+
+
 if (option === "会员转错ETH" ){
 
 
 
   rcorderamount.style.display="none";
+  usdccontractdiv.style.display="none";
 
 
  trxusdtaa=document.getElementById('trxusdta').value;
@@ -9620,6 +9628,43 @@ if(rcchg3.indexOf("VND") >= 0 ) {
 }
 
 
+if (option === "会员转错USDC" ){
+
+
+
+  rcorderamount.style.display="none";
+  usdccontractdiv.style.display="block";
+
+
+ trxusdtaa=document.getElementById('trxusdta').value;
+
+
+  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错USDC转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  //判断兰为为空 请帮忙会员上分
+  if(rcchg3.length==0){
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错USDC转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+}
+
+
+
+
+if(rcchg3.indexOf("VND") >= 0 ) { 
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错USDC 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+  
+  } 
+
+  if(rcchg3.indexOf("PHP") >= 0 ) { 
+    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错USDC 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseFloat(rcchg3)+" PHP 】**\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+
+  
+  } 
+
+}
+
+
+
 
 
 if (option === "会员转错链"){
@@ -9628,6 +9673,7 @@ if (option === "会员转错链"){
  inerror2.style.display="block";
 
  rcorderamount.style.display="none";
+ usdccontractdiv.style.display="none";
 
  
  var OKCBSC = document.getElementById('OKCBSC').value;
@@ -16566,6 +16612,7 @@ function formatText() {
 <option value="修改金额(ETH)" >💜修改金额(ETH)</option>
   <option value="会员转错TRX">会员转错TRX</option>
   <option value="会员转错ETH">会员转错ETH</option>
+    <option value="会员转错USDC">会员转错USDC</option>
   <option value="会员转错链">会员转错链</option>
 
 </select>
@@ -16619,6 +16666,14 @@ function formatText() {
 <input id="trxusdta" type="text" value=""   style=" text-align:center;  width: 180px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent; position: relative; right: 2000000000px;"  onkeyup="rcchg(this)" ></input>
 
 </div>
+
+<div id="usdccontractdiv" style="display: none;">
+  <font style="background-color: black;">USDC合约地址：</font></br>
+
+<input id="usdccontract" type="text" value="0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" placeholder="合约地址" style="text-align:center; width: 550px; font-size: 13pt; color:yellowgreen; font-weight: bolder; border: none; background-color: black;" onkeyup="rcchg(this)"></input></br>
+   <font style="background-color: black; color: yellow;">   扣除 5 U 上分   </font></br> 
+</div>
+
 </br>
 
 <textarea id="rcin" placeholder="请输入订单资讯"   ptype="text" value="" style="width:600px; height:180px; color:rgb(100, 218, 125);font-weight:bold;    background:black; font-size:13pt; text-align:center;" onkeyup="rcchg(this)";></textarea>
@@ -17381,8 +17436,8 @@ background-size: cover; " onkeyup="payout(this)"  onclick="payoutcopy()"></texta
 </br>
 
 <font style="color:yellow">转错币种</font></br>
-USDC - 3 U 手续费</br>
-
+USDC - 5 U 手续费</br>合约地址</br> 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</br>
+</br>
 <font style="color:yellow">TRX 原路退回 10 TRX 手续费 </font></br>
 </br>
 
