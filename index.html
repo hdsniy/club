@@ -5944,15 +5944,6 @@ var formattedDate = month + '/' + day;
 var orderdate = formatDate(sfainsorder);
 
 
-/*
-sfaorderip = match[0].split("	").slice(0,1);
-
-  sfaordername= match[0].split("	").slice(1,2);
-
-    var upstreamRaw = sfain.split("	")[9] || ""; // 确保不报错
-sfaupstream = upstreamRaw.split("-")[0].replace("JSON", "").trim();  // 
-
-*/
 
 
  var inputsfa = document.getElementById('sfain').value;
@@ -6131,58 +6122,9 @@ else if (sfalevel == "支付宝司法" )
    {
 
 
-
-    if (sfainname == "BBIN-bf8(支付宝抗头)+0.15" )
-
-     {
-    sfapayer.style.display="none";
-    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒- 看完请删除不要发给商户\n🟡规章07/09 07:17 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
-
-    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章07/09 07:17后的订单才走抗投诉 	";
-
-    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
-    
-     }
-         else if (   sfainname == "自营商-188金宝博 D户 支付宝抗头/手银H5/微信"  )
-
-     {
-    sfapayer.style.display="none";
-    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒🟡 \n规章09/15 20:44 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
-
-    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章09/15 20:44 后的订单才走抗投诉 	";
-
-    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
-    
-     }
-
-
-    else if (   sfainname == "BBIN-008(支付宝抗头)+0.15" )
-
-     {
-    sfapayer.style.display="none";
-    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒 - 看完请删除不要发给商户\n规章07/31 18:33 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
-
-    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章07/31 18:33 后的订单才走抗投诉 	";
-
-    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
-    
-     }
-
-
      
-    else if (   sfainname == "BBIN-106(支付宝抗头)+0.15" )
 
-     {
-   
-    sfapayer.style.display="none";
-    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒 - 看完请删除不要发给商户\n规章10/15 12:00 PM 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
-
-    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章10/15 12:00 PM 后的订单才走抗投诉 	";
-
-    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
-    
-     }
-    else if (String(sfainname).includes("抗头") &&  sfainname !== "BBIN-106(支付宝抗头)+0.15" &&  sfainname !== "BBIN-bf8(支付宝抗头)+0.15" &&  sfainname !== "自营商-188金宝博 D户 支付宝抗头/手银H5/微信" )
+     if (String(sfainname).includes("抗头") )
 
      {
     sfapayer.style.display="none";
@@ -6193,6 +6135,8 @@ else if (sfalevel == "支付宝司法" )
     document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
     
      }
+
+
 else   {
   sfapayer.style.display="none";
     document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n该笔因会员投诉需先扣除资金 "+sfainmoney+" \n请帮助联系会员撤诉，如三天内没联系到会员撤诉，会将资金直接赔付给卡商\n我们需要直接赔付给码商处里资金退回给会员进行撤诉动作，避免码商司法\n请知悉，还请帮忙联系下";
@@ -6221,6 +6165,19 @@ else   {
     document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
    }
 
+
+       else if (sfalevel=="微信投诉")
+
+
+
+   {
+    sfapayer.style.display="none";
+    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n老板，该笔会员投诉我司这边先比照规章扣除单笔金额 "+sfainmoney+"\n请在五日内帮忙联系撤诉 ，如撤诉这边会补回单笔余额\n但如超过时间没联系上撤诉这边将赔付给卡商，让卡商自行处理\n";
+
+    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP";
+
+    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
+   }
 
 
 
@@ -13355,7 +13312,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260626v1029</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260629v1030</font>
 
 <!-- 出款地址 -->
 
