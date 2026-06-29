@@ -4830,7 +4830,7 @@ function u12018(){
 
 var u12019name= document.getElementById('u12019name').value;
 
-if (u12019name ==="聚付宝-预付上分" || u12019name ==="聚财-预付上分" || u12019name ==="旭腾-预付上分"|| u12019name ==="玖远-预付上分" || u12019name ==="保利-预付上分"  || u12019name ==="安通-预付上分"    ){
+if ( u12019name ==="聚财-预付模式"  ){
 
 var u12019u= parseFloat((document.getElementById('u12019u').value).replace(/[,]+/g, ""));
 var u12019rate= parseFloat((document.getElementById('u12019rate').value).replace(/[,]+/g, ""));
@@ -5174,7 +5174,7 @@ rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
 function GFBBBV(){
- document.getElementById('u12019name').value="聚财-预付上分";
+ document.getElementById('u12019name').value="聚财-预付模式";
  document.getElementById('u12019free').value=0;
 
  var ru10589= document.getElementById('ru10589');
@@ -5206,38 +5206,8 @@ rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
 
-function yc(){
- document.getElementById('u12019name').value="旭腾-预付上分";
- document.getElementById('u12019free').value=0;
 
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
 
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
-function nf(){
- document.getElementById('u12019name').value="玖远-预付上分";
- document.getElementById('u12019free').value=0;
-
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
-
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
 function GFB(){
  document.getElementById('u12019name').value="聚付宝";
  document.getElementById('u12019free').value=0;
@@ -5273,22 +5243,7 @@ document.getElementById('farawayutotal').style.display="none";
 }
 
 
-function anton(){
- document.getElementById('u12019name').value="安通-预付上分";
- document.getElementById('u12019free').value=0;
 
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
-
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
 function wachonZON(){
  document.getElementById('u12019name').value="特金-预付上分";
  document.getElementById('u12019free').value=0.8;
@@ -5305,38 +5260,7 @@ rate10589.style.display="none";
 rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
-function wachonBB(){
- document.getElementById('u12019name').value="纵横-预付上分";
- document.getElementById('u12019free').value=0;
 
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
-
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
-function wachonB(){
- document.getElementById('u12019name').value="华中-预付上分";
- document.getElementById('u12019free').value=0;
-
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
-
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
 function wachon(){
  document.getElementById('u12019name').value="华中";
  document.getElementById('u12019free').value=0;
@@ -5355,22 +5279,6 @@ document.getElementById('farawayutotal').style.display="none";
 }
 function VMSGT(){
  document.getElementById('u12019name').value="GT";
- document.getElementById('u12019free').value=0;
-
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
-
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
-function bl(){
- document.getElementById('u12019name').value="保利-预付上分";
  document.getElementById('u12019free').value=0;
 
  var ru10589= document.getElementById('ru10589');
@@ -13312,7 +13220,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260629v1030</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260629v1031</font>
 
 <!-- 出款地址 -->
 
