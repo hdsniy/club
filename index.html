@@ -7249,6 +7249,26 @@ function rcchgbt(){
 } //复制内容
 
 
+function usdcnameredbt(){
+
+  var notification = document.getElementById('notification');
+      notification.style.top = '50px'; // 滑出位置
+      notification.style.opacity = '1'; // 顯示提示框
+      
+      setTimeout(function() {
+        notification.style.top = '-100px'; // 滑出位置
+        notification.style.opacity = '0'; // 隱藏提示框
+      }, 2000); // 三秒後淡出
+
+  var usdcnamered26 = document.getElementById('usdcnamered');
+    
+    usdcnamered26.select();
+    document.execCommand('copy');
+
+
+} //复制内容
+
+
 function copygowestuc(){
 
   var notification = document.getElementById('notification');
@@ -9511,6 +9531,15 @@ if (option === "会员转错USDC" ){
 
 
  trxusdtaa=document.getElementById('trxusdta').value;
+ var usdcname =document.getElementById('usdcname').value;
+
+
+ document.getElementById('usdcnamered').value="-"+usdcname+" 上分 "+rcchgrm +" 会员转错USDC - "+rcchg2;
+
+
+
+
+
 
 
   document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错USDC转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
@@ -16542,16 +16571,37 @@ function formatText() {
 </div>
 
 <div id="usdccontractdiv" style="display: none;">
-  <font style="background-color: black;">USDC合约地址：</font></br>
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px 24px; background-color: #0a0a0a; border: 1px solid #2a2a2a; border-radius: 10px; width: fit-content; margin: 0 auto;">
 
-<input id="usdccontract" type="text" value="0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" placeholder="合约地址" style="text-align:center; width: 550px; font-size: 13pt; color:yellowgreen; font-weight: bolder; border: none; background-color: black;" onkeyup="rcchg(this)"></input></br>
-   <font style="background-color: black; color: yellow;">   扣除 5 U 上分   </font></br> 
+    <span style="color: #cccccc; font-size: 12pt; font-weight: bold; letter-spacing: 1px;">USDC合约地址：</span>
+
+    <input id="usdccontract" type="text" value="0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" placeholder="合约地址"
+      style="text-align:center; width: 550px; font-size: 13pt; color:yellowgreen; font-weight: bolder; border: 1px solid #2a2a2a; border-radius: 5px; background-color: #111; padding: 6px 10px; outline: none;"
+      onkeyup="rcchg(this)">
+
+    <span style="color: yellow; font-size: 12pt; font-weight: bold; padding: 3px 14px; border: 1px solid #555; border-radius: 20px; background-color: #1a1a00;">扣除 5 U 上分</span>
+
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <input id="usdcname" type="text" value="" placeholder="商户名称"
+        style="text-align:center; width: 200px; font-size: 13pt; color:yellowgreen; font-weight: bolder; border: 1px solid #2a2a2a; border-radius: 5px; background-color: #111; padding: 6px 10px; outline: none;"
+        onkeyup="rcchg(this)">
+      <input id="usdcnamered" type="text" value="" placeholder="商户名称"
+        style="position: fixed; left: -9999px; opacity: 0; pointer-events: none; width: 200px; font-size: 13pt; color: yellowgreen; font-weight: bolder; border: none; background-color: black;"
+        onkeyup="rcchg(this)">
+      <button id="usdcnameredbt" class="myButton" style="padding: 7px 14px; color: #4466ff; font-weight: bold; border-radius: 5px;" onclick="usdcnameredbt()">RC帐记</button>
+    </div>
+
+    <span style="color: yellow; font-size: 11pt; opacity: 0.85;">记得先复制红字 再贴给商户 不然资料会被清除</span>
+
+  </div>
 </div>
 
 </br>
 
 <textarea id="rcin" placeholder="请输入订单资讯"   ptype="text" value="" style="width:600px; height:180px; color:rgb(100, 218, 125);font-weight:bold;    background:black; font-size:13pt; text-align:center;" onkeyup="rcchg(this)";></textarea>
 </br></br>
+
+
 <textarea id="rcchg4" type="text" value="" style="width:600px; height:180px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;" onclick="rcchgbt()"></textarea>
 
 </br></br>
