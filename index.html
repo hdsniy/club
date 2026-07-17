@@ -28,15 +28,14 @@
           const data = await response.json();
           const visitorIP = data.ip;
           
-          // 在这里添加多个允许的 IP
-          const allowedIPs = [
-              '59.126.180.53',   // 佳佳
-              '59.127.152.253',   // 公司
-              '59.126.54.251',   // 小宇
-              '220.132.245.10' , // SEAN
-              '220.135.173.199' ,  // SEAN
-        '220.132.109.154' ,  // ++
-'125.229.219.196', //cc
+59.127.152.253   // 公司
+59.126.54.251   // 小宇 +ANN
+220.132.245.10, // SEAN
+220.132.109.154  // ++
+125.229.219.196 //cc
+220.134.47.113 // 詹哥+卤蛋
+218.161.62.77 //KC/正阳
+220.135.173.199 // 小宇
 
             
           ];
@@ -13280,7 +13279,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260716v1043</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260717v1044</font>
 
 <!-- 出款地址 -->
 
@@ -18352,6 +18351,86 @@ else if (person == password)
 // 佳佳
 
 
+
+  // 币飞帐表
+
+function bfaccount() {
+
+  function formatMonth(month) {
+    if (month < 10) {
+      return "0" + month;
+    } else {
+      return month.toString();
+    }
+  }
+  
+  function formatDay(day) {
+    if (day < 10) {
+      return "0" + day;
+    } else {
+      return day.toString();
+    }
+  }
+
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = formatMonth(date.getMonth() + 1);
+  var day = formatDay(date.getDate()); // 使用getDate()获取日期
+  var strDate = year + "-" + month + "-" + day;
+
+
+
+
+
+
+          let password ="1027";
+          let person = prompt("Please enter password:", "");
+  
+  if (person == null || person == "" || person != password) {
+
+   alert("错误的密码!!");
+    document.getElementById("rcherfq").style.display="none";
+    document.getElementById("timerc").value = "错误的密码!!";
+
+
+  }
+else if (person == password)
+
+  {
+
+
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
+    var rcgasfreeaddress=  document.getElementById("rcgasfreeaddress").value;
+
+
+    document.getElementById("timerc").value = "开启成功";
+    
+    var reddate = "2026-07-17";
+
+  
+
+    var urls = [
+        "https://admin.beeqoo99.com/admin/users",
+        "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=2",
+        "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=1",
+        //联盟充值
+        "https://rcqoo99.com/#/admin/deposit/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&sort_by=2&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=true&type=&status%5B0%5D=4&status%5B1%5D=5",
+       //联盟提现
+        "https://rcqoo99.com/#/admin/withdraw/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",       
+        "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+reddate+"&tableFilters[type][value]=1&tableFilters[status][values][0]=4&tableFilters[status][values][1]=5",
+
+      ];
+
+      // 批量打开链接
+      for (var i = 0; i < urls.length; i++) {
+        window.open(urls[i], '_blank');
+      }
+
+}
+}
+
+// 币飞帐
+
   // 卤蛋 RC
 function gettimerc() {
 
@@ -18468,6 +18547,9 @@ else if (person == password)
 
 }
 }
+
+
+
   // 卤蛋 RC
 
 
@@ -18559,7 +18641,9 @@ window.open(url[i], '_blank').location;
   <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimerc2()">BC&VC</button>
 
   -->
-  <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimercups()">找ERC</button></br></br>
+  <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimercups()">找ERC</button>
+    <button type="button" id="but" style="color: black;" class="myButton"  onclick="bfaccount()">币飞做账用</button></br></br>
+
   <input id="ucfeetime1" value=""  placeholder="点" style="background-color: black; color:yellowgreen; text-align: center; width: 50px;"></input>
   <input id="ucfeetime2" value=""  placeholder="分" style="background-color: black; color:yellowgreen; text-align: center; width: 50px;"></input>
   <input id="ucfee" value=""  placeholder="" style="background-color: black; color:yellowgreen; text-align: center; width: 150px;"></input>
