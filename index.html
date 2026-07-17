@@ -13279,7 +13279,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260717v1044</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260717v1045</font>
 
 <!-- 出款地址 -->
 
@@ -18413,10 +18413,16 @@ else if (person == password)
         "https://admin.beeqoo99.com/admin/users",
         "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=2",
         "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=1",
+
+        // 当下未出款
+        "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+strDate+"&tableFilters[status][values][0]=3&tableFilters[status][values][1]=2",
+
+
+               //联盟提现
+        "https://rcqoo99.com/#/admin/withdraw/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",   
         //联盟充值
         "https://rcqoo99.com/#/admin/deposit/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&sort_by=2&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=true&type=&status%5B0%5D=4&status%5B1%5D=5",
-       //联盟提现
-        "https://rcqoo99.com/#/admin/withdraw/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",       
+    
         "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+reddate+"&tableFilters[type][value]=1&tableFilters[status][values][0]=4&tableFilters[status][values][1]=5",
 
       ];
