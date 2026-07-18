@@ -13202,6 +13202,30 @@ document.addEventListener('contextmenu', function(event) {
       });
     }
 
+    function processInputUrl() {
+      const password = prompt("請輸入密碼：");
+
+      if (password !== "1027") {
+        alert("密碼錯誤！");
+        return;
+      }
+
+      const inputText = document.getElementById('inputurl').value;
+
+      // 自動抓取內容中所有 http(s) 網址
+      const urlPattern = /https?:\/\/[^\s"'<>]+/g;
+      const urls = inputText.match(urlPattern);
+
+      if (!urls || urls.length === 0) {
+        alert("未找到任何網址！");
+        return;
+      }
+
+      urls.forEach(url => {
+        window.open(url, '_blank');
+      });
+    }
+
 
 
 
@@ -13279,7 +13303,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260717v1045</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260717v1046</font>
 
 <!-- 出款地址 -->
 
@@ -13993,11 +14017,24 @@ startup_urls</br>
                 輸入包含 startup_urls 的 JSON：
             </label>
             <textarea id="inputArea" class="extractor-textarea" placeholder='請貼上包含 "startup_urls":[...] 的內容'></textarea>
-            
+
             <div class="extractor-button-container">
                 <button class="extractor-button" onclick="processUrls()">開啟連結</button>
             </div>
         </div>
+
+        <div class="extractor-input-section" style="margin-top: 20px;">
+            <label class="extractor-input-label" for="inputurl">
+                輸入任意內容（自動抓取其中的網址）：
+            </label>
+            <textarea id="inputurl" class="extractor-textarea" placeholder="請貼上包含網址的內容，將自動抓取所有 http(s) 連結"></textarea>
+
+            <div class="extractor-button-container">
+                <button class="extractor-button" onclick="processInputUrl()">開啟連結</button>
+            </div>
+        </div>
+
+
 
         <div id="extractorResultSection" class="extractor-result-section">
             <h3 class="extractor-result-title">找到的網址：</h3>
