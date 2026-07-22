@@ -13303,7 +13303,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260722v1049</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260722v1050</font>
 
 <!-- 出款地址 -->
 
@@ -18452,8 +18452,7 @@ else if (person == password)
         "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=1",
         
         // 未匹配
-        "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+reddate+"&tableFilters[status][values][0]=3&tableFilters[status][values][1]=2",
-
+        "https://admin.beeqoo99.com/admin/transactions?tableFilters[block_created_at][block_created_at_from]="+reddate+"&tableFilters[transfer_type][values][0]=3&tableFilters[status][values][0]=2&tableFilters[coin][values][0]=USDT",
 
         // 当下未出款
         "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+strDate+"&tableFilters[status][values][0]=3&tableFilters[status][values][1]=2",
