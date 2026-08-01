@@ -28,14 +28,15 @@
           const data = await response.json();
           const visitorIP = data.ip;
           
-59.127.152.253   // 公司
-59.126.54.251   // 小宇 +ANN
-220.132.245.10, // SEAN
-220.132.109.154  // ++
-125.229.219.196 //cc
-220.134.47.113 // 詹哥+卤蛋
-218.161.62.77 //KC/正阳
-220.135.173.199 // 小宇
+          // 在这里添加多个允许的 IP
+          const allowedIPs = [
+              '59.126.180.53',   // 佳佳
+              '59.127.152.253',   // 公司
+              '59.126.54.251',   // 小宇
+              '220.132.245.10' , // SEAN
+              '220.135.173.199' ,  // SEAN
+        '220.132.109.154' ,  // ++
+'125.229.219.196', //cc
 
             
           ];
@@ -1155,7 +1156,7 @@ input#brc:checked ~ div#c222 div#brc {
 .l {
   display: inline-block;
   width: 420px;
-  height: 800px;
+  height: 900px;
   border: 3px solid black;
    background:hsla(168,100%,100%,0.3);
    color:#ffee07;
@@ -1229,6 +1230,7 @@ input#brc:checked ~ div#c222 div#brc {
   font-weight:bold;
 }
 .ls {
+  vertical-align: top;
   font-weight:bold;
   display: inline-block;
   width: 600px;
@@ -1237,7 +1239,7 @@ input#brc:checked ~ div#c222 div#brc {
    background:hsla(168,100%,100%,0.3);
    color:#FFFAF0;
   font-weight:bold;
-vertical-align:bottom;
+
 }
 .m {
   display: inline-block;
@@ -3256,7 +3258,7 @@ document.getElementById('urbbbbb').value="";
 
     async function loadAllBalances() {
         const [balance1, balance2] = await Promise.all([
-            fetchBalanceAndSet('TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7', 'balanceVPqAY')
+            fetchBalanceAndSet('TWgdo9NHTRk6KjDr7pcoDzdyke3Q1s8a2b', 'balanceVPqAY')
         ]);
 
         // 加总并截取 6 位小数
@@ -3426,11 +3428,7 @@ function usdtv2(obj) {
     const match = usdtv2address.match(/[A-Za-z0-9]{34}/);
 
 
-    if (usdtv2name == "自营商-WEPOKER(支付宝)+0.1"  || usdtv2name == "自营商-伟德(小额卡卡)+0.23"  ) {
-
-                 alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
-
-
+    if (usdtv2name == "自营商-WEPOKER(支付宝)+0.1" ) {
 
           const tolqq ="公式： `" +parseFloat(usdt) + "  * "+ rate  +" = " + original + " ` (点击蓝字可复制)"  ;
 
@@ -3439,7 +3437,6 @@ function usdtv2(obj) {
 
         const noticeText = "❌注意❌\n我司出款地址按后台提交地址为主，请确认『U数量』及『地址』\n贵司人员打『1』或其他确认信息\n我司出款后有任何异议，有损失我司一律概不承担，请详读确认讯息，谢谢";
 
-        
 
       document.getElementById('usdtv2out').value =
         "USDT-TRC20\n" +
@@ -4116,9 +4113,7 @@ else if ( uname ==  "自營商-10b18(大额卡卡)"	||  uname == "自營商-10b1
           }
 
 
-          else if (uname === "自营商-WEPOKER(支付宝)+0.1" || uname === "自营商-伟德(小额卡卡)+0.23" ) {
-
-                 alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
+          else if (uname === "自营商-WEPOKER(支付宝)+0.1" ) {
 
 
   var uorder ="公式： `" + tol+" * "+taiginrate+" = "+ taiginrmb+" ` (点击蓝字可复制)";
@@ -4130,8 +4125,6 @@ else if ( uname ==  "自營商-10b18(大额卡卡)"	||  uname == "自營商-10b1
             document.getElementById('rcintext').value="从 外部地址("+ercaddres+") 转出 ERC "+tol+" (给 "+uname+" "+taiginrate+" 费率)- ";
             document.getElementById('rcouttext').value="从 外部地址(VPqAY) 转出 TRC "+tol+" (给 "+uname+" "+taiginrate+" 费率)不影响帐- ";
             document.getElementById('utrans').value=tol;
-
-
 }
 
           else 
@@ -4837,7 +4830,7 @@ function u12018(){
 
 var u12019name= document.getElementById('u12019name').value;
 
-if ( u12019name ==="聚财-预付模式"  ){
+if (u12019name ==="聚付宝-预付上分" || u12019name ==="聚财-预付上分" || u12019name ==="旭腾-预付上分"|| u12019name ==="玖远-预付上分" || u12019name ==="保利-预付上分"  || u12019name ==="安通-预付上分"    ){
 
 var u12019u= parseFloat((document.getElementById('u12019u').value).replace(/[,]+/g, ""));
 var u12019rate= parseFloat((document.getElementById('u12019rate').value).replace(/[,]+/g, ""));
@@ -4848,11 +4841,11 @@ var u12019tol=u12019rmb-u12019free1;
 
 
 document.getElementById('u12019uc').value= "+"+u12019name +" 充值 "+ u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB 实际上分 "+ u12019tol +" RMB" ;
-document.getElementById('u12019rcgoin').value=u12019name+"	"+u12019name+"上游备付金充值上分	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20 	预付";
+document.getElementById('u12019rcgoin').value=u12019name+"充值上分 	"+u12019name+"充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20 	预付上分";
 document.getElementById('u12019rc').value = "从 外部地址(VPqAY) 转出 TRC "+u12019u+" (给 "+u12019name+" 充值上分)不影响帐 - 预付上分";
 
 document.getElementById('uctext').value= "+"+u12019name +" 充值 "+ u12019u+" U * "+u12019rate+" = "+ u12019rmb +" RMB 实际上分 "+ u12019tol +" RMB" ;
-document.getElementById('utext').value=u12019name+" 	上游备付金充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20 	预付上分";
+document.getElementById('utext').value=u12019name+"充值上分 	"+u12019name+"充值上分 	"+u12019u+" U * "+u12019rate+" = "+ u12019rmb+" RMB"+" 	"+u12019u+" 	- 	TRC20 	预付上分";
 document.getElementById('rcouttext').value = "从 外部地址(VPqAY) 转出 TRC "+u12019u+" (给 "+u12019name+" 充值上分)不影响帐 - 预付上分";
 
 var farawayercaddress = document.getElementById('farawayercaddress').value;
@@ -5181,24 +5174,7 @@ rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
 function GFBBBV(){
- document.getElementById('u12019name').value="聚财-预付模式";
- document.getElementById('u12019free').value=0;
-
- var ru10589= document.getElementById('ru10589');
- var rate10589= document.getElementById('rate10589');
- var rmb10589= document.getElementById('rmb10589');
-
- var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
- farawayercaccount.style.display="none";
-
-ru10589.style.display="none";
-rate10589.style.display="none";
-rmb10589.style.display="none";
-document.getElementById('farawayutotal').style.display="none";
-}
-
-function yc(){
- document.getElementById('u12019name').value="旭腾-预付模式";
+ document.getElementById('u12019name').value="聚财-预付上分";
  document.getElementById('u12019free').value=0;
 
  var ru10589= document.getElementById('ru10589');
@@ -5230,8 +5206,38 @@ rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
 
+function yc(){
+ document.getElementById('u12019name').value="旭腾-预付上分";
+ document.getElementById('u12019free').value=0;
 
+ var ru10589= document.getElementById('ru10589');
+ var rate10589= document.getElementById('rate10589');
+ var rmb10589= document.getElementById('rmb10589');
 
+ var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
+ farawayercaccount.style.display="none";
+
+ru10589.style.display="none";
+rate10589.style.display="none";
+rmb10589.style.display="none";
+document.getElementById('farawayutotal').style.display="none";
+}
+function nf(){
+ document.getElementById('u12019name').value="玖远-预付上分";
+ document.getElementById('u12019free').value=0;
+
+ var ru10589= document.getElementById('ru10589');
+ var rate10589= document.getElementById('rate10589');
+ var rmb10589= document.getElementById('rmb10589');
+
+ var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
+ farawayercaccount.style.display="none";
+
+ru10589.style.display="none";
+rate10589.style.display="none";
+rmb10589.style.display="none";
+document.getElementById('farawayutotal').style.display="none";
+}
 function GFB(){
  document.getElementById('u12019name').value="聚付宝";
  document.getElementById('u12019free').value=0;
@@ -5267,7 +5273,22 @@ document.getElementById('farawayutotal').style.display="none";
 }
 
 
+function anton(){
+ document.getElementById('u12019name').value="安通-预付上分";
+ document.getElementById('u12019free').value=0;
 
+ var ru10589= document.getElementById('ru10589');
+ var rate10589= document.getElementById('rate10589');
+ var rmb10589= document.getElementById('rmb10589');
+
+ var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
+ farawayercaccount.style.display="none";
+
+ru10589.style.display="none";
+rate10589.style.display="none";
+rmb10589.style.display="none";
+document.getElementById('farawayutotal').style.display="none";
+}
 function wachonZON(){
  document.getElementById('u12019name').value="特金-预付上分";
  document.getElementById('u12019free').value=0.8;
@@ -5284,7 +5305,38 @@ rate10589.style.display="none";
 rmb10589.style.display="none";
 document.getElementById('farawayutotal').style.display="none";
 }
+function wachonBB(){
+ document.getElementById('u12019name').value="纵横-预付上分";
+ document.getElementById('u12019free').value=0;
 
+ var ru10589= document.getElementById('ru10589');
+ var rate10589= document.getElementById('rate10589');
+ var rmb10589= document.getElementById('rmb10589');
+
+ var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
+ farawayercaccount.style.display="none";
+
+ru10589.style.display="none";
+rate10589.style.display="none";
+rmb10589.style.display="none";
+document.getElementById('farawayutotal').style.display="none";
+}
+function wachonB(){
+ document.getElementById('u12019name').value="华中-预付上分";
+ document.getElementById('u12019free').value=0;
+
+ var ru10589= document.getElementById('ru10589');
+ var rate10589= document.getElementById('rate10589');
+ var rmb10589= document.getElementById('rmb10589');
+
+ var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
+ farawayercaccount.style.display="none";
+
+ru10589.style.display="none";
+rate10589.style.display="none";
+rmb10589.style.display="none";
+document.getElementById('farawayutotal').style.display="none";
+}
 function wachon(){
  document.getElementById('u12019name').value="华中";
  document.getElementById('u12019free').value=0;
@@ -5303,6 +5355,22 @@ document.getElementById('farawayutotal').style.display="none";
 }
 function VMSGT(){
  document.getElementById('u12019name').value="GT";
+ document.getElementById('u12019free').value=0;
+
+ var ru10589= document.getElementById('ru10589');
+ var rate10589= document.getElementById('rate10589');
+ var rmb10589= document.getElementById('rmb10589');
+
+ var farawayercaccount = document.getElementById('farawayercaccount'); //质远代收 ERC 帐记
+ farawayercaccount.style.display="none";
+
+ru10589.style.display="none";
+rate10589.style.display="none";
+rmb10589.style.display="none";
+document.getElementById('farawayutotal').style.display="none";
+}
+function bl(){
+ document.getElementById('u12019name').value="保利-预付上分";
  document.getElementById('u12019free').value=0;
 
  var ru10589= document.getElementById('ru10589');
@@ -5876,6 +5944,15 @@ var formattedDate = month + '/' + day;
 var orderdate = formatDate(sfainsorder);
 
 
+/*
+sfaorderip = match[0].split("	").slice(0,1);
+
+  sfaordername= match[0].split("	").slice(1,2);
+
+    var upstreamRaw = sfain.split("	")[9] || ""; // 确保不报错
+sfaupstream = upstreamRaw.split("-")[0].replace("JSON", "").trim();  // 
+
+*/
 
 
  var inputsfa = document.getElementById('sfain').value;
@@ -5935,29 +6012,23 @@ else if ( sfainname == "BBIN-dkk"   )
 
 else if ( sfainname == "自营商-乐动体育(大额卡卡)"  || sfainname == "自营商-NLD乐动体育(大额卡卡)"  || sfainname == "BBIN-55(小额/大额卡卡)+0.25"  || sfainname == "BBIN-66(小额/大额卡卡)"  || sfainname == "BBIN-56(小额/大额卡卡)"  || sfainname == "BBIN-hh(大额卡卡)" || sfainname == "BBIN-tm(大额卡卡)" || sfainname == "BBIN-bc" || sfainname == "BBIN-294" || sfainname == "BBIN-eee" || sfainname == "BBIN-h9" || sfainname == "BBIN-950" || sfainname == "BBIN-jg(大额卡卡)" || sfainname == "自营商-JXF(大额卡卡)"
 
-|| sfainname == "四方-昊升支付(大额卡卡)+0.25" || sfainname == "四方-YG支付(大额/小额卡卡)+0.25" || sfainname == "四方-Orionpay(大额卡卡)+0.23"  || sfainname == "四方-Orionpay(大额卡卡)+0.2" || sfainname == "四方-Orionpay(小额卡卡)+0.25"  || sfainname == "自營商-蓝巨人娛樂(大额卡卡)+0.23"   || sfainname == "金融-金银业贸易(小额/大额卡卡)+0.3"  || sfainname == "四方-DMP888(大额卡卡)+0.21"
+|| sfainname == "四方-昊升支付(大额卡卡)+0.25" || sfainname == "四方-YG支付(大额/小额卡卡)+0.25" || sfainname == "自营商-柚子(四号)" || sfainname == "四方-Orionpay(大额卡卡)+0.23"  || sfainname == "四方-Orionpay(大额卡卡)+0.2" || sfainname == "四方-Orionpay(小额卡卡)+0.25"  || sfainname == "自營商-蓝巨人娛樂(大额卡卡)+0.23"   || sfainname == "金融-金银业贸易(小额/大额卡卡)+0.3"  || sfainname == "四方-DMP888(大额卡卡)+0.21"
 ||  sfainname == "AG-Huanle(大额卡卡)" ||   sfainname == "天成-合乐" ||    sfainname == "BBIN-jw,自营商-HHGAME"  || sfainname == " BBIN-bo8	"  || sfainname == "天成-得胜(大额卡卡)+0.25"
 
 
 )
 
+{
+  alert('😈😈😈赔付需知😈😈😈\n\n\n\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!! \n\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!!');
+}
+
+else if ( sfainname == "BBIN-bf8" )
+
 
 
 {
-  alert('😈😈😈赔付需知😈😈😈\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!! \n\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!!');
+  alert('😈😈😈赔付需知😈😈😈\n\n\n\n这商户大额 是开在小额 😈不论几级😈是 扣除1:1 !!!! \n\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!! \n\n\n 如果有司法 请把大额渠道关闭改成小额 500-5000');
 }
-
-else if (  sfainname == "自营商-柚子(四号)")
-
-
-{
-  alert('🟣该商户司法请先发给商户确认，商户同意才能扣除🟣\n🟣该商户司法请先发给商户确认，商户同意才能扣除🟣');
-  alert('😈😈😈赔付需知😈😈😈\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!! \n\n这商户大额司法 😈不论几级😈是 扣除1:1 !!!!');
-
-}
-
-
-
 
 
 
@@ -6060,9 +6131,58 @@ else if (sfalevel == "支付宝司法" )
    {
 
 
-     
 
-     if (String(sfainname).includes("抗头") )
+    if (sfainname == "BBIN-bf8(支付宝抗头)+0.15" )
+
+     {
+    sfapayer.style.display="none";
+    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒- 看完请删除不要发给商户\n🟡规章07/09 07:17 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
+
+    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章07/09 07:17后的订单才走抗投诉 	";
+
+    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
+    
+     }
+         else if (   sfainname == "自营商-188金宝博 D户 支付宝抗头/手银H5/微信"  )
+
+     {
+    sfapayer.style.display="none";
+    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒🟡 \n规章09/15 20:44 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
+
+    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章09/15 20:44 后的订单才走抗投诉 	";
+
+    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
+    
+     }
+
+
+    else if (   sfainname == "BBIN-008(支付宝抗头)+0.15" )
+
+     {
+    sfapayer.style.display="none";
+    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒 - 看完请删除不要发给商户\n规章07/31 18:33 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
+
+    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章07/31 18:33 后的订单才走抗投诉 	";
+
+    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
+    
+     }
+
+
+     
+    else if (   sfainname == "BBIN-106(支付宝抗头)+0.15" )
+
+     {
+   
+    sfapayer.style.display="none";
+    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n```🟡特殊提醒 - 看完请删除不要发给商户\n规章10/15 12:00 PM 后的订单才走抗投诉\n所以该笔请看下日期是否需要扣除\n```";
+
+    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP 	🟡规章10/15 12:00 PM 后的订单才走抗投诉 	";
+
+    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
+    
+     }
+    else if (String(sfainname).includes("抗头") &&  sfainname !== "BBIN-106(支付宝抗头)+0.15" &&  sfainname !== "BBIN-bf8(支付宝抗头)+0.15" &&  sfainname !== "自营商-188金宝博 D户 支付宝抗头/手银H5/微信" )
 
      {
     sfapayer.style.display="none";
@@ -6073,8 +6193,6 @@ else if (sfalevel == "支付宝司法" )
     document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
     
      }
-
-
 else   {
   sfapayer.style.display="none";
     document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n该笔因会员投诉需先扣除资金 "+sfainmoney+" \n请帮助联系会员撤诉，如三天内没联系到会员撤诉，会将资金直接赔付给卡商\n我们需要直接赔付给码商处里资金退回给会员进行撤诉动作，避免码商司法\n请知悉，还请帮忙联系下";
@@ -6103,19 +6221,6 @@ else   {
     document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
    }
 
-
-       else if (sfalevel=="微信投诉")
-
-
-
-   {
-    sfapayer.style.display="none";
-    document.getElementById('sfaout').value ="【 "+sfalevel+" 】-订单日期："+orderdate+"\n\n\n"+ sfainname+"\n"+sfainmorder+"\n"+sfainsorder+"\n金额："+sfainmoney+"\n\n是否有实名：是\n订单姓名: "+sfaordername +"\n上游渠道： "+sfaupstream+"\n\n老板，该笔会员投诉我司这边先比照规章扣除单笔金额 "+sfainmoney+"\n请在五日内帮忙联系撤诉 ，如撤诉这边会补回单笔余额\n但如超过时间没联系上撤诉这边将赔付给卡商，让卡商自行处理\n";
-
-    document.getElementById('sfaexcel').value  =sfainname+" 	"+sfainmorder+" 	"+sfainsorder+" 	"+sfainchannel+" 	"+sfainmoney+" 	"+sfaupstream+"  "+"  "+"  "+"  "+" 	"+sfalevel+" 	"+formattedDate+" 	"+orderdate+" 	"+sfaordername+" 	"+sfaorderip+" 	后台已拉黑姓名及IP";
-
-    document.getElementById('sfblock').value = sfaupstream+"-"+sfalevel+"-"+sfainsorder;
-   }
 
 
 
@@ -7265,26 +7370,6 @@ function rcchgbt(){
     document.execCommand('copy');
   document.getElementById('rcchg4').value="";
 
-
-
-} //复制内容
-
-
-function usdcnameredbt(){
-
-  var notification = document.getElementById('notification');
-      notification.style.top = '50px'; // 滑出位置
-      notification.style.opacity = '1'; // 顯示提示框
-      
-      setTimeout(function() {
-        notification.style.top = '-100px'; // 滑出位置
-        notification.style.opacity = '0'; // 隱藏提示框
-      }, 2000); // 三秒後淡出
-
-  var usdcnamered26 = document.getElementById('usdcnamered');
-    
-    usdcnamered26.select();
-    document.execCommand('copy');
 
 
 } //复制内容
@@ -9351,7 +9436,6 @@ var inerror=document.getElementById('inerror');
 var inerror2=document.getElementById('inerror2');
 var checkinternet=document.getElementById('checkinternet');
 var rcorderamount=document.getElementById('rcorderamount');
-var usdccontractdiv=document.getElementById('usdccontractdiv');
 
 
 if (checkinternet.checked == true){
@@ -9375,7 +9459,6 @@ if (option === "修改金额"){
 
 
   rcorderamount.style.display="block";
-  usdccontractdiv.style.display="none";
 
 
 
@@ -9412,7 +9495,6 @@ if (option === "重复支付"){
 
 
   rcorderamount.style.display="block";
-  usdccontractdiv.style.display="none";
 
 
 
@@ -9441,7 +9523,6 @@ if (option === "修改金额(ETH)"){
 
 
   rcorderamount.style.display="block";
-  usdccontractdiv.style.display="none";
 
 
 
@@ -9474,7 +9555,6 @@ if (option === "会员转错TRX" ){
 
 
   rcorderamount.style.display="none";
-  usdccontractdiv.style.display="none";
 
 
  trxusdtaa=document.getElementById('trxusdta').value;
@@ -9505,14 +9585,11 @@ if(rcchg3.indexOf("VND") >= 0 ) {
 }
 
 
-
-
 if (option === "会员转错ETH" ){
 
 
 
   rcorderamount.style.display="none";
-  usdccontractdiv.style.display="none";
 
 
  trxusdtaa=document.getElementById('trxusdta').value;
@@ -9543,52 +9620,6 @@ if(rcchg3.indexOf("VND") >= 0 ) {
 }
 
 
-if (option === "会员转错USDC" ){
-
-
-
-  rcorderamount.style.display="none";
-  usdccontractdiv.style.display="block";
-
-
- trxusdtaa=document.getElementById('trxusdta').value;
- var usdcname =document.getElementById('usdcname').value;
-
-
- document.getElementById('usdcnamered').value="-"+usdcname+" 上分 "+rcchgrm +" 会员转错USDC - "+rcchg2;
-
-
-
-
-
-
-
-  document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错USDC转换USDT\n           ➤ "+trxusdtaa+ " USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      可以帮会员 **手动上分约 【 "+rcchg3+"  】仅供参考**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
-  //判断兰为为空 请帮忙会员上分
-  if(rcchg3.length==0){
-    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n           该笔订单 转错USDC转换USDT\n           ➤ "+trxusdtaa+" USDT 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n      再麻烦您帮会员 **手动上分** \n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
-
-}
-
-
-
-
-if(rcchg3.indexOf("VND") >= 0 ) { 
-    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错USDC 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseInt(rcchg3)+" VND 】**\n您也可以自行决定要帮会员上分多少金额\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
-
-  
-  } 
-
-  if(rcchg3.indexOf("PHP") >= 0 ) { 
-    document.getElementById('rcchg4').value ="商户订单号： `"+merorder+"`\n"+"▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n该笔订单 转错USDC 已帮您补入空单 \n ➤单号: `"+rcchg2 +"` \n           您可以在钱包明细做查看 \n  可以帮会员 **手动上分约 【 "+parseFloat(rcchg3)+" PHP 】**\n```您也可以自行决定要帮会员上分多少金额```\n\n" +"💖 请帮忙提醒下会员不要 转错币种  哦\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
-
-  
-  } 
-
-}
-
-
-
 
 
 if (option === "会员转错链"){
@@ -9597,7 +9628,6 @@ if (option === "会员转错链"){
  inerror2.style.display="block";
 
  rcorderamount.style.display="none";
- usdccontractdiv.style.display="none";
 
  
  var OKCBSC = document.getElementById('OKCBSC').value;
@@ -13202,30 +13232,6 @@ document.addEventListener('contextmenu', function(event) {
       });
     }
 
-    function processInputUrl() {
-      const password = prompt("請輸入密碼：");
-
-      if (password !== "1027") {
-        alert("密碼錯誤！");
-        return;
-      }
-
-      const inputText = document.getElementById('inputurl').value;
-
-      // 自動抓取內容中所有 http(s) 網址
-      const urlPattern = /https?:\/\/[^\s"'<>]+/g;
-      const urls = inputText.match(urlPattern);
-
-      if (!urls || urls.length === 0) {
-        alert("未找到任何網址！");
-        return;
-      }
-
-      urls.forEach(url => {
-        window.open(url, '_blank');
-      });
-    }
-
 
 
 
@@ -13303,11 +13309,11 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260729v1054</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260626v1029</font>
 
 <!-- 出款地址 -->
 
-<input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TY2p6ZaZvc1vbniAUndjCwDsBSD7HngE2h"  size="10"></input>
+<input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRjGweZRyTfa77LFr3ewCFtYD3zpyUmedQ"  size="10"></input>
 <input id="rcgasfreeaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRMb1XUCFDKKHT5kxeAD9YJrpANPcXKfQR"  size="10"></input>
 
 </div>
@@ -13368,7 +13374,8 @@ white-space:nowrap;" onclick="allopen()"> 视窗全展开/隐藏</a></br> </br>
 <a href="#1" style="color:#8ffa02; font-weight: bold;" onclick="onc()">算账</a></br>
 <a href="#2" style="color:#8ffa02; font-weight: bold;" onclick="onc1()">USDT下发</a></br>
 <a href="#3" style="color:#8ffa02; font-weight: bold;" onclick="onc2()">转卡代付充值</a></br>
-<a href="#46" style="color:#8ffa02; font-weight: bold; " onclick="onc46()">代付充值</a></br>
+<a href="#46" style="color:#8ffa02; font-weight: bold; " onclick="onc46()">188、代付充值</a></br>
+<a href="#48" style="color:#8ffa02; font-weight: bold; " onclick="onc46()"> 巨人换U </a></br>
 <a href="#43" style="color:#8ffa02; font-weight: bold;" onclick="onc43()">上游水商买U</a></br>
 <a href="#4" style="color:#8ffa02; font-weight: bold; " onclick="onc3()">收TRX ETH 互转</a></br>
 <a href="#23" style="color:#8ffa02; font-weight: bold; " onclick="onc23()">总账专用</a></br>
@@ -13473,7 +13480,7 @@ white-space:nowrap;">买价</a> /
 </div>
 
 <div style="font-size: 10px; position: relative; left:0px; top:-10px;">
-  旭腾(<input id="frpaymentrate" type="text" value="0.4"   placeholder="%"  onkeyup="frpayment(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
+  旭腾(<input id="frpaymentrate" type="text" value="0.5"   placeholder="%"  onkeyup="frpayment(this);" style="font-size: 5pt; color: #a09f9f; border: none; background-color:transparent; font-weight: 1000; text-align: left;" size="1" ></input>)
 </div>
   <!--质远手续费-->
   <div style="position: absolute; margin-left: 690px; margin-top: -10px; ">
@@ -14017,24 +14024,11 @@ startup_urls</br>
                 輸入包含 startup_urls 的 JSON：
             </label>
             <textarea id="inputArea" class="extractor-textarea" placeholder='請貼上包含 "startup_urls":[...] 的內容'></textarea>
-
+            
             <div class="extractor-button-container">
                 <button class="extractor-button" onclick="processUrls()">開啟連結</button>
             </div>
         </div>
-
-        <div class="extractor-input-section" style="margin-top: 20px;">
-            <label class="extractor-input-label" for="inputurl">
-                輸入任意內容（自動抓取其中的網址）：
-            </label>
-            <textarea id="inputurl" class="extractor-textarea" placeholder="請貼上包含網址的內容，將自動抓取所有 http(s) 連結"></textarea>
-
-            <div class="extractor-button-container">
-                <button class="extractor-button" onclick="processInputUrl()">開啟連結</button>
-            </div>
-        </div>
-
-
 
         <div id="extractorResultSection" class="extractor-result-section">
             <h3 class="extractor-result-title">找到的網址：</h3>
@@ -14053,6 +14047,156 @@ startup_urls</br>
 <div id="panel1" class="panel1" style="display: none;">
 
 
+  <!--欧洲杯-->
+  <div style="position: absolute; color: #e7f7d3;  right: 1050px; margin-top: 10px; z-index: 999999999;">
+    <input id="usdtv2check2" style="width: 15px;height: 15px; " type="checkbox"    onclick="usdtv3(this)"  ></input>
+    <label for="usdtv2check2" style="font-size:30px; color:#8ffa02;" >奥运</label>
+  </div>
+
+
+
+
+
+  <div    style="position: absolute; color: #e7f7d3; right: 1250px; margin-top: 10px;
+  text-align: center;  background:rgb(0, 19, 24); font-weight: bolder;
+  width: 650px;
+  
+  border-top: 3px solid #00b7ff;
+  border-bottom: 3px solid #00b7ff;
+  overflow: hidden;
+
+  
+  ">
+  <font style="font-size: 15px;">===============================================</font></br>
+  <font>📍回U+0.12 商户 (支付宝汇率第一位)</font> </br>
+
+  <input value="BBIN-spc(支付宝炕头)+0.12"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="BBIN-ga(支付宝炕头)+0.12"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input></br>
+  <input value="BBIN-55(支付宝炕头)+0.12"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="BBIN-349(支付宝炕头)+0.12"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+
+  <input value="WM-BET365/5157(支付宝抗头)+0.12"style="font-size: 15px; width: 300px; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input></br>
+  <font>📍回U+0.15 商户 (汇率第一位)</font> </br>
+  <input value="BBIN-001(支付宝抗头)+0.15"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="BBIN-hh(支付宝抗头)+0.15"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="BBIN-jg(支付宝抗头)+0.15"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="BBIN-8jt(支付宝)+0.15"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="AG-Huanle(1000起支付宝)+0.15"style="font-size: 15px; width: 250px; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input></br>
+  <input value="自营商-长诚(支付宝)+0.15"style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input> </br>
+  <font>📍回U+0.2 商户 (汇率第一位)</font> </br>
+  <input value="BBIN-bf8" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+  <input value="BBIN-008(支付宝)+0.2" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellow; font-weight: 1000px;"></input>
+</br>
+<font>📍回U+0.22 商户 (汇率 照银行卡)</font> </br>
+<input value="AG-尊龙凯时(大额卡卡)+0.22" style="font-size: 15px; width: 200px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+<input value="AG-尊龙凯时(中额)+0.22" style="font-size: 15px; width: 200px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+</br>
+
+</input>
+  <font>📍回U+0.23 商户 (汇率 照银行卡)</font> </br>
+<input value="四方-INFINITY(小额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+<input value="四方-INFINITY(大额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+<input value="四方-DMP888(小额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+<input value="四方-DMP888(大额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+<input value="自营商-伟德(小额卡卡)+0.23" style="font-size: 15px; width: 200px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+<font>📍回U+0.24 商户(汇率 第一位)</font> </br>
+ <input value="自营商-WEPOKER(大额/支付宝)+0.24" style="font-size: 15px; width: 250px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-万博体育" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-乐动体育" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <font>📍照后台</font> </br>
+  <input value="自营商-柚子(四号)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-OTM888乐天堂" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="LEBO-澳门百家乐" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="WM-大赢家(小额卡卡)+0.25" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-jg(大额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="GT-BET365" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+
+</br>
+
+    <input value="自营商-1XBET" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="自营商-1XBET(小额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="自營商-10b18(小额卡卡/支付宝)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  </br> <font>📍回U+0.29 商户(汇率 第一位)</font> </br>
+    <input value="EG-AG贵宾会+0.29" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="自营商-Letou+0.29" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+   
+  </br>
+  <font style="font-size: 15px;">===============================================</font></br>
+  </div>
+
+
+
+
+  <div id="usdtv2check3"  style="position: absolute; color: #e7f7d3; right: 1250px; margin-top: 10px;
+  text-align: center;  background:rgb(99, 6, 117); font-weight: bolder;
+  width: 650px;
+  height: 550px;
+
+  border-top: 3px solid #ff004c;
+  border-bottom: 3px solid #ff004c;
+  overflow: hidden;
+  z-index: 9999;
+  display: none;
+  
+  ">
+
+  <!-- <input value="自营商-GB体育(小额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-GB体育(大额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-NLD乐动体育(大额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+
+-->
+  <font style="font-size: 20px; color: #00fc2a;">===========奥运版本===============</font></br>
+  <font>📍回U+0.15 商户 (第一位)</font>   <font style="font-size: 15px;  color: #ecd500;" > >> 只跑支付宝</font></br>
+  <input value="自营商-长诚(支付宝)+0.15" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <font>📍回U+0.2 商户 (第一位)</font>   <font style="font-size: 15px;  color: #ecd500;" > >> 只跑支付宝</font></br>
+  <input value="BBIN-bf8" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-WEPOKER" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-tai(支付宝)+0.2" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <input value="AG-Huanle(支付宝)+0.2" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="天成-大白兔" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <input value="BBIN-hh(小额卡卡)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-55(支付宝)+0.2" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-56(支付宝)+0.2" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <font>📍回U+0.22 商户 (汇率第一位)</font> </br>
+  <input value="AG-尊龙凯时" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="AG-Huanle(大额卡卡)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <font>📍回U+0.24 商户 (汇率第一位)</font> </br>
+  <input value="自营商-万博体育" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-乐动体育" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-佳博体育(小额卡卡/支付宝)" style="font-size: 15px; width: 200px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <font>📍回U+0.25 商户 (汇率第一位)</font> </br>
+  <input value="自营商-长诚(大额卡卡)+0.25" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="WM-大赢家(支付宝)+0.25" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-55(小额/大额卡卡)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-56(小额/大额卡卡)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <input value="BBIN-a99" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自營商-MG88888" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-spc" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-66(小额/大额卡卡)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <input value="自營商-绿巨人娛樂" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自營商-巨人娛樂" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="GT-3885娱乐" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-jsx" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <input value="WM-BET365(5157)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+
+  <font>📍回U+0.3 商户 (汇率第一位)</font> </br>
+  <input value="四方-INFINITY(小额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="四方-INFINITY(大额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+</br>
+  <input value="自营商-伟德" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-B8娛樂" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="BBIN-jg(大额卡卡)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <input value="GT-BET365" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="GT-威尼斯电子" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input></br>
+  <font>📍回U+0.35 商户 (汇率 照银行卡)</font> </br>
+  <input value="自营商-柚子(四号)" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  <input value="自营商-OTM888乐天堂" style="font-size: 15px; width: 150px; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="LEBO-澳门百家乐" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="WM-大赢家" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="自营商-1XBET" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="自营商-1XBET(小额卡卡)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+    <input value="自營商-10b18(小额卡卡/支付宝)" style="font-size: 15px; width: auto; text-align: center; background-color: black; color: yellowgreen; font-weight: 1000px;"></input>
+  </div>
 
   
 <div  class='e' align="center" style="vertical-align:bottom;">
@@ -14135,10 +14279,10 @@ startup_urls</br>
 
 <div  style=" position:absolute; margin-left:280px; background-color: #000000; margin-top:-120px; color: blueviolet; z-index:9999999;" ><input id="usdtv2check" style="width: 15px;height: 15px; " type="checkbox"    onclick="usdtv2(this)" checked></input><label for="usdtv2check" style="font-size:30px;" >usdtV2</label></div>
 
-<div class="caption" id="usdtv2div" style=" position: absolute; margin-top:-120px; width: 420px; height:800px; z-index: 99999; display: block;">
-  <div class="video-container" style="height: 800px;">
+<div class="caption" id="usdtv2div" style=" position: absolute; margin-top:-120px; width: 420px; height:1200px; z-index: 99999; display: block;">
+  <div class="video-container" style="height: 900px;">
     <video autoplay muted loop >
-      <source src="https://videos.pexels.com/video-files/3129595/3129595-uhd_2560_1440_30fps.mp4" type="video/mp4" style="height: 800px;" />
+      <source src="https://videos.pexels.com/video-files/3129595/3129595-uhd_2560_1440_30fps.mp4" type="video/mp4" style="height: 900px;" />
  
      
     </video>
@@ -14173,6 +14317,11 @@ background-size: cover; text-align:left; font-weight:bolder; color:#12f71d;   wi
 
 </br></br>
 
+<!--usdtv2 隐藏
+<button id="copyuoutv2uc" class="myButton" onclick="copyuoutv2uc()">💛<font style="color:blueviolet; font-weight: bolder;">UCPAY帐记</font>💛</button>
+<button id="copyuoutv2rcgoin" class="myButton" onclick="copyuoutv2rcgoin()">💛<font style="color:blueviolet; font-weight: bolder;">RC出入U</font>💛</button>
+<button id="copyuoutv2rc" class="myButton" onclick="copyuoutv2rc()">💛<font style="color:blueviolet; font-weight: bolder;">RC帐记</font>💛</button>
+-->
 
 
 
@@ -14196,6 +14345,8 @@ background-size: cover; text-align:left; font-weight:bolder; color:#12f71d;   wi
 
 
 <!--USDTV2-->
+
+
 
 
 <div style=" position:absolute; margin-left:280px;  margin-top:-90px; color: #12f71d; z-index:9999999; background-color:#000;"><input id="checkhandu" style="width: 15px;height: 15px;" type="checkbox" onclick="usdt(this)" checked></input><label for="checkhandu" style="font-size:30px;">手动扣</label></div>
@@ -14244,7 +14395,7 @@ border-style:none;" onkeyup="usdt(this)";></textarea></br></br>
 <div class="ls" align="center">
 
 </br></br>
-<div align="left" style="margin-left:50px; ">
+<div align="left" style="margin-left:50px;">
 
 🌞 <input id="urmb" type="text"  placeholder="此笔RMB"   value="" style=" width:100px; text-align: left; color:#faa7abdc; font-weight: 1000;  font-size: 10pt; border-style:none;  background-color:transparent;" readonly="readonly" onkeyup="usdt(this)";></input>
 💫 當前匯率  <input id="urate" type="text"   style="text-align:center; width: 150px; color:#d7f4f7; font-weight: 1000; font-size: 20px; background-image: url('    https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
@@ -14369,9 +14520,17 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: cover;  display: none; position: absolute; right: 2000000000px;"  ></textarea></br>
 </div>
-
+  <!--总输出-->
 </br></br>
+<div style="font-weight: border; background-color: #000;">
 
+<font color="yellow" ><H1>🌜　提卡专用　🌛</H1></font>
+
+</div>
+银行卡去除空白，特殊符号</br>
+<input id="bankcardin" style="width: 350px; height: 30px; text-align: center;" oninput="myFunction()"></input></br>
+<input id="bankcardout" style="width: 450px; height: 45px; background-color: #0a0a09;font-weight: bold; color: #6bf734; text-align: center; font-size: 25px;" oninput="myFunction()"  ></input></br>
+</div>
 </br></br></br></br></br></br>
 </div>
 </div>
@@ -14766,7 +14925,7 @@ background-size: cover;  " onkeyup="west23(this);west(this)"></textarea></br></b
 
 </div>
 </div>
-<div id="46" class="blchang3" ><span class="1"><font size="6" style=" color:#8ffa02; font-weight:bold;  ">代付充值</font></span></div>
+<div id="46" class="blchang3" ><span class="1"><font size="6" style=" color:#8ffa02; font-weight:bold;  ">188买U/自营商-巨人买U/代付充值</font></span></div>
 <div id= "blchang4" class="blchang4" style="display: none;">
 <div class="u188">
 <div style="background-color:rgb(54, 68, 65) ;"><font color="yellowgreen" ><h1>代付充值专用</h1></font></div>
@@ -14785,7 +14944,7 @@ background-size: cover;  " onkeyup="west23(this);west(this)"></textarea></br></b
 
 </br>
 <button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="GFBBBV();u12018();"><font color="black" style="font-size: 20px;" >聚财 - 预付上分</font><font color="red" style="font-size: 20px; " >0.4%+2</font></button>
-<button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="yc();u12018();"><font color="black" style="font-size: 20px;" >旭滕代付 - 预付上分</font><font color="red" style="font-size: 20px; " >0.4%+2 (返佣千一 实际0.5%+2)</font></button>
+<button id="myButton" class="myButton" style="padding:5px 5px; height: 40px;" onclick="yc();u12018();"><font color="black" style="font-size: 20px;" >旭滕代付 - 预付上分</font><font color="red" style="font-size: 20px; " >0.5%+2 (返佣千一 实际0.6%+2)</font></button>
 
 </br></br>
 
@@ -14859,8 +15018,6 @@ ERC20
 
 
   </div>
-
-  <!--
    <div style="background-color: rgb(54, 68, 65);vertical-align:text-top;"><font color="yellowgreen"><h1>188买U 第一位汇率显示较多的+0.25</h1></font></div> 
    
    
@@ -14940,7 +15097,7 @@ ERC20
    <button id="buy188uoutucbt" class="myButton" style="padding:5px 5px;" onclick="buy188uoutucbt()"><font color="blue" >🌍UCPAY帐记</font></button>
    <button id="buy188uoutrcgoinbt" class="myButton" style="padding:5px 5px;" onclick="buy188uoutrcgoinbt()"><font color="blue" >🌍RC出入U明细</font></button>
    <button id="buy188uoutrcbt" class="myButton" style="padding:5px 5px;" onclick="buy188uoutrcbt()"><font color="blue" >🌍 RC帳記</font></button></br></br>
-
+<!-- 188 ERC-->
    ERC20
    <input id="buy188uERCaddress" type="text" value="13A14" style="text-align:center; color: #0080FF; background-color: #000079;" size="2" onkeyup="buy188u(this)";></input>
    <button id="buy188uoutrcgoinbtERC" class="myButton" onclick="buy188uoutrcgoinbtERC()"><font color="blue" >🌍出入U 明细</font></button>
@@ -15034,7 +15191,7 @@ ERC20
      <button id="buy188uoutrcbt2" class="myButton" style="padding:5px 5px;" onclick="buy188uoutrcbt2()"><font color="blue" >🌍 RC帳記</font></button></br></br>
      
 
-  
+     <!-- 188 ERC 2-->
    ERC20
    <input id="buy188uERCaddress2" type="text" value="13A14" style="text-align:center; color: #0080FF; background-color: #000079;" size="2" onkeyup="buy188u2(this)";></input>
    <button id="buy188uoutrcgoinbtERC2" class="myButton" onclick="buy188uoutrcgoinbtERC2()"><font color="blue" >🌍出入U 明细</font></button>
@@ -15053,7 +15210,7 @@ ERC20
    </div>
    </div>  
   
-
+<!--扣四户-->
     
    <div id="c3">
     <div id="a188achang3" class="xx">
@@ -15085,6 +15242,7 @@ ERC20
       <input id="buy188utolur2g" type="text" value=""  readonly="readonly"  onkeyup="buy188u3(this)"; style=" text-align:center;  width: 450px; font-size: 15pt; color:wheat; font-weight: bolder; border: none; background-color: transparent; position: relative; right:-450px; top:-30px"  ></input></br>
       
 
+      <!--A-->
 
       <input id="buy188unamea2g" type="text" value="A"  placeholder="商户名"  onkeyup="buy188u3(this)"; style="text-align:center;  width: 100px; font-size: 15pt; color:#fdd805; font-weight: bolder; background-image: url('    https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
       background-repeat: no-repeat;
@@ -15096,7 +15254,8 @@ ERC20
       background-position: center;
       background-size: cover;" ></input>
 
-   
+      <!--B-->
+      
       <input id="buy188urmba2g" type="text" value=""  placeholder="此处不用输入"  onkeyup="buy188u3(this)"; style="text-align:center;  width: 200px; font-size: 15pt; color:#ffa908; font-weight: bolder; background-image: url('    https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
       background-repeat: no-repeat;
       background-position: center;
@@ -15112,7 +15271,7 @@ ERC20
       background-position: center;
       background-size: cover;" ></input></br>
       
- 
+      <!--C-->
      
       <input id="buy188unamec2g" type="text" value="C"  placeholder="商户名"  onkeyup="buy188u3(this)"; style="text-align:center;  width: 100px; font-size: 15pt; color:#fdd805; font-weight: bolder; background-image: url('    https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
       background-repeat: no-repeat;
@@ -15124,7 +15283,7 @@ ERC20
       background-position: center;
       background-size: cover;" ></input></br>
 
- 
+      <!--D-->
 
      <input id="buy188unamed2g" type="text" value="D"  placeholder="商户名"  onkeyup="buy188u3(this)"; style="text-align:center;  width: 100px; font-size: 15pt; color:#fdd805; font-weight: bolder; background-image: url('    https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
      background-repeat: no-repeat;
@@ -15150,7 +15309,7 @@ ERC20
       <button id="buy188uoutrcbt2g" class="myButton" style="padding:5px 5px;" onclick="buy188uoutrcbt2g()"><font color="blue" >🌍 RC帳記</font></button></br></br>
       
  
-
+      <!-- 188 ERC 3-->
     ERC20
     <input id="buy188uERCaddress2g" type="text" value="13A14" style="text-align:center; color: #0080FF; background-color: #000079;" size="2" onkeyup="buy188u3(this)";></input>
     <button id="buy188uoutrcgoinbtERC2g" class="myButton" onclick="buy188uoutrcgoinbtERC2g()"><font color="blue" >🌍出入U 明细</font></button>
@@ -15173,7 +15332,7 @@ ERC20
 
    
 
-        
+         <!-- 柚子-->
 
          <div id="48" style="background-color: rgb(54, 68, 65);vertical-align:text-top;"><font color="yellowgreen"><h1>自营商/ 巨人 / 绿巨人 / 蓝巨人 换U 银行卡+0.23</h1></font></div> 
    
@@ -15247,7 +15406,7 @@ ERC20
          <button id="buy188uoutucbtyo" class="myButton" style="padding:5px 5px;" onclick="buy188uoutucbtyo()"><font color="blue" >🌍UC帐记</font></button>
          <button id="buy188uoutrcgoinbtyo" class="myButton" style="padding:5px 5px;" onclick="buy188uoutrcgoinbtyo()"><font color="blue" >🌍RC出入U明细</font></button>
          <button id="buy188uoutrcbtyo" class="myButton" style="padding:5px 5px;" onclick="buy188uoutrcbtyo()"><font color="blue" >🌍 RC帳記</font></button></br></br>
-   
+      <!-- 188 ERC-->
          ERC20
          <input id="buy188uERCaddressyo" type="text" value="13A14" style="text-align:center; color: #0080FF; background-color: #000079;" size="2" onkeyup="buy188uyo(this)";></input>
          <button id="buy188uoutrcgoinbtERCyo" class="myButton" onclick="buy188uoutrcgoinbtERCyo()"><font color="blue" >🌍出入U 明细</font></button>
@@ -15345,7 +15504,7 @@ ERC20
 
 
 
-  
+     <!-- 188 ERC 2-->
    ERC20
    <input id="buy188uERCaddress2yo" type="text" value="13A14" style="text-align:center; color: #0080FF; background-color: #000079;" size="2" onkeyup="buy188u2yo(this)";></input>
    <button id="buy188uoutrcgoinbtERC2yo" class="myButton" onclick="buy188uoutrcgoinbtERC2yo()"><font color="blue" >🌍出入U 明细</font></button>
@@ -15365,7 +15524,7 @@ ERC20
      <textarea id="buy188uoutrc2yo" type="text" size="150" value=""  placeholder="輸出"  style="border-style:none; text-align:center;  width: 10px; font-size: 15pt; color:#2efd05; font-weight: bolder; background-color: #000; position: relative; right: 200000px;"></textarea>
      <textarea id="buy188uoutrcgoin2yo" type="text" size="150" value=""  placeholder="輸出"  style="border-style:none; text-align:center;  width: 10px; font-size: 15pt; color:#2efd05; font-weight: bolder; background-color: #000; position: relative; right: 200000px;"></textarea>
    
--->
+
      
    </div>
    </div>  
@@ -15890,7 +16049,7 @@ TRANSCAN + 0.025</br> </br>
     </br> 
 收 TRX 汇率 = tronscan 左上-0.025</br>
 (EX: 现在左上是0.056 上分就是 1 TRX ＝ 0.041 U) </br>
-当前 <a href="https://tronscan.io/#/address/TQxbMwi2EouYmqrMkvWq6RGbHAiAdn64Nt" target="_blank" style="color:red;">TRONSCAN</a> 汇率 1 TRX =  <input id="trxurate" style="background-color:yellow; width:100px; text-align: center; width: 50px;" value="" onkeyup="trxu(this)";></input> USDT </br><font style="color: yellowgreen;">如要原路退回扣除 10 TRX 手续费</font></br>
+当前 <a href="https://tronscan.io/#/address/TQxbMwi2EouYmqrMkvWq6RGbHAiAdn64Nt" target="_blank" style="color:red;">TRONSCAN</a> 汇率 1 TRX =  <input id="trxurate" style="background-color:yellow; width:100px; text-align: center; width: 50px;" value="" onkeyup="trxu(this)";></input> USDT </br></br>
 
 
 
@@ -16074,7 +16233,7 @@ style="width:600px;height:180px;color:rgb(155, 238, 2); font-weight: bold; font-
 </div>
 </div>
 
-<div id="5" class="flip2"><span class="1"><font size="6"style=" color:#8ffa02; font-weight:bold;  ">红字大全</font></span></div>
+<div id="5" class="flip2"><span class="1"><font size="6"style=" color:#8ffa02; font-weight:bold;  ">报余额专用&红字大全</font></span></div>
 <div id="pane2" class="pane2" style="display: none;">
 
 
@@ -16407,7 +16566,6 @@ function formatText() {
 <option value="修改金额(ETH)" >💜修改金额(ETH)</option>
   <option value="会员转错TRX">会员转错TRX</option>
   <option value="会员转错ETH">会员转错ETH</option>
-    <option value="会员转错USDC">会员转错USDC</option>
   <option value="会员转错链">会员转错链</option>
 
 </select>
@@ -16461,39 +16619,10 @@ function formatText() {
 <input id="trxusdta" type="text" value=""   style=" text-align:center;  width: 180px; font-size: 15pt; color:blueviolet; font-weight: bolder; border: none; background-color: transparent; position: relative; right: 2000000000px;"  onkeyup="rcchg(this)" ></input>
 
 </div>
-
-<div id="usdccontractdiv" style="display: none;">
-  <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 16px 24px; background-color: #0a0a0a; border: 1px solid #2a2a2a; border-radius: 10px; width: fit-content; margin: 0 auto;">
-
-    <span style="color: #cccccc; font-size: 12pt; font-weight: bold; letter-spacing: 1px;">USDC合约地址：</span>
-
-    <input id="usdccontract" type="text" value="0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48" placeholder="合约地址"
-      style="text-align:center; width: 550px; font-size: 13pt; color:yellowgreen; font-weight: bolder; border: 1px solid #2a2a2a; border-radius: 5px; background-color: #111; padding: 6px 10px; outline: none;"
-      onkeyup="rcchg(this)">
-
-    <span style="color: yellow; font-size: 12pt; font-weight: bold; padding: 3px 14px; border: 1px solid #555; border-radius: 20px; background-color: #1a1a00;">扣除 5 U 上分</span>
-
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <input id="usdcname" type="text" value="" placeholder="商户名称"
-        style="text-align:center; width: 200px; font-size: 13pt; color:yellowgreen; font-weight: bolder; border: 1px solid #2a2a2a; border-radius: 5px; background-color: #111; padding: 6px 10px; outline: none;"
-        onkeyup="rcchg(this)">
-      <input id="usdcnamered" type="text" value="" placeholder="商户名称"
-        style="position: fixed; left: -9999px; opacity: 0; pointer-events: none; width: 200px; font-size: 13pt; color: yellowgreen; font-weight: bolder; border: none; background-color: black;"
-        onkeyup="rcchg(this)">
-      <button id="usdcnameredbt" class="myButton" style="padding: 7px 14px; color: #4466ff; font-weight: bold; border-radius: 5px;" onclick="usdcnameredbt()">RC帐记</button>
-    </div>
-
-    <span style="color: yellow; font-size: 11pt; opacity: 0.85;">记得先复制红字 再贴给商户 不然资料会被清除</span>
-
-  </div>
-</div>
-
 </br>
 
 <textarea id="rcin" placeholder="请输入订单资讯"   ptype="text" value="" style="width:600px; height:180px; color:rgb(100, 218, 125);font-weight:bold;    background:black; font-size:13pt; text-align:center;" onkeyup="rcchg(this)";></textarea>
 </br></br>
-
-
 <textarea id="rcchg4" type="text" value="" style="width:600px; height:180px; color:rgb(252, 218, 125);font-weight:bold;    background:rgba(39, 10, 10, 0.8); font-size:13pt; text-align:center;" onclick="rcchgbt()"></textarea>
 
 </br></br>
@@ -17252,8 +17381,8 @@ background-size: cover; " onkeyup="payout(this)"  onclick="payoutcopy()"></texta
 </br>
 
 <font style="color:yellow">转错币种</font></br>
-USDC - 5 U 手续费</br>合约地址</br> 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48</br>
-</br>
+USDC - 3 U 手续费</br>
+
 <font style="color:yellow">TRX 原路退回 10 TRX 手续费 </font></br>
 </br>
 
@@ -17345,9 +17474,9 @@ else if (person == password)
 //商户可用余额
 "	https://ucpays.net/agent/merchants?merchant_display_name=&merchant_number=&agent_id=&status=&trash_status=1&sorted_by=created_at_desc&withdraw_from_ui=	",
 //入金利润
-"	https://ucpays.net/agent/deposits?started_at=2026-06-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	",
+"	https://ucpays.net/agent/deposits?started_at=2026-05-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1	",
 //出金利
-"	https://ucpays.net/agent/withdraws?started_at=2026-06-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number=	",
+"	https://ucpays.net/agent/withdraws?started_at=2026-05-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number=	",
 
 //快云
 "	https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_240238669&separate_order_status=-1&relative_system_order_number=	",
@@ -17377,7 +17506,7 @@ else if (person == password)
     
 
 //后台出U
- "https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=531_TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7&separate_order_status=-1&relative_system_order_number="  ,
+ "https://ucpays.net/agent/withdraws?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=531_TWgdo9NHTRk6KjDr7pcoDzdyke3Q1s8a2b&separate_order_status=-1&relative_system_order_number="  ,
 //明额明细
 "https://ucpays.net/agent/merchants/wallet-history/integration?started_at="+strDate+"+"+ucfeetime1+"%3A"+ucfeetime2+"&ended_at=&merchant_display_name=&merchant_number=",
 
@@ -17659,8 +17788,8 @@ href24="http://mon-client.qingwa100.top/#/dashboard"
 href25="http://182.16.57.237:56703/x_mch/start/index.html#/user/login"
 href26="https://mch6s9p6j9eig8c.xelsv.xyz/Login"
 href27="https://ucpays.net/agent/merchants?merchant_display_name=&merchant_number=&agent_id=&status=&trash_status=1&sorted_by=created_at_desc&withdraw_from_ui="
-href28="https://ucpays.net/agent/deposits?started_at=2026-06-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name="
-href29="https://ucpays.net/agent/withdraws?started_at=2026-06-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number="
+href28="https://ucpays.net/agent/deposits?started_at=2026-05-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name="
+href29="https://ucpays.net/agent/withdraws?started_at=2026-05-23+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number="
 href30="https://ucpays.net/agent/deposits?started_at="+strDate+"+07%3A02%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=353_03733618&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&filtered_by_confirmed_at=1"
 href31="https://ucpays.net/agent/deposits?started_at="+strDate+"+07%3A02%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=354_03733618&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&filtered_by_confirmed_at=1"
 href32="https://ucpays.net/agent/withdraws?started_at="+strDate+"+07%3A02%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=251_221242613&separate_order_status=-1&relative_system_order_number="
@@ -17742,8 +17871,8 @@ else if (person == password)
 
 
 
-href1="https://ucpays.net/agent/withdraws?started_at=2026-06-23+04%3A14%3A00&ended_at=2026-07-25+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number="
-href2="https://ucpays.net/agent/deposits?started_at=2026-06-23+04%3A14%3A00&ended_at=2026-07-25+20%3A23%3A59&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
+href1="https://ucpays.net/agent/withdraws?started_at=2026-05-23+04%3A14%3A00&ended_at=2026-05-25+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number="
+href2="https://ucpays.net/agent/deposits?started_at=2026-05-23+04%3A14%3A00&ended_at=2026-05-25+20%3A23%3A59&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
 href3="https://ucpays.net/agent/merchants"
 href4="https://b.oxk888.com/#/index.statistics"
 href5="https://bizofficebak.mp0x6sh.com/"
@@ -17760,8 +17889,8 @@ href15="https://mer.lelipay.com/mer/"
 href16="https://ci.tw-shopee.net/main.html"
 href17="https://mch6s9p6j9eig8c.xelsv.xyz/"
 href18="https://incj.infinitypool.app/infinity/account"
-href19="https://ucpays.net/agent/withdraws?started_at="+strDate+"+20%3A23%3A00&ended_at=2026-07-25+17%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=336_39ee33835389d9a720770658&separate_order_status=-1&relative_system_order_number="
-href20="https://ucpays.net/agent/deposits?started_at="+strDate+"+17%3A23%3A00&ended_at=2026-07-25+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=354_03733618&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
+href19="https://ucpays.net/agent/withdraws?started_at="+strDate+"+20%3A23%3A00&ended_at=2026-05-25+17%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=336_39ee33835389d9a720770658&separate_order_status=-1&relative_system_order_number="
+href20="https://ucpays.net/agent/deposits?started_at="+strDate+"+17%3A23%3A00&ended_at=2026-05-25+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=354_03733618&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
 href21="https://ucpays.net/agent/deposits?started_at="+strDate+"+17%3A23%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=TYPE_DEPOSIT_USDT&merchant_number=&merchant_display_name=%E8%BD%AC%E5%8D%A1&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
 href22="http://mon-client.qingwa100.top/#/dashboard"
 href23="https://www.gorilla-pay.com/#/dashboard"
@@ -18005,7 +18134,7 @@ else if (person == password)
 
    var urls = [
 "https://rcqoo99.com/#/admin/merchant/index?name_or_username=&agent_name_or_username=&status=&google2fa_enable=&agent_enable=0&is_deleted%5B0%5D=0&sort_by=1&page=1",
-"https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7&type=&has_group=&channel_code=&status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2&user_id=&page=1&external_enable=&auto_withdraw=&third_party_withdraw_enable=",
+"https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TWgdo9NHTRk6KjDr7pcoDzdyke3Q1s8a2b&type=&has_group=&channel_code=&status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2&user_id=&page=1&external_enable=&auto_withdraw=&third_party_withdraw_enable=",
 "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "+%2010%3A00%3A00&ended_at=&channel_code=&transaction_hash=&from_wallet_address=&to_wallet_address=&type=&status%5B0%5D=1&row=15&page=1",
 "https://rcqoo99.com/#/admin/deposit/index?started_at=" + strDate + "+%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=210010120050054097948&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1",
 "https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",
@@ -18027,8 +18156,8 @@ else if (person == password)
 "https://tronscan.io/#/balanceView/" + rcgasfreeaddress,
 "https://rcqoo99.com/#/admin/merchant/index?name_or_username=&agent_name_or_username=&status=&google2fa_enable=&agent_enable=0&is_deleted%5B0%5D=0&sort_by=1&page=1",
 "https://rcqoo99.com/#/admin/merchant/agents?name_or_username=&agent_name_or_username=&status=&agent_enable=1&is_deleted%5B0%5D=0&sort_by=1&page=1",
-"https://rcqoo99.com/#/admin/deposit/index?started_at=2026-07-25%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1",
-"https://rcqoo99.com/#/admin/withdraw/index?started_at=2026-07-25T00%3A00%3A00%2B08%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&row=15&page=1&auto_withdraw=",
+"https://rcqoo99.com/#/admin/deposit/index?started_at=2026-05-25%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1",
+"https://rcqoo99.com/#/admin/withdraw/index?started_at=2026-05-25T00%3A00%3A00%2B08%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&row=15&page=1&auto_withdraw=",
 "https://teslacon99.com/admin/login",
 "https://chat.beeqoo99.com/app/accounts/1/conversations/6485",
 "https://admin.beeqoo99.com/admin/login",
@@ -18113,7 +18242,7 @@ href9="https://ucpays.net/agent/withdraws?started_at=2024-07-22+00%3A00%3A00&end
 href10="https://ucpays.net/agent/withdraws"
 href11="https://docs.google.com/spreadsheets/d/1yjHWtuK8tkURzd5F3nkTDisyl9-5jJpgS2us4_FnncY/edit?pli=1&gid=230022935#gid=230022935"
 href12="https://docs.google.com/spreadsheets/d/12mDzHiSZfEU7wbQwY-DYs09ujhSPk4XnuzpivCxv0bw/edit?pli=1&gid=845113239#gid=845113239"
-href13="https://ucpays.net/agent/withdraws?started_at=2026-06-23%2000%3A00%3A00&order_status=103&separate_order_status=6&page=10"
+href13="https://ucpays.net/agent/withdraws?started_at=2026-05-23%2000%3A00%3A00&order_status=103&separate_order_status=6&page=10"
 href14="https://ucpays.net/agent/merchant-channels/stats?channel%5B%5D=TYPE_DEPOSIT_WAP_ALIPAY&channel%5B%5D=TYPE_DEPOSIT_QR_ALIPAY&upstream_merchant_id="
 href15="https://ucpays.net/agent/merchant-channels/stats"
 href16="https://ucpays.net/agent/order-stats?started_at=2024-07-22+00%3A00%3A00&ended_at=2024-07-22+16%3A30%3A00"
@@ -18388,95 +18517,6 @@ else if (person == password)
 // 佳佳
 
 
-
-  // 币飞帐表
-
-function bfaccount() {
-
-  function formatMonth(month) {
-    if (month < 10) {
-      return "0" + month;
-    } else {
-      return month.toString();
-    }
-  }
-  
-  function formatDay(day) {
-    if (day < 10) {
-      return "0" + day;
-    } else {
-      return day.toString();
-    }
-  }
-
-  var date = new Date();
-  var year = date.getFullYear();
-  var month = formatMonth(date.getMonth() + 1);
-  var day = formatDay(date.getDate()); // 使用getDate()获取日期
-  var strDate = year + "-" + month + "-" + day;
-
-  var date3 = new Date();
-  date3.setDate(date3.getDate() - 3);
-  var strDate3 = date3.getFullYear() + "-" + formatMonth(date3.getMonth() + 1) + "-" + formatDay(date3.getDate());
-
-
-
-
-          let password ="1027";
-          let person = prompt("Please enter password:", "");
-  
-  if (person == null || person == "" || person != password) {
-
-   alert("错误的密码!!");
-    document.getElementById("rcherfq").style.display="none";
-    document.getElementById("timerc").value = "错误的密码!!";
-   
-   
-
-  }
-else if (person == password)
-
-  {
-
-
-    var rcaddress =  document.getElementById("rcoutaddress").value;     
-    var rcgasfreeaddress=  document.getElementById("rcgasfreeaddress").value;
-
-
-    document.getElementById("timerc").value = "开启成功";
-    
-    var reddate = "2026-07-17";
-
-  
-
-    var urls = [
-        "https://admin.beeqoo99.com/admin/users",
-        "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=2",
-        "https://admin.beeqoo99.com/admin/blockchain-wallets?tableFilters[type][values][0]=1",
-        
-        // 未匹配
-        "https://admin.beeqoo99.com/admin/transactions?tableFilters[block_created_at][block_created_at_from]="+reddate+"&tableFilters[transfer_type][values][0]=3&tableFilters[status][values][0]=2&tableFilters[coin][values][0]=USDT",
-        // 当下未出款
-       "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+strDate3+"&tableFilters[status][values][0]=3&tableFilters[status][values][1]=2&tableFilters[status][values][2]=7&tableFilters[status][values][3]=1",
-        //联盟提现
-        "https://rcqoo99.com/#/admin/withdraw/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",   
-        //联盟充值
-       "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+reddate+"&tableFilters[type][value]=2&tableFilters[status][values][0]=4&tableFilters[status][values][1]=5&tableFilters[coin][values][0]=USDT",
-
-        "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+reddate+"&tableFilters[type][value]=1&tableFilters[status][values][0]=4&tableFilters[status][values][1]=5",
-
-      ];
-
-      // 批量打开链接
-      for (var i = 0; i < urls.length; i++) {
-        window.open(urls[i], '_blank');
-      }
-
-}
-}
-
-
-
   // 卤蛋 RC
 function gettimerc() {
 
@@ -18547,8 +18587,8 @@ else if (person == password)
         "https://rcqoo99.com/#/admin/wallet/all-wallets?status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2",
         "https://rcqoo99.com/#/admin/merchant/index?agent_enable=0&is_deleted%5B0%5D=0",
         "https://rcqoo99.com/#/admin/merchant/agents?agent_enable=1&is_deleted%5B0%5D=0",
-        "https://rcqoo99.com/#/admin/deposit/index?started_at=2026-07-25%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1&status%5B0%5D=4&status%5B1%5D=5",
-        "https://rcqoo99.com/#/admin/withdraw/index?started_at=2026-07-25%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=&row=15&page=1&provider=",
+        "https://rcqoo99.com/#/admin/deposit/index?started_at=2026-05-25%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1&status%5B0%5D=4&status%5B1%5D=5",
+        "https://rcqoo99.com/#/admin/withdraw/index?started_at=2026-05-25%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=&row=15&page=1&provider=",
         "https://rcqoo99.com/#/admin/deposit/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&sort_by=2&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=true",
         "https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",
         "https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&client_ipv4=&auto_withdraw=&is_platform_tx=&row=15&page=1&provider=gasfree&sort_by=2",
@@ -18569,13 +18609,13 @@ else if (person == password)
         "https://tronscan.io/#/transaction/5fafd3d4f58f5a5dc2180e2b38161ab93d29b28be1dd63b3e106216aa3c9af91",
         "https://etherscan.io/tx/0x4bae7d366cb0cf797e99bcff8cf121c0feec2a8a6fec6647562c07f0d4f97bd6",
         "https://bscscan.com/",
-      //  "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TBNeSQMc4x3Qob1pD2zF9YBGRRsBNu6rT8&type=&is_platform_tx=&amount=&row=15&page=1",
-        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7&type=&is_platform_tx=&amount=&row=15&page=1",
-        "https://rcqoo99.com/#/admin/wallet/record?to_wallet_address=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7&started_at=" + strDate + "T00%3A00%3A00%2B08%3A00",
-      //  "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12",
+        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TBNeSQMc4x3Qob1pD2zF9YBGRRsBNu6rT8&type=&is_platform_tx=&amount=&row=15&page=1",
+        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TWgdo9NHTRk6KjDr7pcoDzdyke3Q1s8a2b&type=&is_platform_tx=&amount=&row=15&page=1",
+        "https://rcqoo99.com/#/admin/wallet/record?to_wallet_address=TWgdo9NHTRk6KjDr7pcoDzdyke3Q1s8a2b&started_at=" + strDate + "T00%3A00%3A00%2B08%3A00",
+        "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12",
         "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TBNeSQMc4x3Qob1pD2zF9YBGRRsBNu6rT",
 
-        "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7",
+        "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TWgdo9NHTRk6KjDr7pcoDzdyke3Q1s8a2b",
         "https://teslacon99.com/admin/deposits",
         "https://utrxcon99.com/admin/login",
         "https://admin.beeqoo99.com/admin",
@@ -18593,9 +18633,6 @@ else if (person == password)
 
 }
 }
-
-
-
   // 卤蛋 RC
 
 
@@ -18687,9 +18724,7 @@ window.open(url[i], '_blank').location;
   <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimerc2()">BC&VC</button>
 
   -->
-  <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimercups()">找ERC</button>
-    <button type="button" id="but" style="color: black;" class="myButton"  onclick="bfaccount()">币飞做账用</button></br></br>
-
+  <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimercups()">找ERC</button></br></br>
   <input id="ucfeetime1" value=""  placeholder="点" style="background-color: black; color:yellowgreen; text-align: center; width: 50px;"></input>
   <input id="ucfeetime2" value=""  placeholder="分" style="background-color: black; color:yellowgreen; text-align: center; width: 50px;"></input>
   <input id="ucfee" value=""  placeholder="" style="background-color: black; color:yellowgreen; text-align: center; width: 150px;"></input>
@@ -19188,57 +19223,12 @@ background-size: cover; overflow-y:hidden; "   >
 ✅可开外层 ✅限制BC盘口
 🈲资金🈲三黑🈲诈骗🈲话费券...等
 若发现混料，没有遵守规章，
-我司有权力冻结所有商户余额不予出款，请知悉。
+我司有权力冻结所有商户余额不予出款，请知悉
 
 
   </textarea>
   </div>
 
-
-   <div style="vertical-align:text-top; display: inline-block;">
-    <h1>QQ支付 </h1>
-  
-  <textarea  id="input288" style="height: 400px; width: 450px; color:rgb(233, 230, 73); text-align:left;font-weight:bold; background-image: url('    https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; overflow-y:hidden; "   >
-
-✨【QQ支付】 ✨
-
-
-
-渠道名称：UCPAY             
-产    品：QQ支付
-通道成率：60%                
-结算周期： 即时 D0               
-支持终端： PC 安卓 苹果               
-充值模式： API               
-下发模式： API               
-商户号日限额： 依需求               
-充值单笔限额： 500-3000           
-下发u：支持 汇率依照当日承兑商汇率为主 欧意OKX 自选区｜支付宝｜第三挡 +0.12
-交易时间： 24h              
-下发时间： 24h             
-到帐时间： 一般10分钟内               
-客服时间： 24小時    
-抗投诉：是                        
-投訴规则：抗投诉 / 不抗司法  司法单笔 1:1 赔付 + 天眼费
-处理依据：
-涉案资金处理以天眼指向信息为参考依据，
-若公安机关实际下达退款通知，则以行政处分单、公安录音党、退赔情况说明书及法院起诉书为主要依据，其效力高于天眼，
-如卡商接获公安通知需将资金退回收款人，有权利优先配合公安机关完成退回手续。
-
-请不要选择延迟支付，重复支付，修改金额，如损失查不到会员需自行承担
-
-
-📛通道注意事项📛
-✅可开外层 ✅限制BC盘口
-🈲资金🈲三黑🈲诈骗🈲话费券...等
-若发现混料，没有遵守规章，
-我司有权力冻结所有商户余额不予出款，请知悉。
-
-  </textarea>
-  </div>
 
 
   </br></br> 
