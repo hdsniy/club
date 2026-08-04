@@ -3371,6 +3371,9 @@ else {
 }
 
 
+let usdtv2HashAlertCount = 0;
+let usdtv3HashAlertCount = 0;
+
 function usdtv2(obj) {
   document.getElementById('usdtv2out').value = "";
 
@@ -3426,9 +3429,14 @@ function usdtv2(obj) {
     const match = usdtv2address.match(/[A-Za-z0-9]{34}/);
 
 
-    if (usdtv2name == "自营商-WEPOKER(支付宝)+0.1"  || usdtv2name == "自营商-伟德(小额卡卡)+0.23"  ) {
+    if (usdtv2name == "自营商-WEPOKER(支付宝)+0.1"   ) {
 
-                 alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
+                 if (usdtv2HashAlertCount < 2) {
+                   alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
+                   alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
+
+                   usdtv2HashAlertCount++;
+                 }
 
 
 
@@ -3462,6 +3470,17 @@ function usdtv2(obj) {
 
       return;
     }
+
+  
+    if ( usdtv2name == "自营商-伟德(小额卡卡)+0.23"  ) {
+
+                 if (usdtv3HashAlertCount < 2) {
+                   alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
+                   alert("⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希\n⚠️他家下发要发交易哈希");
+                   usdtv3HashAlertCount++;
+                 }
+                 }
+
 
 
     // 设置输出内容
@@ -13308,7 +13327,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260804v1060</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260804v1061</font>
 
 <!-- 出款地址 -->
 
