@@ -13327,10 +13327,10 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260804v1061</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本20260805v1062</font>
 
 <!-- 出款地址 -->
-
+<input id="rcdate" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="2026-07-25"  size="10"></input>
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRYzVi51eN9RC7TQdhEudSJL8mPVDhN6B5"  size="10"></input>
 <input id="rcgasfreeaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRMb1XUCFDKKHT5kxeAD9YJrpANPcXKfQR"  size="10"></input>
 
@@ -17306,7 +17306,8 @@ USDC - 5 U 手续费</br>合约地址</br> 0xA0b86991c6218b36c1d19D4a2e9Eb0cE360
 
 
 
-  
+var rcdate= document.getElementById("rcdate").value ;
+
       // 鲁蛋 帐
 function ucfee(){
  var ucfeetime1=  document.getElementById("ucfeetime1").value ;
@@ -17766,8 +17767,8 @@ else if (person == password)
 
 
 
-href1="https://ucpays.net/agent/withdraws?started_at=2026-06-23+04%3A14%3A00&ended_at=2026-07-25+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number="
-href2="https://ucpays.net/agent/deposits?started_at=2026-06-23+04%3A14%3A00&ended_at=2026-07-25+20%3A23%3A59&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
+href1="https://ucpays.net/agent/withdraws?started_at=2026-06-23+04%3A14%3A00&ended_at="+rcdate+"+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&separate_order_status=-1&relative_system_order_number="
+href2="https://ucpays.net/agent/deposits?started_at=2026-06-23+04%3A14%3A00&ended_at="+rcdate+"+20%3A23%3A59&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
 href3="https://ucpays.net/agent/merchants"
 href4="https://b.oxk888.com/#/index.statistics"
 href5="https://bizofficebak.mp0x6sh.com/"
@@ -17784,8 +17785,8 @@ href15="https://mer.lelipay.com/mer/"
 href16="https://ci.tw-shopee.net/main.html"
 href17="https://mch6s9p6j9eig8c.xelsv.xyz/"
 href18="https://incj.infinitypool.app/infinity/account"
-href19="https://ucpays.net/agent/withdraws?started_at="+strDate+"+20%3A23%3A00&ended_at=2026-07-25+17%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=336_39ee33835389d9a720770658&separate_order_status=-1&relative_system_order_number="
-href20="https://ucpays.net/agent/deposits?started_at="+strDate+"+17%3A23%3A00&ended_at=2026-07-25+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=354_03733618&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
+href19="https://ucpays.net/agent/withdraws?started_at="+strDate+"+20%3A23%3A00&ended_at="+rcdate+"+17%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key=336_39ee33835389d9a720770658&separate_order_status=-1&relative_system_order_number="
+href20="https://ucpays.net/agent/deposits?started_at="+strDate+"+17%3A23%3A00&ended_at="+rcdate+"+20%3A23%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_key=354_03733618&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
 href21="https://ucpays.net/agent/deposits?started_at="+strDate+"+17%3A23%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=TYPE_DEPOSIT_USDT&merchant_number=&merchant_display_name=%E8%BD%AC%E5%8D%A1&upstream_merchant_group_key=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
 href22="http://mon-client.qingwa100.top/#/dashboard"
 href23="https://www.gorilla-pay.com/#/dashboard"
@@ -18051,8 +18052,8 @@ else if (person == password)
 "https://tronscan.io/#/balanceView/" + rcgasfreeaddress,
 "https://rcqoo99.com/#/admin/merchant/index?name_or_username=&agent_name_or_username=&status=&google2fa_enable=&agent_enable=0&is_deleted%5B0%5D=0&sort_by=1&page=1",
 "https://rcqoo99.com/#/admin/merchant/agents?name_or_username=&agent_name_or_username=&status=&agent_enable=1&is_deleted%5B0%5D=0&sort_by=1&page=1",
-"https://rcqoo99.com/#/admin/deposit/index?started_at=2026-07-25%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1",
-"https://rcqoo99.com/#/admin/withdraw/index?started_at=2026-07-25T00%3A00%3A00%2B08%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&row=15&page=1&auto_withdraw=",
+"https://rcqoo99.com/#/admin/deposit/index?started_at="+rcdate+"%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1",
+"https://rcqoo99.com/#/admin/withdraw/index?started_at="+rcdate+"T00%3A00%3A00%2B08%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&row=15&page=1&auto_withdraw=",
 "https://teslacon99.com/admin/login",
 "https://chat.beeqoo99.com/app/accounts/1/conversations/6485",
 "https://admin.beeqoo99.com/admin/login",
@@ -18501,6 +18502,92 @@ else if (person == password)
 
 
 
+
+
+  // rc帐表
+
+function rcaccount() {
+
+  function formatMonth(month) {
+    if (month < 10) {
+      return "0" + month;
+    } else {
+      return month.toString();
+    }
+  }
+  
+  function formatDay(day) {
+    if (day < 10) {
+      return "0" + day;
+    } else {
+      return day.toString();
+    }
+  }
+
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = formatMonth(date.getMonth() + 1);
+  var day = formatDay(date.getDate()); // 使用getDate()获取日期
+  var strDate = year + "-" + month + "-" + day;
+
+  var date3 = new Date();
+  date3.setDate(date3.getDate() - 3);
+  var strDate3 = date3.getFullYear() + "-" + formatMonth(date3.getMonth() + 1) + "-" + formatDay(date3.getDate());
+
+
+
+
+          let password ="1027";
+          let person = prompt("Please enter password:", "");
+  
+  if (person == null || person == "" || person != password) {
+
+   alert("错误的密码!!");
+    document.getElementById("rcherfq").style.display="none";
+    document.getElementById("timerc").value = "错误的密码!!";
+   
+   
+
+  }
+else if (person == password)
+
+  {
+
+
+    var rcaddress =  document.getElementById("rcoutaddress").value;     
+    var rcgasfreeaddress=  document.getElementById("rcgasfreeaddress").value;
+
+
+    document.getElementById("timerc").value = "开启成功";
+    
+    var reddate = "2026-07-17";
+
+  
+
+    var urls = [
+
+        "https://rcqoo99.com/#/admin/accounting?deposit_started_at="+rcdate+"%2000%3A00%3A00&withdraw_started_at="+rcdate+"%2000%3A00%3A00",
+       "https://tronscan.io/#/address/" + rcaddress,
+
+        "https://rcqoo99.com/#/admin/deposit/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&sort_by=2&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=true",
+        "https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",
+        "https://rcqoo99.com/#/admin/exchange/index?started_at=" + strDate + " 00%3A00%3A00",
+        "https://rcqoo99.com/#/rent-energy/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&user_id=&is_refund=&id=&row=15&page=1",
+        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&status%5B0%5D=1&channel_code%5B0%5D=USDT-TRC20&channel_code%5B1%5D=USDT-ERC20&channel_code%5B2%5D=USDT-BEP20&page=1",
+        "https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=2&status%5B1%5D=3&client_ipv4=&auto_withdraw=&is_platform_tx=&row=15&page=1&provider=&sort_by=1",
+       "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=ETH&transaction_hash=&from_wallet_address=&to_wallet_address=&type=&status%5B0%5D=1&is_platform_tx=&amount=&row=15&page=1",           
+
+      ];
+
+      // 批量打开链接
+      for (var i = 0; i < urls.length; i++) {
+        window.open(urls[i], '_blank');
+      }
+
+}
+}
+
+
   // 卤蛋 RC
 function gettimerc() {
 
@@ -18565,7 +18652,7 @@ else if (person == password)
         "https://rcqoo99.com/#/admin/merchant/order-stats?page=1",
        "https://rcqoo99.com/#/admin/wallet/transfer-record?started_at=" + strDate + "T00%3A00%3A00%2B08%3A00",
 
-        "https://rcqoo99.com/#/admin/accounting?deposit_started_at=2026-07-25%2000%3A00%3A00&withdraw_started_at=2026-07-25%2000%3A00%3A00",
+        "https://rcqoo99.com/#/admin/accounting?deposit_started_at="+rcdate+"%2000%3A00%3A00&withdraw_started_at="+rcdate+"%2000%3A00%3A00",
        "https://tronscan.io/#/address/" + rcaddress,
 
         "https://rcqoo99.com/#/admin/deposit/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&sort_by=2&order_number_or_system_order_number=&name_or_username=&system_wallet_address=&transaction_hash=&channel_code=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=true",
@@ -18587,10 +18674,8 @@ else if (person == password)
         "https://tronscan.io/#/transaction/5fafd3d4f58f5a5dc2180e2b38161ab93d29b28be1dd63b3e106216aa3c9af91",
         "https://etherscan.io/tx/0x4bae7d366cb0cf797e99bcff8cf121c0feec2a8a6fec6647562c07f0d4f97bd6",
         "https://bscscan.com/",
-      //  "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TBNeSQMc4x3Qob1pD2zF9YBGRRsBNu6rT8&type=&is_platform_tx=&amount=&row=15&page=1",
         "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7&type=&is_platform_tx=&amount=&row=15&page=1",
         "https://rcqoo99.com/#/admin/wallet/record?to_wallet_address=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7&started_at=" + strDate + "T00%3A00%3A00%2B08%3A00",
-      //  "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12",
         "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TBNeSQMc4x3Qob1pD2zF9YBGRRsBNu6rT",
 
         "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name=TYyL7N67a4R2BexQzGicpYFrChjuNfKrK7",
@@ -18706,7 +18791,8 @@ window.open(url[i], '_blank').location;
 
   -->
   <button type="button" id="but" style="color: whitesmoke;" class="myButtonbl"  onclick="gettimercups()">找ERC</button>
-    <button type="button" id="but" style="color: black;" class="myButton"  onclick="bfaccount()">币飞做账用</button></br></br>
+    <button type="button" id="but" style="color: black;" class="myButton"  onclick="bfaccount()">币飞做账用</button>
+    <button type="button" id="but" style="color: black;" class="myButton"  onclick="rcaccount()">RC做账用</button></br></br>
 
   <input id="ucfeetime1" value=""  placeholder="点" style="background-color: black; color:yellowgreen; text-align: center; width: 50px;"></input>
   <input id="ucfeetime2" value=""  placeholder="分" style="background-color: black; color:yellowgreen; text-align: center; width: 50px;"></input>
