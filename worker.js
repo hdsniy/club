@@ -1,5 +1,7 @@
 const ALLOWED_IPS = new Set([
   '35.77.150.209', // 替换成你的固定 IP
+    '95.41.18.241', // 替换成你的固定 IP
+
 ]);
 
 export default {
