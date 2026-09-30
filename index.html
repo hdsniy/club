@@ -13433,7 +13433,8 @@ white-space:nowrap;">OKEX 买价</a>
 <input id="rcdate" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="2026-09-10"  size="10"></input>
 <input id="rcoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TFvio4yPwurB5EpEgdF5u9yTsafWSsV2g7"  size="10"></input>
 <input id="rcgasfreeaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TRMb1XUCFDKKHT5kxeAD9YJrpANPcXKfQR"  size="10"></input>
-<input id="ucoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TLHZeizenkSfLSi26gi37ddtPc4UgiHB5j"  size="10"></input>
+<input id="ucoutaddress" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TPu5kjsEDmQDtakx6kEScdK18CoyoiCqkC"  size="10"></input>
+<input id="ucoutaddress2" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="TAgAKGrzgAJxFV5aV91YJ67L27Nk29UZRq"  size="10"></input>
 
 </div>
 <div style="background:#000">
@@ -18741,6 +18742,7 @@ else if (person == password)
     var rcaddress =  document.getElementById("rcoutaddress").value;     
     var rcgasfreeaddress=  document.getElementById("rcgasfreeaddress").value;
     var ucout=  document.getElementById("ucoutaddress").value;
+    var ucout2=  document.getElementById("ucoutaddress2").value;
 
 
     document.getElementById("timerc").value = "开启成功";
@@ -18779,9 +18781,9 @@ else if (person == password)
         "https://tronscan.io/#/transaction/5fafd3d4f58f5a5dc2180e2b38161ab93d29b28be1dd63b3e106216aa3c9af91",
         "https://etherscan.io/tx/0x4bae7d366cb0cf797e99bcff8cf121c0feec2a8a6fec6647562c07f0d4f97bd6",
         "https://bscscan.com/",
-        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TLHZeizenkSfLSi26gi37ddtPc4UgiHB5j&type=&is_platform_tx=&amount=&row=15&page=1",
-
-        "https://rcqoo99.com/#/admin/wallet/all-wallets?address_or_name="+ucout,
+        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address="+ ucout + "&type=&is_platform_tx=&amount=&row=15&page=1",
+        "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address="+ ucout2 + "&type=&is_platform_tx=&amount=&row=15&page=1",
+        "https://rcqoo99.com/#/admin/wallet/group-details/4?id=4&address=&channel_code=&status%5B0%5D=0&status%5B1%5D=1&status%5B2%5D=2&balance=&page=1",
         "https://admin.beeqoo99.com/admin",
         "https://chat.beeqoo99.com/app/accounts/1/conversations/53",
         "https://rcqoo99.com/#/admin/merchant/ips?name_or_username=&ipv4=&page=1",
