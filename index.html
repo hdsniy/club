@@ -801,6 +801,136 @@ box-shadow: 0px 1px 0px 0px #fff6af;
   box-shadow: 0 0 3px #4facfe, 0 0 6px #00f2fe;
 }
 
+/*上传到RC*/
+.rcUploadBtn {
+  --rc: #00f0ff;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  min-width: 130px;
+  padding: 6px 16px;
+  background: linear-gradient(180deg, rgba(0, 40, 60, 0.95), rgba(0, 12, 24, 0.95));
+  border: 1px solid var(--rc);
+  /* 斜切角 */
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  color: var(--rc);
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-shadow: 0 0 6px var(--rc);
+  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.35);
+  transition: all 0.25s ease;
+}
+/* 扫光 */
+.rcUploadBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: skewX(-20deg);
+  animation: rcSweep 2.8s infinite;
+}
+/* 底部能量条 */
+.rcUploadBtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--rc);
+  box-shadow: 0 0 8px var(--rc);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.rcUploadBtn:hover {
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(0, 80, 110, 0.95), rgba(0, 20, 40, 0.95));
+  box-shadow: inset 0 0 18px rgba(0, 240, 255, 0.6);
+}
+.rcUploadBtn:hover::after {
+  transform: scaleX(1);
+}
+.rcUploadBtn:active {
+  transform: scale(0.97);
+}
+.rcUploadBtn:disabled {
+  cursor: wait;
+}
+.rcUploadBtn.rc-loading {
+  --rc: #ffc400;
+}
+.rcUploadBtn.rc-loading::after {
+  animation: rcLoad 1s linear infinite;
+}
+.rcUploadBtn.rc-loading::before {
+  animation-duration: 0.9s;
+}
+.rcUploadBtn.rc-success {
+  --rc: #00ff88;
+  box-shadow: inset 0 0 18px rgba(0, 255, 136, 0.6);
+}
+.rcUploadBtn.rc-success::after,
+.rcUploadBtn.rc-error::after {
+  transform: scaleX(1);
+}
+.rcUploadBtn.rc-error {
+  --rc: #ff3b5c;
+  box-shadow: inset 0 0 18px rgba(255, 59, 92, 0.6);
+  animation: rcShake 0.35s;
+}
+.rcUploadBtn.rc-warn {
+  --rc: #ff9f1c;
+  box-shadow: inset 0 0 18px rgba(255, 159, 28, 0.6);
+}
+.rcUploadBtn.rc-warn::after {
+  transform: scaleX(1);
+}
+.rcUploadStatus.rc-warn {
+  color: #ff9f1c;
+  text-shadow: 0 0 6px #ff9f1c;
+}
+.rcUploadStatus {
+  display: block;
+  height: 18px;       /* 预留高度，出现文字时版面不会跳动 */
+  line-height: 18px;
+  margin-top: 4px;
+  white-space: nowrap;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: bold;
+}
+.rcUploadStatus.rc-success {
+  color: #00ff88;
+  text-shadow: 0 0 6px #00ff88;
+}
+.rcUploadStatus.rc-error {
+  color: #ff3b5c;
+  text-shadow: 0 0 6px #ff3b5c;
+}
+@keyframes rcSweep {
+  0%   { left: -60%; }
+  60%  { left: 130%; }
+  100% { left: 130%; }
+}
+@keyframes rcLoad {
+  0%   { transform: scaleX(0); transform-origin: left; }
+  50%  { transform: scaleX(1); transform-origin: left; }
+  51%  { transform: scaleX(1); transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+@keyframes rcShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
 
 
 
@@ -3467,7 +3597,7 @@ function usdtv2(obj) {
 
       document.getElementById('usdtv2outuc').value = "+" + usdtv2name + " 出U " + tolrmb + " RMB" + " (费率 " + urate + " 换 " + usdtv2amount1 + " U) " + usdtv2order;
       document.getElementById('usdtv2outrc').value = "从 外部地址(VPqAY) 转出 TRC " + tolERC + " (给 " + usdtv2name + " " + urate + " 费率)不影响帐- ";
-      document.getElementById('usdtv2outrcgoin').value = usdtv2name + "   RMB换U" + "   " + tolrmb + "RMB / " + urate + "= " + usdtv2amount1 + " U   " + tolERC + "   -   " + "ERC20";
+      document.getElementById('usdtv2outrcgoin').value = usdtv2name + " 	RMB换U" + " 	" + tolrmb + "RMB / " + urate + "= " + usdtv2amount1 + " U 	" + tolERC + " 	- 	" + "ERC20";
       document.getElementById('utransv2').value = tolERC;
 
       return;
@@ -12276,6 +12406,71 @@ document.execCommand('copy');
 
 
 }
+//上传到RC
+function usdtv2update() {
+  var text = document.getElementById('usdtv2outuc').value;         // → RC 的 A 栏
+  var text2 = document.getElementById('utext').value;    // → 外部地址出入U明细 的 C 栏起
+  if (!text || !text2) {
+    alert("没有内容可以上传");
+    return;
+  }
+
+  var btn = document.getElementById('usdtv2updateBtn');
+  if (btn.disabled) return; // 防止重复点
+  btn.disabled = true;
+  btn.className = "rcUploadBtn rc-loading";
+  btn.innerHTML = "◌ 传输中 0s";
+
+  // 等待时显示秒数，看得出还在跑
+  var startTime = Date.now();
+  btn.rcTimer = setInterval(function () {
+    btn.innerHTML = "◌ 传输中 " + Math.floor((Date.now() - startTime) / 1000) + "s";
+  }, 1000);
+
+  // 用 JSONP，避免跨域导致“写入成功但返回失败”
+  $.ajax({
+    url: "https://script.google.com/macros/s/AKfycbwniH261QagQu3U4kUMJyDMw1a8L2ZFLJJgvj3zgSn4kBNBx0UCtXBo1svNpUCO4_fa6g/exec",
+    data: { "text": text, "text2": text2 },
+    dataType: "jsonp",
+    timeout: 60000 // Apps Script 冷启动或排队时可能要十几秒
+  })
+  .done(function (res) {
+    if (res && res.ok) {
+      usdtv2updateDone(btn, "rc-success", "✔ 成功上传");
+      // 显示总耗时
+      var total = ((Date.now() - startTime) / 1000).toFixed(1);
+      document.getElementById('usdtv2updateStatus').innerHTML += " 共" + total + "s";
+    } else {
+      usdtv2updateDone(btn, "rc-error", "✖ " + ((res && res.error) || "上传失败"));
+    }
+  })
+  .fail(function (xhr, textStatus) {
+    if (textStatus === "timeout") {
+      // 超时不代表没写入，Apps Script 可能只是回应太慢
+      usdtv2updateDone(btn, "rc-warn", "⚠ 超时 请到表确认");
+    } else {
+      usdtv2updateDone(btn, "rc-error", "✖ 连接失败");
+    }
+  });
+}
+
+// 结果一直留着，直到下一次点击
+function usdtv2updateDone(btn, state, msg) {
+  clearInterval(btn.rcTimer);
+  btn.className = "rcUploadBtn " + state;
+  btn.innerHTML = msg;
+  btn.disabled = false;
+
+  var now = new Date();
+  var time = ("0" + now.getHours()).slice(-2) + ":" +
+             ("0" + now.getMinutes()).slice(-2) + ":" +
+             ("0" + now.getSeconds()).slice(-2);
+  var status = document.getElementById('usdtv2updateStatus');
+  status.className = "rcUploadStatus " + state;
+  status.innerHTML = time + " " + msg;
+}
+
+
 
 function bigamountrule(){
 
@@ -14279,7 +14474,12 @@ background-size: cover; text-align:left; font-weight:bolder; color:#12f71d;   wi
 </br>
 
 <div style="position: relative; z-index: 99;">
+
+
+<button type="button" id="usdtv2updateBtn" class="rcUploadBtn" onclick="usdtv2update()">⇪ 上传 RC</button>
+
 <button id="copyuoutv2" class="myButton" onclick="copyuoutv2()">💛<font style="color:blue; font-weight: bolder; ">复制内容</font>💛</button>
+<div id="usdtv2updateStatus" class="rcUploadStatus"></div>
 </div>
 </br></br>
 <textarea id="usdtv2out" type="text" value=""  style="background-image: url('https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/98.jpg');            
