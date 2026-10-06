@@ -678,6 +678,37 @@ font-family:'Arial';
            
 margin:0px;padding:5px;text-align:center;}
 
+/* 连结分类 */
+.flipLinks{
+  background:rgba(61, 132, 165, 0.801);
+            color:white;
+            margin:0px;padding:5px;text-align:center;}
+.paneLinks{background-image: url('https://raw.githubusercontent.com/hdsniy/club/refs/heads/main/63.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+display:none;
+margin:0px;padding:5px;}
+.lk-wrap { max-width: 1000px; margin: 0 auto; padding: 12px 16px 40px; text-align: left; color: #e6e6e6; }
+.lk-search { width: 100%; max-width: 420px; padding: 8px 12px; font-size: 15px; border: 2px solid #00b7ff;
+             border-radius: 8px; background: rgba(0, 19, 24, 0.85); color: #8ffa02; }
+.lk-nav { margin: 10px 0 14px; display: flex; flex-wrap: wrap; gap: 6px; }
+.lk-nav a { padding: 3px 12px; border-radius: 999px; background: rgba(5, 58, 100, 0.85); border: 1px solid #00b7ff;
+            color: #8ffa02; text-decoration: none; font-size: 14px; font-weight: bold; }
+.lk-sec { margin-bottom: 18px; }
+.lk-sec h3 { font-size: 18px; margin: 0 0 6px; padding-left: 8px; color: yellow; border-left: 4px solid #00b7ff; }
+.lk-list { list-style: none; margin: 0; padding: 0; background: rgba(0, 19, 24, 0.82);
+           border: 1px solid #00b7ff; border-radius: 10px; overflow: hidden; }
+.lk-list li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;
+              padding: 8px 14px; border-top: 1px solid rgba(0, 183, 255, 0.3); }
+.lk-list li:first-child { border-top: none; }
+.lk-name { font-weight: bold; min-width: 160px; color: #8ffa02; }
+.lk-note { color: #ffd966; font-size: 13px; }
+.lk-list a { color: #6ec8ff; word-break: break-all; text-decoration: none; }
+.lk-list a:hover { text-decoration: underline; }
+.lk-hidden { display: none !important; }
+
 
 .flipwest{
   background:rgba(61, 132, 165, 0.801);
@@ -1723,6 +1754,27 @@ $(".flip43").click(function(){
 $(".flip12").click(function(){
     $(".pane12").slideToggle("fast");
 
+  });});
+
+  $(function(){
+$(".flipLinks").click(function(){
+    $(".paneLinks").slideToggle("normal");
+
+  });});
+
+// 连结分类 搜索：按名称、备注、网址过滤
+$(function(){
+$("#lk-search").on("input", function(){
+    var q = this.value.trim().toLowerCase();
+    $("#paneLinks .lk-sec").each(function(){
+      var shown = 0;
+      $(this).find("li").each(function(){
+        var hit = !q || this.textContent.toLowerCase().indexOf(q) !== -1;
+        $(this).toggleClass("lk-hidden", !hit);
+        if (hit) shown++;
+      });
+      $(this).toggleClass("lk-hidden", shown === 0);
+    });
   });});
 
 function sum(obj) { 
@@ -9931,9 +9983,11 @@ var allopeng = document.getElementById('pane4');
 var allopenh = document.getElementById('blchang4');
 var allopeni = document.getElementById('pane43');
 var allopen12 = document.getElementById('pane12');
+var allopenLinks = document.getElementById('paneLinks');
 
 
 if(allopena.style.display==="none" &&
+allopenLinks.style.display==="none" &&
 allopenb.style.display==="none"&&
 allopenc.style.display==="none"&&
 allopend.style.display==="none" &&
@@ -9956,6 +10010,7 @@ allopenh.style.display="block";
 allopeni.style.display="block";
 allopen12.style.display="block";
 allopen6.style.display="block";
+allopenLinks.style.display="block";
 }
 else{
 allopena.style.display="none";
@@ -9969,6 +10024,7 @@ allopenh.style.display="none";
 allopen12.style.display="none";
 allopen6.style.display="none";
 allopeni.style.display="none";
+allopenLinks.style.display="none";
 }
 
 
@@ -10060,6 +10116,15 @@ if(allopeng.style.display==="none"  )
 {
 allopeng.style.display="block";}
 
+
+}
+function oncLinks(){
+
+var allopenl = document.getElementById('paneLinks');
+
+if(allopenl.style.display==="none"  )
+{
+allopenl.style.display="block";}
 
 }
 function onc12(){
@@ -13627,7 +13692,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本202601006v1077</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本202601006v1078</font>
 
 <!-- 出款地址 -->
 <input id="rcdate" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="2026-09-30"  size="10"></input>
@@ -13701,6 +13766,7 @@ white-space:nowrap;" onclick="allopen()"> 视窗全展开/隐藏</a></br> </br>
 <a href="#5" style="color:#8ffa02; font-weight: bold;" onclick="onc4()">红字大全</a></br>
 <a href="#6" style="color:#8ffa02; font-weight: bold;" onclick="onc5()">修改金额</a></br>
 <a href="#rate" style="color:#8ffa02; font-weight: bold;" onclick="onc12()">司法订单、交接</a></br>
+<a href="#links" style="color:#8ffa02; font-weight: bold;" onclick="oncLinks()">连结分类</a></br>
 <a href="#7" style="color:#8ffa02; font-weight: bold;" onclick="onc6()"> 记事本</a></br></br>
 
 
@@ -17562,6 +17628,120 @@ background-size: cover; " onkeyup="payout(this)"  onclick="payoutcopy()"></texta
 
 
 
+</div>
+
+<!-- 连结分类 -->
+<div id="links" class="flipLinks"><span class="1"><font size="6" style=" color:#8ffa02; font-weight:bold;  ">连结分类</font></span></div>
+<div id="paneLinks" class="paneLinks" style="display: none;">
+<div class="lk-wrap">
+  <input id="lk-search" class="lk-search" type="search" placeholder="搜索名称 / 网址 / 编号…">
+  <div class="lk-nav">
+    <a href="#lk-dae">大额</a>
+    <a href="#lk-xiaoe">小额</a>
+    <a href="#lk-rmb">数字RMB</a>
+    <a href="#lk-zfb">支付宝</a>
+    <a href="#lk-wx">微信</a>
+    <a href="#lk-zfbdf">支付宝代付</a>
+    <a href="#lk-zkdf">转卡代付</a>
+    <a href="#lk-bfj">备付金</a>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-dae">大额</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">BCOTC 卡卡</span><span class="lk-note">QD945</span><a href="https://vip.bc-otc.app" target="_blank">https://vip.bc-otc.app</a></li>
+      <li><span class="lk-name">新 - BCOTC 卡卡</span><span class="lk-note">DE156</span><a href="https://vip.bc-otc.app" target="_blank">https://vip.bc-otc.app</a></li>
+      <li><span class="lk-name">信达</span><a href="https://rm1.fourth-merchant.info" target="_blank">https://rm1.fourth-merchant.info</a></li>
+      <li><span class="lk-name">乐支付卡卡</span><a href="https://lepay168.com/?#/login?redirect=%2Fhome" target="_blank">https://lepay168.com/?#/login?redirect=%2Fhome</a></li>
+      <li><span class="lk-name">爱发支付大额卡卡</span><a href="https://kokpay.com/#/layout/person" target="_blank">https://kokpay.com/#/layout/person</a></li>
+      <li><span class="lk-name">吕布大额</span><a href="http://me.lbpal.click" target="_blank">http://me.lbpal.click</a></li>
+      <li><span class="lk-name">DMP</span><a href="https://pay.drmpro.net/" target="_blank">https://pay.drmpro.net/</a></li>
+      <li><span class="lk-name">GAT 大额卡卡</span><a href="https://www.gatling.vip/admin/auth/login" target="_blank">https://www.gatling.vip/admin/auth/login</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-xiaoe">小额</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">RCPAY</span><span class="lk-note">BCOTC</span><a href="https://vip.bc-otc.app" target="_blank">https://vip.bc-otc.app</a></li>
+      <li><span class="lk-name">RS小额</span><span class="lk-note">纯代付</span><a href="https://www.rspay88.com/BO_WEB/Login" target="_blank">https://www.rspay88.com/BO_WEB/Login</a></li>
+      <li><span class="lk-name">RS小额</span><span class="lk-note">纯回U</span><a href="https://www.rspay88.com/BO_WEB/Login" target="_blank">https://www.rspay88.com/BO_WEB/Login</a></li>
+      <li><span class="lk-name">新WF小额</span><a href="https://mch.a5a616f2a491.com/login/772e0e2505e7e40221a0bd20" target="_blank">https://mch.a5a616f2a491.com/login/772e0e2505e7e40221a0bd20</a></li>
+      <li><span class="lk-name">XQ小额</span><a href="http://y2m6p9u6g4w8y7r8m9c1.itxt002.xyz/" target="_blank">http://y2m6p9u6g4w8y7r8m9c1.itxt002.xyz/</a></li>
+      <li><span class="lk-name">新BC小额卡卡</span><span class="lk-note">NT314</span><a href="https://vip.bc-otc.app" target="_blank">https://vip.bc-otc.app</a></li>
+      <li><span class="lk-name">XQ小额 200 起</span><span class="lk-note">跳博创</span><a href="http://y2m6p9u6g4w8y7r8m9c1.itxt002.xyz/" target="_blank">http://y2m6p9u6g4w8y7r8m9c1.itxt002.xyz/</a></li>
+      <li><span class="lk-name">XB 小额卡卡</span><a href="https://www.xbpay168.com/user_Login_index.html" target="_blank">https://www.xbpay168.com/user_Login_index.html</a></li>
+      <li><span class="lk-name">GAT 小额卡卡</span><a href="https://www.gatling.vip/admin/auth/login" target="_blank">https://www.gatling.vip/admin/auth/login</a></li>
+      <li><span class="lk-name">香蕉小额</span><a href="http://101.36.107.147:8020/ymmm" target="_blank">http://101.36.107.147:8020/ymmm</a></li>
+      <li><span class="lk-name">水浒传</span><a href="https://mch.shzpay.xyz" target="_blank">https://mch.shzpay.xyz</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-rmb">数字RMB</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">吕布</span><a href="http://me.lbpal.click" target="_blank">http://me.lbpal.click</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-zfb">支付宝</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">（未命名）</span><a href="https://okx886.com/login" target="_blank">https://okx886.com/login</a></li>
+      <li><span class="lk-name">GL188</span><a href="https://merchant.gl188.asia/login" target="_blank">https://merchant.gl188.asia/login</a></li>
+      <li><span class="lk-name">V7支付宝</span><span class="lk-note">不抗头</span><a href="https://zhaltrrema.com/merchants/sign_in" target="_blank">https://zhaltrrema.com/merchants/sign_in</a></li>
+      <li><span class="lk-name">SGPAY</span><a href="https://merchant.sgpay888.com/sg-admin/auth/login" target="_blank">https://merchant.sgpay888.com/sg-admin/auth/login</a></li>
+      <li><span class="lk-name">SHPAY</span><a href="https://merchant.shpay555.com/shpay-admin/auth/login" target="_blank">https://merchant.shpay555.com/shpay-admin/auth/login</a></li>
+      <li><span class="lk-name">SDPAY2</span><span class="lk-note">2.5%</span><a href="https://m.sdpay88.com" target="_blank">https://m.sdpay88.com</a></li>
+      <li><span class="lk-name">博创 乐支付</span><a href="https://ogp.fourth-merchant.info" target="_blank">https://ogp.fourth-merchant.info</a></li>
+      <li><span class="lk-name">长诚支付宝</span><a href="https://mer.zhangcheng888.com" target="_blank">https://mer.zhangcheng888.com</a></li>
+      <li><span class="lk-name">水许传</span><a href="https://mch.shzpay.xyz" target="_blank">https://mch.shzpay.xyz</a></li>
+      <li><span class="lk-name">SDPAY</span><a href="https://m.sdpay88.com" target="_blank">https://m.sdpay88.com</a></li>
+      <li><span class="lk-name">WF</span><a href="https://mch.a5a616f2a491.com/records/balance" target="_blank">https://mch.a5a616f2a491.com/records/balance</a></li>
+      <li><span class="lk-name">GAT 支付宝</span><span class="lk-note">抗头</span><a href="https://www.gatling.vip/admin/auth/login" target="_blank">https://www.gatling.vip/admin/auth/login</a></li>
+      <li><span class="lk-name">新BC 支付宝 300起</span><span class="lk-note">BC OTC · DH924</span><a href="https://vip.bc-otc.app" target="_blank">https://vip.bc-otc.app</a></li>
+      <li><span class="lk-name">新BC 支付宝 500起</span><span class="lk-note">BC OTC · TI975</span><a href="https://vip.bc-otc.app" target="_blank">https://vip.bc-otc.app</a></li>
+      <li><span class="lk-name">乐支付支付宝</span><a href="https://lepay168.com/?#/login?redirect=%2Fhome" target="_blank">https://lepay168.com/?#/login?redirect=%2Fhome</a></li>
+      <li><span class="lk-name">JBP</span><a href="https://bsp.jbp-pay.com/" target="_blank">https://bsp.jbp-pay.com/</a></li>
+      <li><span class="lk-name">JJ支付宝</span><span class="lk-note">抗头</span><a href="https://fkemcwss.com/merchants/sign_in" target="_blank">https://fkemcwss.com/merchants/sign_in</a></li>
+      <li><span class="lk-name">VCOTC 支付宝</span><span class="lk-note">VC OTC</span><a href="https://vcotc.net/login" target="_blank">https://vcotc.net/login</a></li>
+      <li><span class="lk-name">EZPAY</span><span class="lk-note">抗头 · 注意 有跳代理</span><a href="https://b.oxk888.com/#/userlogin" target="_blank">https://b.oxk888.com/#/userlogin</a></li>
+      <li><span class="lk-name">FT支付宝</span><a href="https://sys.oxk888.com/#/userlogin" target="_blank">https://sys.oxk888.com/#/userlogin</a></li>
+      <li><span class="lk-name">PP支付宝</span><a href="https://adminpp.cc/userlogin" target="_blank">https://adminpp.cc/userlogin</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-wx">微信</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">V7 抖音/微信</span><span class="lk-note">新商户后台</span><a href="https://zhaltrrema.com/merchants/sign_in" target="_blank">https://zhaltrrema.com/merchants/sign_in</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-zfbdf">支付宝代付</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">DMP 支付宝代付</span><a href="https://pay.drmpro.net/" target="_blank">https://pay.drmpro.net/</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-zkdf">转卡代付</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">AS</span><span class="lk-note">商户号 PF0004</span><a href="https://axpayment.org/backstage/index.html" target="_blank">https://axpayment.org/backstage/index.html</a></li>
+    </ul>
+  </div>
+
+  <div class="lk-sec">
+    <h3 id="lk-bfj">备付金</h3>
+    <ul class="lk-list">
+      <li><span class="lk-name">聚财</span><a href="https://jucai-df-mch-pzxok.aaagood.xyz" target="_blank">https://jucai-df-mch-pzxok.aaagood.xyz</a></li>
+      <li><span class="lk-name">新快云</span><a href="http://8.218.215.171:3548/agent/Login/index.html" target="_blank">http://8.218.215.171:3548/agent/Login/index.html</a></li>
+      <li><span class="lk-name">明日备付金</span><a href="https://mingrimon-client.kuafuzhuri.net" target="_blank">https://mingrimon-client.kuafuzhuri.net</a></li>
+      <li><span class="lk-name">旭腾备付金</span><a href="https://zcxwcb8lxsz.jkroot.com/ZhmYPM91GVcoHBW7rwRQWGjdQ821kvre/login" target="_blank">https://zcxwcb8lxsz.jkroot.com/ZhmYPM91GVcoHBW7rwRQWGjdQ821kvre/login</a></li>
+    </ul>
+  </div>
+</div>
 </div>
 
 <div id="7" class="flip4"><span class="1"><font size="6" style=" color:#8ffa02; font-weight:bold;  ">记事本 & 公司连结 </font></span></div>
