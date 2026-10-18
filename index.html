@@ -13692,7 +13692,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本202601017v1080</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本202601017v1082</font>
 
 <!-- 出款地址 -->
 <input id="rcdate" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="2026-10-10"  size="10"></input>
@@ -18957,7 +18957,10 @@ else if (person == password)
 
     document.getElementById("timerc").value = "开启成功";
     
-    var reddate = "2026-10-17";
+
+        var reddatea = "2026-10-17";  // 联盟提现
+
+    var reddate = "2026-07-17";
 
   
 
@@ -18971,7 +18974,7 @@ else if (person == password)
         // 当下未出款
        "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+strDate3+"&tableFilters[status][values][0]=3&tableFilters[status][values][1]=2&tableFilters[status][values][2]=7&tableFilters[status][values][3]=1",
         //联盟提现
-        "https://rcqoo99.com/#/admin/withdraw/index?started_at="+reddate+"%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",   
+        "https://rcqoo99.com/#/admin/withdraw/index?started_at="+reddatea+"%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&auto_withdraw=&is_platform_tx=true&row=15&page=1&provider=&sort_by=2",   
         //联盟充值
        "https://admin.beeqoo99.com/admin/withdraws?tableFilters[created_at][created_at_from]="+reddate+"&tableFilters[type][value]=2&tableFilters[status][values][0]=4&tableFilters[status][values][1]=5&tableFilters[coin][values][0]=USDT",
 
