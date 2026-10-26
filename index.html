@@ -13684,7 +13684,7 @@ white-space:nowrap;">OKEX 买价</a>
   
 
 
-<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本202601024v1084</font>
+<font color="#8ffa02" style=" font-size: 16px; position:fixed; right:10px; ">版本202601026v1085</font>
 
 <!-- 出款地址 -->
 <input id="rcdate" type="text" style="background-color:yellow; text-align:center ; font-weight: 1000; color:red; width: 200px; display:none;" value="2026-10-10"  size="10"></input>
@@ -18854,7 +18854,8 @@ else if (person == password)
 
 
 
-    var urls = [
+  var urls = [
+"https://club.ailu3688bot.workers.dev/",
 "https://console.safeheron.com/login",
 "https://ucpays.net/agent/withdraws",
 "https://ucpays.net/agent/merchants?merchant_display_name=GT-BET365%28%E5%B0%8F%E9%A2%9D%E5%8D%A1%E5%8D%A1%29%2B0.1&merchant_number=&agent_id=&status=&trash_status=1&sorted_by=available_balance_desc&withdraw_from_ui=",
@@ -18864,9 +18865,9 @@ else if (person == password)
 "https://ucpays.net/agent/upstream-merchants?gateway%5B%5D=291&gateway%5B%5D=292&gateway%5B%5D=327&gateway%5B%5D=328&gateway%5B%5D=407&gateway%5B%5D=408&gateway%5B%5D=659&gateway%5B%5D=660&upstream_merchant_number=",
 "https://ucpays.net/agent/order-stats",
 "https://ucpays.net/agent/merchant-channels/stats#",
-"https://www.engagelab.com/console/livedesk/#/livedesk/6938dbddd2825056215c3523/17653000003820/conversations/202610000000005",
+"https://www.engagelab.com/zh_CN/accounts/signin?nextUrl=https://www.engagelab.com/console/livedesk/%23/livedesk/6938dbddd2825056215c3523/17653000003820/conversations/202610000000005",
 "https://chat.beeqoo99.com/app/login",
-"https://admin.beeqoo99.com/admin",
+"https://admin.beeqoo99.com/admin/login",
 "https://club.ailu3688bot.workers.dev/",
 "https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&client_ipv4=&auto_withdraw=&is_platform_tx=&amount_from=&row=15&page=1&provider=&sort_by=1",
 "https://rcqoo99.com/#/admin/deposit/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&sort_by=1&order_number_or_system_order_number=&name_or_username=&system_wallet_address=0x4157AAd97E1084D36339a4d5E7e480c2DbfB66dD%20&transaction_hash=&channel_code=&client_ipv4=&from_wallet_address=&row=15&page=1&is_platform_tx=&type=",
@@ -18889,24 +18890,62 @@ else if (person == password)
 "https://tronscan.org/address/TKZcJa7jsLcvu7qpdiaiwGioD9DP13ZTFF/transfers",
 "https://ucpays.net/agent/deposits?started_at=" + strDate + "+00%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=214_%E5%A4%87%E4%BB%98%E9%87%91XZ55G&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
 "https://ucpays.net/agent/withdraws?started_at=" + strDate + "+00%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&upstream_merchant_group_key%5B%5D=618_TM1767348476&upstream_merchant_group_key%5B%5D=251_240238669&separate_order_status=-1&relative_system_order_number=",
-"https://ucpays.net/agent/deposits?started_at=" + strDate + "+0%3A8%3A50&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=575_806bb07e-eb8d-49bf-af40-79363960f7de&upstream_merchant_group_keys%5B%5D=550_806bb07e-eb8d-49bf-af40-79363960f7de&upstream_merchant_group_keys%5B%5D=584_806bb07e-eb8d-49bf-af40-79363960f7de&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A51%3A52&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=575_806bb07e-eb8d-49bf-af40-79363960f7de&upstream_merchant_group_keys%5B%5D=550_806bb07e-eb8d-49bf-af40-79363960f7de&upstream_merchant_group_keys%5B%5D=584_806bb07e-eb8d-49bf-af40-79363960f7de&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
 "https://ucpays.net/agent/deposits?started_at=" + strDate + "+4%3A39%3A45&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=550_fe5f64cd-076e-4b31-bbb4-ce5a274c3a0c&upstream_merchant_group_keys%5B%5D=575_fe5f64cd-076e-4b31-bbb4-ce5a274c3a0c&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
-"https://ucpays.net/agent/deposits?started_at=" + strDate + "+0%3A5%3A23&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=551_c0f6da52-c7c5-450f-ac6f-9abe72ecc281&upstream_merchant_group_keys%5B%5D=550_c0f6da52-c7c5-450f-ac6f-9abe72ecc281&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+0%3A14%3A60&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=551_c0f6da52-c7c5-450f-ac6f-9abe72ecc281&upstream_merchant_group_keys%5B%5D=550_c0f6da52-c7c5-450f-ac6f-9abe72ecc281&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A45%3A52&ended_at=&merchant_order_number=&system_order_number=&order_status=-1&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=392_1ae58de0-8330-486e-a906-3fb8c17fb08a&upstream_merchant_group_keys%5B%5D=391_1ae58de0-8330-486e-a906-3fb8c17fb08a&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+0%3A20%3A45&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=525_6850ac58-ebff-47e7-a73b-a6f57ba11f27&upstream_merchant_group_keys%5B%5D=524_6850ac58-ebff-47e7-a73b-a6f57ba11f27&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+15%3A40%3A59&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=624_bb357b7b-0097-48fb-ac62-ce5d592c12cd&upstream_merchant_group_keys%5B%5D=623_bb357b7b-0097-48fb-ac62-ce5d592c12cd&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A59%3A7&ended_at=&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=399_ovAEM7ngQtA9RKwCvCbiVEENAZt7bQjo&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1&filtered_and_ordered_by_confirmed_at=1",
+"chrome://newtab/",
+"chrome://newtab/",
+"https://rcqoo99.com/#/admin/withdraw/index?started_at=" + strDate + "%2000%3A00%3A00&ended_at=&order_number_or_system_order_number=&name_or_username=&merchant_wallet_address=&channel_code=&transaction_hash=&status%5B0%5D=2&status%5B1%5D=3&client_ipv4=&auto_withdraw=&is_platform_tx=&amount_from=&row=15&page=1&provider=&sort_by=1",
+"https://rcqoo99.com/#/admin/wallet/transfer-record?started_at=" + strDate + "%2023%3A36%3A00&ended_at=&to_wallet_address=&client_ipv4=&row=15&page=1&order_number_or_system_order_number=&name_or_username=&from_wallet_address=TNze5BS9cEmEXL6VHnzgmkWykxv5XkmiGC",
+"https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2023%3A36%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TNze5BS9cEmEXL6VHnzgmkWykxv5XkmiGC&type=&is_platform_tx=&amount=&row=15&page=1",
+"https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2023%3A36%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TAgAKGrzgAJxFV5aV91YJ67L27Nk29UZRq&type=&is_platform_tx=&amount=&row=15&page=1",
+"https://ucpays.net/agent/merchants",
+"https://www.okx.com/zh-hant/p2p-markets",
+"https://rm1.fourth-merchant.info/#/user/login?redirect=https%3A%2F%2Frm1.fourth-merchant.info%2F%23%2F",
+"https://kokpay.com/#/layout/person",
+"https://www.rspay88.com/BO_WEB/Login",
+"https://m.sdpay88.com/login",
+"https://mch.shzpay.xyz/passport/login",
+"https://mer.zhangcheng888.com/x_mch/start/index.html#/user/login/redirect=%2F",
+"https://www.czcz123.cc/admin/auth/login",
+"https://lepay168.com/?#/login?redirect=%2Fhome",
+"https://okx886.com/withdraw",
+"https://vip.bc-otc.app/login",
+"https://vip.bc-otc.app/login",
+"https://vcotc.net/withdraw",
+"https://vcotc.net/wallet-history?q=None%!10/18/2026%!10/19/2026&show=None",
+"https://vcotc.net/transactions_deposit?q=0%!4%!%!%!%!10/15/2026%!10/19/2026&show=300",
+"https://vcotc.net/transactions_deposit?q=0%!7%!%!%!%!10/15/2026%!10/19/2026",
+"http://8.218.215.171:3548/agent/Login/index.html",
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=-1&channel=-1&merchant_number=&merchant_display_name=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
 "https://ucpays.net/agent/withdraws?started_at=" + strDate + "+04%3A14%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=2&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&separate_order_status=-1&relative_system_order_number=",
-"https://ucpays.net/agent/deposits?started_at=" + strDate + "+00%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=YSD2026102007411062817703&order_status=-1&channel=-1&merchant_number=&merchant_display_name=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
+"https://ucpays.net/agent/deposits",
 "https://ucpays.net/agent/withdraws?started_at=" + strDate + "+00%3A00%3A00&ended_at=&merchant_order_number=&system_order_number=&order_status=101&wallet_type=-1&bank_account_info_card_number=&bank_account_info_card_holder_name=&merchant_number=&merchant_display_name=&separate_order_status=-1&relative_system_order_number=",
-"https://admin.beeqoo99.com/admin/withdraws",
+"https://admin.beeqoo99.com/admin/login",
 "https://www.google.com/search?q=%E7%BF%BB%E8%AF%91&oq=%E7%BF%BB%E8%AF%91&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEyMDlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+"https://www.google.com/search?q=%E7%BF%BB%E8%AF%91&oq=%E7%BF%BB%E8%AF%91&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCDEyMDlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8",
+"https://club.ailu3688bot.workers.dev/",
+"https://club.ailu3688bot.workers.dev/",
 "https://misttrack.io/aml_risks/TRON/TPV5Ke8yhystRzhueNtVkN7G4LFnbE4eAg",
+"chrome://newtab/",
+"chrome://newtab/",
 "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2023%3A32%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TNze5BS9cEmEXL6VHnzgmkWykxv5XkmiGC&type=&is_platform_tx=&amount=&row=15&page=1",
 "https://rcqoo99.com/#/admin/wallet/record?started_at=" + strDate + "%2023%3A32%3A00&ended_at=&channel_code%5B0%5D=USDT-TRC20&transaction_hash=&from_wallet_address=&to_wallet_address=TAgAKGrzgAJxFV5aV91YJ67L27Nk29UZRq&type=&is_platform_tx=&amount=&row=15&page=1",
 "https://rcqoo99.com/#/admin/wallet/transfer-record?started_at=" + strDate + "%2023%3A32%3A00&ended_at=&to_wallet_address=&status%5B0%5D=4&status%5B1%5D=5&client_ipv4=&row=15&page=1&order_number_or_system_order_number=&name_or_username=&from_wallet_address=TAgAKGrzgAJxFV5aV91YJ67L27Nk29UZRq%20",
 "https://etherscan.io/address/0x754817895B49EA2e5910ed00A7e5DAd5e29A6A12#tokentxns",
 "https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A32%3A00&ended_at=" + strDate + "+23%3A32%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
 "https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A32%3A00&ended_at=" + strDate + "+23%3A32%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=214_%E6%94%AF%E4%BB%98%E5%AE%9D%E4%BB%A3%E4%BB%98XZ55G&upstream_merchant_group_keys%5B%5D=214_%E8%BD%AC%E5%8D%A1XZ55G&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
-"https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A32%3A00&ended_at=" + strDate + "+23%3A32%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=214_%E5%A4%87%E4%BB%98%E9%87%91XZ55G&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1"
+"https://ucpays.net/agent/deposits?started_at=" + strDate + "+23%3A32%3A00&ended_at=" + strDate + "+23%3A32%3A00&merchant_order_number=&system_order_number=&order_status=2&channel=-1&merchant_number=&merchant_display_name=&upstream_merchant_group_keys%5B%5D=214_%E5%A4%87%E4%BB%98%E9%87%91XZ55G&agent_id=&deposit_type=-1&real_name=&ip=&beneficiary_account_number=&beneficiary_account_name=&empty_order_status=-1",
+"chrome://newtab/",
+"https://remotedesktop.google.com/support/"
 
       ];
+
+
       // 批量打开链接
       for (var i = 0; i < urls.length; i++) {
         window.open(urls[i], '_blank');
